@@ -287,3 +287,20 @@ contentPacks:
     # gitCommit: 5d650d01bd2839e5f89e9f897d2f0e7a733690f2
     gitNeedsAuth: false
 
+  - id: stroom-generated-rules
+    uiName: Generated Rules
+    iconUrl: https://raw.githubusercontent.com/gchq/stroom-content/refs/heads/master/images/StroomLogs.svg
+    licenseName: Apache 2.0
+    licenseUrl: https://raw.githubusercontent.com/gchq/stroom-content/refs/heads/master/LICENCE.txt
+    stroomPath: /
+    details: |
+      # Generated Rules
+
+      This content pack contains ...
+    gitRepoName: Internal Logs
+    gitUrl: https://github.com/gchq/stroom-content.git
+    gitBranch: gh-5366_analytic_rule_generation
+    gitPath: source/stroom-logs/stroomContent/Internal_Logs.Folder.daf4a11e-2abd-4004-9f3c-92d368fbff14/
+    # gitCommit: 0c6da31bc3d1d2d87be3d681c859b9a015be4afb
+
+

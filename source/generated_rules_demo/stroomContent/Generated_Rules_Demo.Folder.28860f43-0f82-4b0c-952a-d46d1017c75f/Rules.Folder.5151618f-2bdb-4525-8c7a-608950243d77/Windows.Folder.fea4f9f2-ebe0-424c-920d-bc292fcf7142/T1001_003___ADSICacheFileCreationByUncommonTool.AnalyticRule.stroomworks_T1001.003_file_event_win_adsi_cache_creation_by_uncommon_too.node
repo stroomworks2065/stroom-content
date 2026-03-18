@@ -1,0 +1,5 @@
+name=T1001.003 - ADSICacheFileCreationByUncommonTool
+path=/Generated Rules Demo/Rules/Windows/T1001.003 - ADSICacheFileCreationByUncommonTool
+type=AnalyticRule
+uuid=stroomworks_T1001.003_file_event_win_adsi_cache_creation_by_uncommon_too
+version=V2

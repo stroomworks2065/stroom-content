@@ -1,0 +1,50 @@
+{
+  "analyticProcessType" : "STREAMING",
+  "description" : "Detects file names with specific patterns seen generated and used by tools such as Mimikatz and DSInternals related to exported or stolen DPAPI backup keys and certificates.\n\n\nLevel: high\n\nStatus: test\n\nFalse Positives:\n- Unlikely\n\nReferences:\n- https://www.dsinternals.com/en/dpapi-backup-key-theft-auditing/\n- https://github.com/MichaelGrafnetter/DSInternals/blob/39ee8a69bbdc1cfd12c9afdd7513b4788c4895d4/Src/DSInternals.Common/Data/DPAPI/DPAPIBackupKey.cs#L28-L32\n\nTags:\n- attack.credential-access\n- attack.t1555\n- attack.t1552.004\n\nSource Sigma rule author(s):\n- Nounou Mbeiri\n- Nasreddine Bencherchali (Nextron Systems)\n\nSource Sigma rule: file\\_event\\_win\\_susp\\_dpapi\\_backup\\_and\\_cert\\_export\\_ioc.yml",
+  "duplicateNotificationConfig" : {
+    "chooseColumns" : false,
+    "columnNames" : [ ],
+    "rememberNotifications" : false,
+    "suppressDuplicateNotifications" : false
+  },
+  "errorFeed" : {
+    "type" : "Feed",
+    "uuid" : "8b95697a-1827-4e67-b982-940f3d47634c",
+    "name" : "RULE_ERRORS_FEED"
+  },
+  "includeRuleDocumentation" : false,
+  "languageVersion" : "STROOM_QL_VERSION_0_1",
+  "level" : "high",
+  "name" : "T1555 - DPAPIBackupKeysAndCertificateExportActivityIOC",
+  "notifications" : [ {
+    "destination" : {
+      "type" : "stream",
+      "destinationFeed" : {
+        "type" : "Feed",
+        "uuid" : "f58bb9a9-1359-4077-9451-f977b2b862c3",
+        "name" : "RULE_OUTPUT_FEED"
+      },
+      "useSourceFeedIfPossible" : false
+    },
+    "destinationType" : "STREAM",
+    "enabled" : true,
+    "limitNotifications" : false,
+    "maxNotifications" : 1,
+    "resumeAfter" : {
+      "time" : 1,
+      "timeUnit" : "DAYS"
+    },
+    "uuid" : "9ed54c1d-6c2c-41e0-aae1-fe3a25c5f77c"
+  } ],
+  "query" : "from RULE_VIEW\nwhere ((EventData.TargetFilename = '*ntds_capi_*' or EventData.TargetFilename = '*ntds_legacy_*' or EventData.TargetFilename = '*ntds_unknown_*') and (EventData.TargetFilename = '*.cer*' or EventData.TargetFilename = '*.key*' or EventData.TargetFilename = '*.pfx*' or EventData.TargetFilename = '*.pvk*'))\nselect *",
+  "rememberNotifications" : false,
+  "status" : "test",
+  "suppressDuplicateNotifications" : false,
+  "timeRange" : {
+    "name" : "All time",
+    "condition" : "BETWEEN"
+  },
+  "uuid" : "stroomworks_T1555_file_event_win_susp_dpapi_backup_and_cert_export_ioc",
+  "version" : "c96e0000-dea0-4c3a-88cc-a107449521e1",
+  "type" : "AnalyticRule"
+}

@@ -1,0 +1,226 @@
+{
+  "type" : "Index",
+  "uuid" : "759afbac-297c-43f7-ac90-9303fb995f50",
+  "name" : "INDEX",
+  "version" : "cdeab1bb-0397-4b21-b894-ff0e2979d724",
+  "maxDocsPerShard" : 1000000000,
+  "partitionBy" : "MONTH",
+  "partitionSize" : 1,
+  "shardsPerPartition" : 1,
+  "fields" : [ {
+    "fldName" : "EventData.AccessMask",
+    "fldType" : "TEXT",
+    "analyzerType" : "KEYWORD",
+    "indexed" : true,
+    "stored" : true,
+    "termPositions" : false,
+    "caseSensitive" : false
+  }, {
+    "fldName" : "EventData.AuthenticationPackageName",
+    "fldType" : "TEXT",
+    "analyzerType" : "KEYWORD",
+    "indexed" : true,
+    "stored" : true,
+    "termPositions" : false,
+    "caseSensitive" : false
+  }, {
+    "fldName" : "EventData.CommandLine",
+    "fldType" : "TEXT",
+    "analyzerType" : "KEYWORD",
+    "indexed" : true,
+    "stored" : true,
+    "termPositions" : false,
+    "caseSensitive" : false
+  }, {
+    "fldName" : "EventData.ContextInfo",
+    "fldType" : "TEXT",
+    "analyzerType" : "KEYWORD",
+    "indexed" : true,
+    "stored" : true,
+    "termPositions" : false,
+    "caseSensitive" : false
+  }, {
+    "fldName" : "EventData.Data",
+    "fldType" : "TEXT",
+    "analyzerType" : "KEYWORD",
+    "indexed" : true,
+    "stored" : true,
+    "termPositions" : false,
+    "caseSensitive" : false
+  }, {
+    "fldName" : "EventData.DestinationHostname",
+    "fldType" : "TEXT",
+    "analyzerType" : "KEYWORD",
+    "indexed" : true,
+    "stored" : true,
+    "termPositions" : false,
+    "caseSensitive" : false
+  }, {
+    "fldName" : "EventData.Details",
+    "fldType" : "TEXT",
+    "analyzerType" : "KEYWORD",
+    "indexed" : true,
+    "stored" : true,
+    "termPositions" : false,
+    "caseSensitive" : false
+  }, {
+    "fldName" : "EventData.EventID",
+    "fldType" : "TEXT",
+    "analyzerType" : "KEYWORD",
+    "indexed" : true,
+    "stored" : true,
+    "termPositions" : false,
+    "caseSensitive" : false
+  }, {
+    "fldName" : "EventData.Image",
+    "fldType" : "TEXT",
+    "analyzerType" : "KEYWORD",
+    "indexed" : true,
+    "stored" : true,
+    "termPositions" : false,
+    "caseSensitive" : false
+  }, {
+    "fldName" : "EventData.Initiated",
+    "fldType" : "TEXT",
+    "analyzerType" : "KEYWORD",
+    "indexed" : true,
+    "stored" : true,
+    "termPositions" : false,
+    "caseSensitive" : false
+  }, {
+    "fldName" : "EventData.LogonType",
+    "fldType" : "TEXT",
+    "analyzerType" : "KEYWORD",
+    "indexed" : true,
+    "stored" : true,
+    "termPositions" : false,
+    "caseSensitive" : false
+  }, {
+    "fldName" : "EventData.ObjectName",
+    "fldType" : "TEXT",
+    "analyzerType" : "KEYWORD",
+    "indexed" : true,
+    "stored" : true,
+    "termPositions" : false,
+    "caseSensitive" : false
+  }, {
+    "fldName" : "EventData.ObjectServer",
+    "fldType" : "TEXT",
+    "analyzerType" : "KEYWORD",
+    "indexed" : true,
+    "stored" : true,
+    "termPositions" : false,
+    "caseSensitive" : false
+  }, {
+    "fldName" : "EventData.ObjectType",
+    "fldType" : "TEXT",
+    "analyzerType" : "KEYWORD",
+    "indexed" : true,
+    "stored" : true,
+    "termPositions" : false,
+    "caseSensitive" : false
+  }, {
+    "fldName" : "EventData.ParentImage",
+    "fldType" : "TEXT",
+    "analyzerType" : "KEYWORD",
+    "indexed" : true,
+    "stored" : true,
+    "termPositions" : false,
+    "caseSensitive" : false
+  }, {
+    "fldName" : "EventData.Product",
+    "fldType" : "TEXT",
+    "analyzerType" : "KEYWORD",
+    "indexed" : true,
+    "stored" : true,
+    "termPositions" : false,
+    "caseSensitive" : false
+  }, {
+    "fldName" : "EventData.Provider_Name",
+    "fldType" : "TEXT",
+    "analyzerType" : "KEYWORD",
+    "indexed" : true,
+    "stored" : true,
+    "termPositions" : false,
+    "caseSensitive" : false
+  }, {
+    "fldName" : "EventData.QueryName",
+    "fldType" : "TEXT",
+    "analyzerType" : "KEYWORD",
+    "indexed" : true,
+    "stored" : true,
+    "termPositions" : false,
+    "caseSensitive" : false
+  }, {
+    "fldName" : "EventData.ScriptBlockText",
+    "fldType" : "TEXT",
+    "analyzerType" : "KEYWORD",
+    "indexed" : true,
+    "stored" : true,
+    "termPositions" : false,
+    "caseSensitive" : false
+  }, {
+    "fldName" : "EventData.TargetFilename",
+    "fldType" : "TEXT",
+    "analyzerType" : "KEYWORD",
+    "indexed" : true,
+    "stored" : true,
+    "termPositions" : false,
+    "caseSensitive" : false
+  }, {
+    "fldName" : "EventData.TargetObject",
+    "fldType" : "TEXT",
+    "analyzerType" : "KEYWORD",
+    "indexed" : true,
+    "stored" : true,
+    "termPositions" : false,
+    "caseSensitive" : false
+  }, {
+    "fldName" : "EventData.TargetUserName",
+    "fldType" : "TEXT",
+    "analyzerType" : "KEYWORD",
+    "indexed" : true,
+    "stored" : true,
+    "termPositions" : false,
+    "caseSensitive" : false
+  }, {
+    "fldName" : "EventData.User",
+    "fldType" : "TEXT",
+    "analyzerType" : "KEYWORD",
+    "indexed" : true,
+    "stored" : true,
+    "termPositions" : false,
+    "caseSensitive" : false
+  }, {
+    "fldName" : "EventId",
+    "fldType" : "ID",
+    "analyzerType" : "KEYWORD",
+    "indexed" : true,
+    "stored" : true,
+    "termPositions" : false,
+    "caseSensitive" : false
+  }, {
+    "fldName" : "StreamId",
+    "fldType" : "ID",
+    "analyzerType" : "KEYWORD",
+    "indexed" : true,
+    "stored" : true,
+    "termPositions" : false,
+    "caseSensitive" : false
+  }, {
+    "fldName" : "System.EventID",
+    "fldType" : "TEXT",
+    "analyzerType" : "KEYWORD",
+    "indexed" : true,
+    "stored" : true,
+    "termPositions" : false,
+    "caseSensitive" : false
+  } ],
+  "timeField" : "EventTime",
+  "volumeGroupName" : "Default Volume Group",
+  "defaultExtractionPipeline" : {
+    "type" : "Pipeline",
+    "uuid" : "05d50cd4-f9dd-4972-aac9-32810a57e02c",
+    "name" : "EXTRACTION_PIPELINE"
+  }
+}

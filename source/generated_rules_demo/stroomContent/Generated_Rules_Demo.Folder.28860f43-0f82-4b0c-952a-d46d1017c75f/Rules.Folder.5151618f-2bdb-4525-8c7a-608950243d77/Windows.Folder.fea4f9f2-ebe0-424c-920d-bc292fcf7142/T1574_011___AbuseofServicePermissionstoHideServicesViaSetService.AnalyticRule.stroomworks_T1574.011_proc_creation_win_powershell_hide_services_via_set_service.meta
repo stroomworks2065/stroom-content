@@ -1,0 +1,50 @@
+{
+  "analyticProcessType" : "STREAMING",
+  "description" : "Detects usage of the \"Set-Service\" powershell cmdlet to configure a new SecurityDescriptor that allows a service to be hidden from other utilities such as \"sc.exe\", \"Get-Service\"...etc. (Works only in powershell 7)\n\nLevel: high\n\nStatus: test\n\nFalse Positives:\n- Rare intended use of hidden services\n\nReferences:\n- https://twitter.com/Alh4zr3d/status/1580925761996828672\n- https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/set-service?view=powershell-7.2\n\nTags:\n- attack.persistence\n- attack.defense-evasion\n- attack.privilege-escalation\n- attack.t1574.011\n\nSource Sigma rule author(s):\n- Nasreddine Bencherchali (Nextron Systems)\n\nSource Sigma rule: proc\\_creation\\_win\\_powershell\\_hide\\_services\\_via\\_set\\_service.yml",
+  "duplicateNotificationConfig" : {
+    "chooseColumns" : false,
+    "columnNames" : [ ],
+    "rememberNotifications" : false,
+    "suppressDuplicateNotifications" : false
+  },
+  "errorFeed" : {
+    "type" : "Feed",
+    "uuid" : "8b95697a-1827-4e67-b982-940f3d47634c",
+    "name" : "RULE_ERRORS_FEED"
+  },
+  "includeRuleDocumentation" : false,
+  "languageVersion" : "STROOM_QL_VERSION_0_1",
+  "level" : "high",
+  "name" : "T1574.011 - AbuseofServicePermissionstoHideServicesViaSetService",
+  "notifications" : [ {
+    "destination" : {
+      "type" : "stream",
+      "destinationFeed" : {
+        "type" : "Feed",
+        "uuid" : "f58bb9a9-1359-4077-9451-f977b2b862c3",
+        "name" : "RULE_OUTPUT_FEED"
+      },
+      "useSourceFeedIfPossible" : false
+    },
+    "destinationType" : "STREAM",
+    "enabled" : true,
+    "limitNotifications" : false,
+    "maxNotifications" : 1,
+    "resumeAfter" : {
+      "time" : 1,
+      "timeUnit" : "DAYS"
+    },
+    "uuid" : "9ed54c1d-6c2c-41e0-aae1-fe3a25c5f77c"
+  } ],
+  "query" : "from RULE_VIEW\nwhere (((EventData.Image = '*\\\\\\\\pwsh.exe') or (EventData.OriginalFileName = '*pwsh.dll*')) or ((EventData.CommandLine = '*Set-Service *' or EventData.CommandLine = '*DCLCWPDTSD*'))) or ((EventData.CommandLine = '*-SecurityDescriptorSddl *' or EventData.CommandLine = '*-sd *'))\nselect *",
+  "rememberNotifications" : false,
+  "status" : "test",
+  "suppressDuplicateNotifications" : false,
+  "timeRange" : {
+    "name" : "All time",
+    "condition" : "BETWEEN"
+  },
+  "uuid" : "stroomworks_T1574.011_proc_creation_win_powershell_hide_services_via_set_service",
+  "version" : "c96e0000-dea0-4c3a-88cc-a107449521e1",
+  "type" : "AnalyticRule"
+}

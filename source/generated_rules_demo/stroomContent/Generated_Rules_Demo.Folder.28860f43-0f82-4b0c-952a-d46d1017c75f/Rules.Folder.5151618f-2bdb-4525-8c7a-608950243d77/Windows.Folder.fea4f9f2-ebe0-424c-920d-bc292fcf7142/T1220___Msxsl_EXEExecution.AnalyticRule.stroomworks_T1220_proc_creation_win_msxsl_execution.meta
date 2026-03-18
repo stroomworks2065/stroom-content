@@ -1,0 +1,50 @@
+{
+  "analyticProcessType" : "STREAMING",
+  "description" : "Detects the execution of the MSXSL utility. This can be used to execute Extensible Stylesheet Language (XSL) files. These files are commonly used to describe the processing and rendering of data within XML files.\nAdversaries can abuse this functionality to execute arbitrary files while potentially bypassing application whitelisting defenses.\n\n\nLevel: medium\n\nStatus: test\n\nFalse Positives:\n- Msxsl is not installed by default and is deprecated, so unlikely on most systems.\n\nReferences:\n- https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1220/T1220.md\n- https://lolbas-project.github.io/lolbas/OtherMSBinaries/Msxsl/\n\nTags:\n- attack.defense-evasion\n- attack.t1220\n\nSource Sigma rule author(s):\n- Timur Zinniatullin\n- oscd.community\n\nSource Sigma rule: proc\\_creation\\_win\\_msxsl\\_execution.yml",
+  "duplicateNotificationConfig" : {
+    "chooseColumns" : false,
+    "columnNames" : [ ],
+    "rememberNotifications" : false,
+    "suppressDuplicateNotifications" : false
+  },
+  "errorFeed" : {
+    "type" : "Feed",
+    "uuid" : "8b95697a-1827-4e67-b982-940f3d47634c",
+    "name" : "RULE_ERRORS_FEED"
+  },
+  "includeRuleDocumentation" : false,
+  "languageVersion" : "STROOM_QL_VERSION_0_1",
+  "level" : "medium",
+  "name" : "T1220 - Msxsl.EXEExecution",
+  "notifications" : [ {
+    "destination" : {
+      "type" : "stream",
+      "destinationFeed" : {
+        "type" : "Feed",
+        "uuid" : "f58bb9a9-1359-4077-9451-f977b2b862c3",
+        "name" : "RULE_OUTPUT_FEED"
+      },
+      "useSourceFeedIfPossible" : false
+    },
+    "destinationType" : "STREAM",
+    "enabled" : true,
+    "limitNotifications" : false,
+    "maxNotifications" : 1,
+    "resumeAfter" : {
+      "time" : 1,
+      "timeUnit" : "DAYS"
+    },
+    "uuid" : "9ed54c1d-6c2c-41e0-aae1-fe3a25c5f77c"
+  } ],
+  "query" : "from RULE_VIEW\nwhere (EventData.Image = '*\\\\\\\\msxsl.exe')\nselect *",
+  "rememberNotifications" : false,
+  "status" : "test",
+  "suppressDuplicateNotifications" : false,
+  "timeRange" : {
+    "name" : "All time",
+    "condition" : "BETWEEN"
+  },
+  "uuid" : "stroomworks_T1220_proc_creation_win_msxsl_execution",
+  "version" : "c96e0000-dea0-4c3a-88cc-a107449521e1",
+  "type" : "AnalyticRule"
+}

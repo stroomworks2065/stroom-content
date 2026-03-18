@@ -1,0 +1,50 @@
+{
+  "analyticProcessType" : "STREAMING",
+  "description" : "Detects execution of the \"cloudflared\" tool with the tunnel \"cleanup\" flag in order to cleanup tunnel connections.\n\nLevel: medium\n\nStatus: test\n\nFalse Positives:\n- Legitimate usage of Cloudflared.\n\nReferences:\n- https://github.com/cloudflare/cloudflared\n- https://developers.cloudflare.com/cloudflare-one/connections/connect-apps\n\nTags:\n- attack.command-and-control\n- attack.t1102\n- attack.t1090\n- attack.t1572\n\nSource Sigma rule author(s):\n- Nasreddine Bencherchali (Nextron Systems)\n\nSource Sigma rule: proc\\_creation\\_win\\_cloudflared\\_tunnel\\_cleanup.yml",
+  "duplicateNotificationConfig" : {
+    "chooseColumns" : false,
+    "columnNames" : [ ],
+    "rememberNotifications" : false,
+    "suppressDuplicateNotifications" : false
+  },
+  "errorFeed" : {
+    "type" : "Feed",
+    "uuid" : "8b95697a-1827-4e67-b982-940f3d47634c",
+    "name" : "RULE_ERRORS_FEED"
+  },
+  "includeRuleDocumentation" : false,
+  "languageVersion" : "STROOM_QL_VERSION_0_1",
+  "level" : "medium",
+  "name" : "T1572 - CloudflaredTunnelConnectionsCleanup",
+  "notifications" : [ {
+    "destination" : {
+      "type" : "stream",
+      "destinationFeed" : {
+        "type" : "Feed",
+        "uuid" : "f58bb9a9-1359-4077-9451-f977b2b862c3",
+        "name" : "RULE_OUTPUT_FEED"
+      },
+      "useSourceFeedIfPossible" : false
+    },
+    "destinationType" : "STREAM",
+    "enabled" : true,
+    "limitNotifications" : false,
+    "maxNotifications" : 1,
+    "resumeAfter" : {
+      "time" : 1,
+      "timeUnit" : "DAYS"
+    },
+    "uuid" : "9ed54c1d-6c2c-41e0-aae1-fe3a25c5f77c"
+  } ],
+  "query" : "from RULE_VIEW\nwhere ((EventData.CommandLine = '* tunnel *' or EventData.CommandLine = '*cleanup *') and (EventData.CommandLine = '*-config *' or EventData.CommandLine = '*-connector-id *'))\nselect *",
+  "rememberNotifications" : false,
+  "status" : "test",
+  "suppressDuplicateNotifications" : false,
+  "timeRange" : {
+    "name" : "All time",
+    "condition" : "BETWEEN"
+  },
+  "uuid" : "stroomworks_T1572_proc_creation_win_cloudflared_tunnel_cleanup",
+  "version" : "c96e0000-dea0-4c3a-88cc-a107449521e1",
+  "type" : "AnalyticRule"
+}

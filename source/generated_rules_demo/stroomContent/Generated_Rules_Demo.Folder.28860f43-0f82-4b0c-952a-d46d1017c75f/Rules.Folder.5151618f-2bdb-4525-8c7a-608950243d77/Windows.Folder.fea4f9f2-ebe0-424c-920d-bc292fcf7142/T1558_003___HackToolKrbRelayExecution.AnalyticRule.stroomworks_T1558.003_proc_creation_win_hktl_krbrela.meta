@@ -1,0 +1,50 @@
+{
+  "analyticProcessType" : "STREAMING",
+  "description" : "Detects the use of KrbRelay, a Kerberos relaying tool\n\nLevel: high\n\nStatus: test\n\nFalse Positives:\n- Unlikely\n\nReferences:\n- https://github.com/cube0x0/KrbRelay\n\nTags:\n- attack.credential-access\n- attack.t1558.003\n\nSource Sigma rule author(s):\n- Florian Roth (Nextron Systems)\n\nSource Sigma rule: proc\\_creation\\_win\\_hktl\\_krbrelay.yml",
+  "duplicateNotificationConfig" : {
+    "chooseColumns" : false,
+    "columnNames" : [ ],
+    "rememberNotifications" : false,
+    "suppressDuplicateNotifications" : false
+  },
+  "errorFeed" : {
+    "type" : "Feed",
+    "uuid" : "8b95697a-1827-4e67-b982-940f3d47634c",
+    "name" : "RULE_ERRORS_FEED"
+  },
+  "includeRuleDocumentation" : false,
+  "languageVersion" : "STROOM_QL_VERSION_0_1",
+  "level" : "high",
+  "name" : "T1558.003 - HackToolKrbRelayExecution",
+  "notifications" : [ {
+    "destination" : {
+      "type" : "stream",
+      "destinationFeed" : {
+        "type" : "Feed",
+        "uuid" : "f58bb9a9-1359-4077-9451-f977b2b862c3",
+        "name" : "RULE_OUTPUT_FEED"
+      },
+      "useSourceFeedIfPossible" : false
+    },
+    "destinationType" : "STREAM",
+    "enabled" : true,
+    "limitNotifications" : false,
+    "maxNotifications" : 1,
+    "resumeAfter" : {
+      "time" : 1,
+      "timeUnit" : "DAYS"
+    },
+    "uuid" : "9ed54c1d-6c2c-41e0-aae1-fe3a25c5f77c"
+  } ],
+  "query" : "from RULE_VIEW\nwhere ((((EventData.Image = '*\\\\\\\\KrbRelay.exe') or (EventData.OriginalFileName = '*KrbRelay.exe*')) or ((EventData.CommandLine = '* -spn *' or EventData.CommandLine = '* -clsid *' or EventData.CommandLine = '* -rbcd *'))) or ((EventData.CommandLine = '*shadowcred*' or EventData.CommandLine = '*clsid*' or EventData.CommandLine = '*spn*'))) or ((EventData.CommandLine = '*spn *' or EventData.CommandLine = '*session *' or EventData.CommandLine = '*clsid *'))\nselect *",
+  "rememberNotifications" : false,
+  "status" : "test",
+  "suppressDuplicateNotifications" : false,
+  "timeRange" : {
+    "name" : "All time",
+    "condition" : "BETWEEN"
+  },
+  "uuid" : "stroomworks_T1558.003_proc_creation_win_hktl_krbrela",
+  "version" : "c96e0000-dea0-4c3a-88cc-a107449521e1",
+  "type" : "AnalyticRule"
+}

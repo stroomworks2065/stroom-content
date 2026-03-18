@@ -1,0 +1,5 @@
+name=T1574.011 - AbuseOfServicePermissionsToHideServicesViaSetService
+path=/Generated Rules Demo/Data Generators/Windows/T1574.011 - AbuseOfServicePermissionsToHideServicesViaSetService
+type=DataGen
+uuid=stroomworks_datagen_T1574.011 - AbuseOfServicePermissionsToHideServicesViaSetService
+version=V2

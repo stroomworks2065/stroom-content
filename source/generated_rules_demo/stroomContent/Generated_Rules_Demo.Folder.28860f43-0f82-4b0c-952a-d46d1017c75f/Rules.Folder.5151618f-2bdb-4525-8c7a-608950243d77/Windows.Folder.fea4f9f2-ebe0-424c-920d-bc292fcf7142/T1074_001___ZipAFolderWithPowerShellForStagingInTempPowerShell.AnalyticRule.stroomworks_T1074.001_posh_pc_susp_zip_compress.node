@@ -1,0 +1,5 @@
+name=T1074.001 - ZipAFolderWithPowerShellForStagingInTempPowerShell
+path=/Generated Rules Demo/Rules/Windows/T1074.001 - ZipAFolderWithPowerShellForStagingInTempPowerShell
+type=AnalyticRule
+uuid=stroomworks_T1074.001_posh_pc_susp_zip_compress
+version=V2

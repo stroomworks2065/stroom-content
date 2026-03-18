@@ -1,0 +1,5 @@
+name=T1137.003 - PotentialPersistenceViaOutlookForm
+path=/Generated Rules Demo/Data Generators/Windows/T1137.003 - PotentialPersistenceViaOutlookForm
+type=DataGen
+uuid=stroomworks_datagen_T1137.003 - PotentialPersistenceViaOutlookForm
+version=V2

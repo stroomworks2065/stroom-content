@@ -1,0 +1,50 @@
+{
+  "analyticProcessType" : "STREAMING",
+  "description" : "Detects PowerShell scripts that make use of the \"Compress-Archive\" Cmdlet in order to compress folders and files where the output is stored in a potentially suspicious location that is used often by malware for exfiltration.\nAn adversary might compress data (e.g., sensitive documents) that is collected prior to exfiltration in order to make it portable and minimize the amount of data sent over the network.\n\n\nLevel: medium\n\nStatus: test\n\nFalse Positives:\n- Unknown\n\nReferences:\n- https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1074.001/T1074.001.md\n- https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-347a\n\nTags:\n- attack.collection\n- attack.t1074.001\n\nSource Sigma rule author(s):\n- Nasreddine Bencherchali (Nextron Systems)\n- frack113\n\nSource Sigma rule: posh\\_pc\\_susp\\_zip\\_compress.yml",
+  "duplicateNotificationConfig" : {
+    "chooseColumns" : false,
+    "columnNames" : [ ],
+    "rememberNotifications" : false,
+    "suppressDuplicateNotifications" : false
+  },
+  "errorFeed" : {
+    "type" : "Feed",
+    "uuid" : "8b95697a-1827-4e67-b982-940f3d47634c",
+    "name" : "RULE_ERRORS_FEED"
+  },
+  "includeRuleDocumentation" : false,
+  "languageVersion" : "STROOM_QL_VERSION_0_1",
+  "level" : "medium",
+  "name" : "T1074.001 - ZipAFolderWithPowerShellForStagingInTempPowerShell",
+  "notifications" : [ {
+    "destination" : {
+      "type" : "stream",
+      "destinationFeed" : {
+        "type" : "Feed",
+        "uuid" : "f58bb9a9-1359-4077-9451-f977b2b862c3",
+        "name" : "RULE_OUTPUT_FEED"
+      },
+      "useSourceFeedIfPossible" : false
+    },
+    "destinationType" : "STREAM",
+    "enabled" : true,
+    "limitNotifications" : false,
+    "maxNotifications" : 1,
+    "resumeAfter" : {
+      "time" : 1,
+      "timeUnit" : "DAYS"
+    },
+    "uuid" : "9ed54c1d-6c2c-41e0-aae1-fe3a25c5f77c"
+  } ],
+  "query" : "from RULE_VIEW\nwhere ((EventData.Data = '*Compress-Archive -Path*-DestinationPath $env:TEMP*' or EventData.Data = '*Compress-Archive -Path*-DestinationPath*\\\\\\\\AppData\\\\\\\\Local\\\\\\\\Temp\\\\\\\\*' or EventData.Data = '*Compress-Archive -Path*-DestinationPath*:\\\\\\\\Windows\\\\\\\\Temp\\\\\\\\*'))\nselect *",
+  "rememberNotifications" : false,
+  "status" : "test",
+  "suppressDuplicateNotifications" : false,
+  "timeRange" : {
+    "name" : "All time",
+    "condition" : "BETWEEN"
+  },
+  "uuid" : "stroomworks_T1074.001_posh_pc_susp_zip_compress",
+  "version" : "c96e0000-dea0-4c3a-88cc-a107449521e1",
+  "type" : "AnalyticRule"
+}

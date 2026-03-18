@@ -1,0 +1,50 @@
+{
+  "analyticProcessType" : "STREAMING",
+  "description" : "Detects potential malicious and unauthorized usage of bcdedit.exe\n\nLevel: medium\n\nStatus: test\n\nReferences:\n- https://learn.microsoft.com/en-us/windows-hardware/drivers/devtest/bcdedit--set\n- https://twitter.com/malwrhunterteam/status/1372536434125512712/photo/2\n\nTags:\n- attack.defense-evasion\n- attack.t1070\n- attack.persistence\n- attack.t1542.003\n\nSource Sigma rule author(s):\n- @neu5ron\n\nSource Sigma rule: proc\\_creation\\_win\\_bcdedit\\_susp\\_execution.yml",
+  "duplicateNotificationConfig" : {
+    "chooseColumns" : false,
+    "columnNames" : [ ],
+    "rememberNotifications" : false,
+    "suppressDuplicateNotifications" : false
+  },
+  "errorFeed" : {
+    "type" : "Feed",
+    "uuid" : "8b95697a-1827-4e67-b982-940f3d47634c",
+    "name" : "RULE_ERRORS_FEED"
+  },
+  "includeRuleDocumentation" : false,
+  "languageVersion" : "STROOM_QL_VERSION_0_1",
+  "level" : "medium",
+  "name" : "T1542.003 - PotentialRansomwareorUnauthorizedMBRTamperingViaBcdedit.EXE",
+  "notifications" : [ {
+    "destination" : {
+      "type" : "stream",
+      "destinationFeed" : {
+        "type" : "Feed",
+        "uuid" : "f58bb9a9-1359-4077-9451-f977b2b862c3",
+        "name" : "RULE_OUTPUT_FEED"
+      },
+      "useSourceFeedIfPossible" : false
+    },
+    "destinationType" : "STREAM",
+    "enabled" : true,
+    "limitNotifications" : false,
+    "maxNotifications" : 1,
+    "resumeAfter" : {
+      "time" : 1,
+      "timeUnit" : "DAYS"
+    },
+    "uuid" : "9ed54c1d-6c2c-41e0-aae1-fe3a25c5f77c"
+  } ],
+  "query" : "from RULE_VIEW\nwhere ((EventData.Image = '*\\\\\\\\bcdedit.exe') or (EventData.OriginalFileName = '*bcdedit.exe*')) or ((EventData.CommandLine = '*delete*' or EventData.CommandLine = '*deletevalue*' or EventData.CommandLine = '*import*' or EventData.CommandLine = '*safeboot*' or EventData.CommandLine = '*network*'))\nselect *",
+  "rememberNotifications" : false,
+  "status" : "test",
+  "suppressDuplicateNotifications" : false,
+  "timeRange" : {
+    "name" : "All time",
+    "condition" : "BETWEEN"
+  },
+  "uuid" : "stroomworks_T1542.003_proc_creation_win_bcdedit_susp_execution",
+  "version" : "c96e0000-dea0-4c3a-88cc-a107449521e1",
+  "type" : "AnalyticRule"
+}

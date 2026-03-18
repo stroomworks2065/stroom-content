@@ -1,0 +1,5 @@
+name=T1220 - Msxsl.ExeExecution
+path=/Generated Rules Demo/Data Generators/Windows/T1220 - Msxsl.ExeExecution
+type=DataGen
+uuid=stroomworks_datagen_T1220 - Msxsl.ExeExecution
+version=V2

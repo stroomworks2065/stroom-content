@@ -1,0 +1,5 @@
+name=T1555 - DPAPIBackupKeysAndCertificateExportActivityIOC
+path=/Generated Rules Demo/Data Generators/Windows/T1555 - DPAPIBackupKeysAndCertificateExportActivityIOC
+type=DataGen
+uuid=stroomworks_datagen_T1555 - DPAPIBackupKeysAndCertificateExportActivityIOC
+version=V2

@@ -1,0 +1,50 @@
+{
+  "analyticProcessType" : "STREAMING",
+  "description" : "Detection of unusual child processes by different system processes\n\nLevel: high\n\nStatus: test\n\nFalse Positives:\n- Unknown\n\nReferences:\n- https://image.slidesharecdn.com/kheirkhabarovoffzonefinal-181117201458/95/hunting-for-privilege-escalation-in-windows-environment-74-638.jpg\n\nTags:\n- attack.defense-evasion\n- attack.privilege-escalation\n- attack.t1548\n\nSource Sigma rule author(s):\n- Semanur Guneysu @semanurtg\n- oscd.community\n\nSource Sigma rule: proc\\_creation\\_win\\_susp\\_abusing\\_debug\\_privilege.yml",
+  "duplicateNotificationConfig" : {
+    "chooseColumns" : false,
+    "columnNames" : [ ],
+    "rememberNotifications" : false,
+    "suppressDuplicateNotifications" : false
+  },
+  "errorFeed" : {
+    "type" : "Feed",
+    "uuid" : "8b95697a-1827-4e67-b982-940f3d47634c",
+    "name" : "RULE_ERRORS_FEED"
+  },
+  "includeRuleDocumentation" : false,
+  "languageVersion" : "STROOM_QL_VERSION_0_1",
+  "level" : "high",
+  "name" : "T1548 - AbusedDebugPrivilegebyArbitraryParentProcesses",
+  "notifications" : [ {
+    "destination" : {
+      "type" : "stream",
+      "destinationFeed" : {
+        "type" : "Feed",
+        "uuid" : "f58bb9a9-1359-4077-9451-f977b2b862c3",
+        "name" : "RULE_OUTPUT_FEED"
+      },
+      "useSourceFeedIfPossible" : false
+    },
+    "destinationType" : "STREAM",
+    "enabled" : true,
+    "limitNotifications" : false,
+    "maxNotifications" : 1,
+    "resumeAfter" : {
+      "time" : 1,
+      "timeUnit" : "DAYS"
+    },
+    "uuid" : "9ed54c1d-6c2c-41e0-aae1-fe3a25c5f77c"
+  } ],
+  "query" : "from RULE_VIEW\nwhere (((EventData.ParentImage = '*\\\\\\\\winlogon.exe' or EventData.ParentImage = '*\\\\\\\\services.exe' or EventData.ParentImage = '*\\\\\\\\lsass.exe' or EventData.ParentImage = '*\\\\\\\\csrss.exe' or EventData.ParentImage = '*\\\\\\\\smss.exe' or EventData.ParentImage = '*\\\\\\\\wininit.exe' or EventData.ParentImage = '*\\\\\\\\spoolsv.exe' or EventData.ParentImage = '*\\\\\\\\searchindexer.exe') and (EventData.User = '*AUTHORI*' or EventData.User = '*AUTORI*')) or (((EventData.Image = '*\\\\\\\\powershell.exe' or EventData.Image = '*\\\\\\\\pwsh.exe' or EventData.Image = '*\\\\\\\\cmd.exe')) or ((EventData.OriginalFileName = '*PowerShell.EXE*' or EventData.OriginalFileName = '*pwsh.dll*' or EventData.OriginalFileName = '*Cmd.Exe*')))) and not ((EventData.CommandLine = '* route *' or EventData.CommandLine = '* ADD *'))\nselect *",
+  "rememberNotifications" : false,
+  "status" : "test",
+  "suppressDuplicateNotifications" : false,
+  "timeRange" : {
+    "name" : "All time",
+    "condition" : "BETWEEN"
+  },
+  "uuid" : "stroomworks_T1548_proc_creation_win_susp_abusing_debug_privilege",
+  "version" : "c96e0000-dea0-4c3a-88cc-a107449521e1",
+  "type" : "AnalyticRule"
+}

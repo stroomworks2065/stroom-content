@@ -1,0 +1,50 @@
+{
+  "analyticProcessType" : "STREAMING",
+  "description" : "Detects powershell scripts that adds a Name Resolution Policy Table (NRPT) rule for the specified namespace.\nThis will bypass the default DNS server and uses a specified server for answering the query.\n\n\nLevel: high\n\nStatus: test\n\nFalse Positives:\n- Unknown\n\nReferences:\n- https://twitter.com/NathanMcNulty/status/1569497348841287681\n- https://learn.microsoft.com/en-us/powershell/module/dnsclient/add-dnsclientnrptrule?view=windowsserver2022-ps\n\nTags:\n- attack.impact\n- attack.t1565\n\nSource Sigma rule author(s):\n- Borna Talebi\n\nSource Sigma rule: posh\\_ps\\_add\\_dnsclient\\_rule.yml",
+  "duplicateNotificationConfig" : {
+    "chooseColumns" : false,
+    "columnNames" : [ ],
+    "rememberNotifications" : false,
+    "suppressDuplicateNotifications" : false
+  },
+  "errorFeed" : {
+    "type" : "Feed",
+    "uuid" : "8b95697a-1827-4e67-b982-940f3d47634c",
+    "name" : "RULE_ERRORS_FEED"
+  },
+  "includeRuleDocumentation" : false,
+  "languageVersion" : "STROOM_QL_VERSION_0_1",
+  "level" : "high",
+  "name" : "T1565 - PowershellAddNameResolutionPolicyTableRule",
+  "notifications" : [ {
+    "destination" : {
+      "type" : "stream",
+      "destinationFeed" : {
+        "type" : "Feed",
+        "uuid" : "f58bb9a9-1359-4077-9451-f977b2b862c3",
+        "name" : "RULE_OUTPUT_FEED"
+      },
+      "useSourceFeedIfPossible" : false
+    },
+    "destinationType" : "STREAM",
+    "enabled" : true,
+    "limitNotifications" : false,
+    "maxNotifications" : 1,
+    "resumeAfter" : {
+      "time" : 1,
+      "timeUnit" : "DAYS"
+    },
+    "uuid" : "9ed54c1d-6c2c-41e0-aae1-fe3a25c5f77c"
+  } ],
+  "query" : "from RULE_VIEW\nwhere ((EventData.ScriptBlockText = '*Add-DnsClientNrptRule*' or EventData.ScriptBlockText = '*-Namesp*' or EventData.ScriptBlockText = '*-NameSe*'))\nselect *",
+  "rememberNotifications" : false,
+  "status" : "test",
+  "suppressDuplicateNotifications" : false,
+  "timeRange" : {
+    "name" : "All time",
+    "condition" : "BETWEEN"
+  },
+  "uuid" : "stroomworks_T1565_posh_ps_add_dnsclient_rule",
+  "version" : "c96e0000-dea0-4c3a-88cc-a107449521e1",
+  "type" : "AnalyticRule"
+}

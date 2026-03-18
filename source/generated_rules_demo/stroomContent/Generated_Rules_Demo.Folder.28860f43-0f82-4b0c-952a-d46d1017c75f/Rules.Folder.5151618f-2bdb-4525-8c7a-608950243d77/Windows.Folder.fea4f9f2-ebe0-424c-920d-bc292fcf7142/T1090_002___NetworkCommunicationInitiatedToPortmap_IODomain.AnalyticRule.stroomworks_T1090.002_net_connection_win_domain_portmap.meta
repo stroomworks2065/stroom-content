@@ -1,0 +1,50 @@
+{
+  "analyticProcessType" : "STREAMING",
+  "description" : "Detects an executable accessing the portmap.io domain, which could be a sign of forbidden C2 traffic or data exfiltration by malicious actors\n\nLevel: medium\n\nStatus: test\n\nFalse Positives:\n- Legitimate use of portmap.io domains\n\nReferences:\n- https://portmap.io/\n- https://github.com/rapid7/metasploit-framework/issues/11337\n- https://pro.twitter.com/JaromirHorejsi/status/1795001037746761892/photo/2\n\nTags:\n- attack.t1041\n- attack.command-and-control\n- attack.t1090.002\n- attack.exfiltration\n\nSource Sigma rule author(s):\n- Florian Roth (Nextron Systems)\n\nSource Sigma rule: net\\_connection\\_win\\_domain\\_portmap.yml",
+  "duplicateNotificationConfig" : {
+    "chooseColumns" : false,
+    "columnNames" : [ ],
+    "rememberNotifications" : false,
+    "suppressDuplicateNotifications" : false
+  },
+  "errorFeed" : {
+    "type" : "Feed",
+    "uuid" : "8b95697a-1827-4e67-b982-940f3d47634c",
+    "name" : "RULE_ERRORS_FEED"
+  },
+  "includeRuleDocumentation" : false,
+  "languageVersion" : "STROOM_QL_VERSION_0_1",
+  "level" : "medium",
+  "name" : "T1090.002 - NetworkCommunicationInitiatedToPortmap.IODomain",
+  "notifications" : [ {
+    "destination" : {
+      "type" : "stream",
+      "destinationFeed" : {
+        "type" : "Feed",
+        "uuid" : "f58bb9a9-1359-4077-9451-f977b2b862c3",
+        "name" : "RULE_OUTPUT_FEED"
+      },
+      "useSourceFeedIfPossible" : false
+    },
+    "destinationType" : "STREAM",
+    "enabled" : true,
+    "limitNotifications" : false,
+    "maxNotifications" : 1,
+    "resumeAfter" : {
+      "time" : 1,
+      "timeUnit" : "DAYS"
+    },
+    "uuid" : "9ed54c1d-6c2c-41e0-aae1-fe3a25c5f77c"
+  } ],
+  "query" : "from RULE_VIEW\nwhere (EventData.Initiated = 'true' and EventData.DestinationHostname = '*.portmap.io*')\nselect *",
+  "rememberNotifications" : false,
+  "status" : "test",
+  "suppressDuplicateNotifications" : false,
+  "timeRange" : {
+    "name" : "All time",
+    "condition" : "BETWEEN"
+  },
+  "uuid" : "stroomworks_T1090.002_net_connection_win_domain_portmap",
+  "version" : "c96e0000-dea0-4c3a-88cc-a107449521e1",
+  "type" : "AnalyticRule"
+}

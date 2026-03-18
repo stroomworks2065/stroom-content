@@ -1,0 +1,50 @@
+{
+  "analyticProcessType" : "STREAMING",
+  "description" : "Detects network connections via finger.exe, which can be abused by threat actors to retrieve remote commands for execution on Windows devices.\nIn one ClickFix malware campaign, adversaries leveraged the finger protocol to fetch commands from a remote server.\nSince the finger utility is not commonly used in modern Windows environments, its presence already raises suspicion.\nInvestigating such network connections can also help identify potential malicious infrastructure used by threat actors\n\n\nLevel: high\n\nStatus: experimental\n\nFalse Positives:\n- Unlikely\n\nReferences:\n- https://www.bleepingcomputer.com/news/security/decades-old-finger-protocol-abused-in-clickfix-malware-attacks/\n\nTags:\n- attack.command-and-control\n- attack.t1071.004\n- attack.execution\n- attack.t1059.003\n\nSource Sigma rule author(s):\n- Swachchhanda Shrawan Poudel (Nextron Systems)\n\nSource Sigma rule: net\\_connection\\_win\\_finger.yml",
+  "duplicateNotificationConfig" : {
+    "chooseColumns" : false,
+    "columnNames" : [ ],
+    "rememberNotifications" : false,
+    "suppressDuplicateNotifications" : false
+  },
+  "errorFeed" : {
+    "type" : "Feed",
+    "uuid" : "8b95697a-1827-4e67-b982-940f3d47634c",
+    "name" : "RULE_ERRORS_FEED"
+  },
+  "includeRuleDocumentation" : false,
+  "languageVersion" : "STROOM_QL_VERSION_0_1",
+  "level" : "high",
+  "name" : "T1071.004 - NetworkConnectionInitiatedviaFinger.EXE",
+  "notifications" : [ {
+    "destination" : {
+      "type" : "stream",
+      "destinationFeed" : {
+        "type" : "Feed",
+        "uuid" : "f58bb9a9-1359-4077-9451-f977b2b862c3",
+        "name" : "RULE_OUTPUT_FEED"
+      },
+      "useSourceFeedIfPossible" : false
+    },
+    "destinationType" : "STREAM",
+    "enabled" : true,
+    "limitNotifications" : false,
+    "maxNotifications" : 1,
+    "resumeAfter" : {
+      "time" : 1,
+      "timeUnit" : "DAYS"
+    },
+    "uuid" : "9ed54c1d-6c2c-41e0-aae1-fe3a25c5f77c"
+  } ],
+  "query" : "from RULE_VIEW\nwhere (EventData.Initiated = 'true' and EventData.Image = '*\\\\\\\\finger.exe')\nselect *",
+  "rememberNotifications" : false,
+  "status" : "experimental",
+  "suppressDuplicateNotifications" : false,
+  "timeRange" : {
+    "name" : "All time",
+    "condition" : "BETWEEN"
+  },
+  "uuid" : "stroomworks_T1071.004_net_connection_win_finger",
+  "version" : "c96e0000-dea0-4c3a-88cc-a107449521e1",
+  "type" : "AnalyticRule"
+}

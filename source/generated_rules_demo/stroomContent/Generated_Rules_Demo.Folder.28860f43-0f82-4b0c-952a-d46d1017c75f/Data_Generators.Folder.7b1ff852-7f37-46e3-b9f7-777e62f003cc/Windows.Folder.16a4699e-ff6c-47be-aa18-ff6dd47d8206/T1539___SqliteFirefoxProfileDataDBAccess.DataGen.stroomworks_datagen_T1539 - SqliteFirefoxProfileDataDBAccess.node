@@ -1,0 +1,5 @@
+name=T1539 - SqliteFirefoxProfileDataDBAccess
+path=/Generated Rules Demo/Data Generators/Windows/T1539 - SqliteFirefoxProfileDataDBAccess
+type=DataGen
+uuid=stroomworks_datagen_T1539 - SqliteFirefoxProfileDataDBAccess
+version=V2

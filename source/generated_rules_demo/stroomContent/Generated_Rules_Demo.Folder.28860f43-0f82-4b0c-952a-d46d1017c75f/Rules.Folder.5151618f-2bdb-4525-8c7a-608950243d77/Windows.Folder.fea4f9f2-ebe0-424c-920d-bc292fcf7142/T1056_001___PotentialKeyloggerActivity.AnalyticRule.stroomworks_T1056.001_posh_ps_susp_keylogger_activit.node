@@ -1,0 +1,5 @@
+name=T1056.001 - PotentialKeyloggerActivity
+path=/Generated Rules Demo/Rules/Windows/T1056.001 - PotentialKeyloggerActivity
+type=AnalyticRule
+uuid=stroomworks_T1056.001_posh_ps_susp_keylogger_activit
+version=V2

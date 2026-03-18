@@ -1,0 +1,5 @@
+name=T1548 - AbusedDebugPrivilegeByArbitraryParentProcesses
+path=/Generated Rules Demo/Data Generators/Windows/T1548 - AbusedDebugPrivilegeByArbitraryParentProcesses
+type=DataGen
+uuid=stroomworks_datagen_T1548 - AbusedDebugPrivilegeByArbitraryParentProcesses
+version=V2

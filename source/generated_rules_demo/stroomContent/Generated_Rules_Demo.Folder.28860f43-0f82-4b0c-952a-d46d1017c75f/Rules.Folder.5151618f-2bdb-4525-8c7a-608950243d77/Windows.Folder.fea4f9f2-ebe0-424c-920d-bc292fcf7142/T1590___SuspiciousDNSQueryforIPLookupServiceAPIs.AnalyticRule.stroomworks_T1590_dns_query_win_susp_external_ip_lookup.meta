@@ -1,0 +1,50 @@
+{
+  "analyticProcessType" : "STREAMING",
+  "description" : "Detects DNS queries for IP lookup services such as \"api.ipify.org\" originating from a non browser process.\n\nLevel: medium\n\nStatus: test\n\nFalse Positives:\n- Legitimate usage of IP lookup services such as ipify API\n\nReferences:\n- https://www.binarydefense.com/analysis-of-hancitor-when-boring-begets-beacon\n- https://twitter.com/neonprimetime/status/1436376497980428318\n- https://www.trendmicro.com/en\\_us/research/23/e/managed-xdr-investigation-of-ducktail-in-trend-micro-vision-one.html\n\nTags:\n- attack.reconnaissance\n- attack.t1590\n\nSource Sigma rule author(s):\n- Brandon George (blog post)\n- Thomas Patzke\n\nSource Sigma rule: dns\\_query\\_win\\_susp\\_external\\_ip\\_lookup.yml",
+  "duplicateNotificationConfig" : {
+    "chooseColumns" : false,
+    "columnNames" : [ ],
+    "rememberNotifications" : false,
+    "suppressDuplicateNotifications" : false
+  },
+  "errorFeed" : {
+    "type" : "Feed",
+    "uuid" : "8b95697a-1827-4e67-b982-940f3d47634c",
+    "name" : "RULE_ERRORS_FEED"
+  },
+  "includeRuleDocumentation" : false,
+  "languageVersion" : "STROOM_QL_VERSION_0_1",
+  "level" : "medium",
+  "name" : "T1590 - SuspiciousDNSQueryforIPLookupServiceAPIs",
+  "notifications" : [ {
+    "destination" : {
+      "type" : "stream",
+      "destinationFeed" : {
+        "type" : "Feed",
+        "uuid" : "f58bb9a9-1359-4077-9451-f977b2b862c3",
+        "name" : "RULE_OUTPUT_FEED"
+      },
+      "useSourceFeedIfPossible" : false
+    },
+    "destinationType" : "STREAM",
+    "enabled" : true,
+    "limitNotifications" : false,
+    "maxNotifications" : 1,
+    "resumeAfter" : {
+      "time" : 1,
+      "timeUnit" : "DAYS"
+    },
+    "uuid" : "9ed54c1d-6c2c-41e0-aae1-fe3a25c5f77c"
+  } ],
+  "query" : "from RULE_VIEW\nwhere (((EventData.QueryName = '*www.ip.cn*' or EventData.QueryName = '*l2.io*')) or ((EventData.QueryName = '*api.2ip.ua*' or EventData.QueryName = '*api.bigdatacloud.net*' or EventData.QueryName = '*api.ipify.org*' or EventData.QueryName = '*bot.whatismyipaddress.com*' or EventData.QueryName = '*canireachthe.net*' or EventData.QueryName = '*checkip.amazonaws.com*' or EventData.QueryName = '*checkip.dyndns.org*' or EventData.QueryName = '*curlmyip.com*' or EventData.QueryName = '*db-ip.com*' or EventData.QueryName = '*edns.ip-api.com*' or EventData.QueryName = '*eth0.me*' or EventData.QueryName = '*freegeoip.app*' or EventData.QueryName = '*geoipy.com*' or EventData.QueryName = '*getip.pro*' or EventData.QueryName = '*icanhazip.com*' or EventData.QueryName = '*ident.me*' or EventData.QueryName = '*ifconfig.io*' or EventData.QueryName = '*ifconfig.me*' or EventData.QueryName = '*ip-api.com*' or EventData.QueryName = '*ip.360.cn*' or EventData.QueryName = '*ip.anysrc.net*' or EventData.QueryName = '*ip.taobao.com*' or EventData.QueryName = '*ip.tyk.nu*' or EventData.QueryName = '*ipaddressworld.com*' or EventData.QueryName = '*ipapi.co*' or EventData.QueryName = '*ipconfig.io*' or EventData.QueryName = '*ipecho.net*' or EventData.QueryName = '*ipinfo.io*' or EventData.QueryName = '*ipip.net*' or EventData.QueryName = '*ipof.in*' or EventData.QueryName = '*ipv4.icanhazip.com*' or EventData.QueryName = '*ipv4bot.whatismyipaddress.com*' or EventData.QueryName = '*ipv6-test.com*' or EventData.QueryName = '*ipwho.is*' or EventData.QueryName = '*jsonip.com*' or EventData.QueryName = '*myexternalip.com*' or EventData.QueryName = '*seeip.org*' or EventData.QueryName = '*wgetip.com*' or EventData.QueryName = '*whatismyip.akamai.com*' or EventData.QueryName = '*whois.pconline.com.cn*' or EventData.QueryName = '*wtfismyip.com*'))) and not ((((((((((((EventData.Image = '*\\\\\\\\brave.exe') or ((EventData.Image = 'C:\\\\\\\\Program Files\\\\\\\\Google\\\\\\\\Chrome\\\\\\\\Application\\\\\\\\chrome.exe' or EventData.Image = 'C:\\\\\\\\Program Files (x86)\\\\\\\\Google\\\\\\\\Chrome\\\\\\\\Application\\\\\\\\chrome.exe'))) or ((EventData.Image = 'C:\\\\\\\\Program Files\\\\\\\\Mozilla Firefox\\\\\\\\firefox.exe' or EventData.Image = 'C:\\\\\\\\Program Files (x86)\\\\\\\\Mozilla Firefox\\\\\\\\firefox.exe'))) or ((EventData.Image = 'C:\\\\\\\\Program Files (x86)\\\\\\\\Internet Explorer\\\\\\\\iexplore.exe' or EventData.Image = 'C:\\\\\\\\Program Files\\\\\\\\Internet Explorer\\\\\\\\iexplore.exe'))) or (EventData.Image = '*\\\\\\\\maxthon.exe')) or ((EventData.Image = 'C:\\\\\\\\Program Files (x86)\\\\\\\\Microsoft\\\\\\\\EdgeWebView\\\\\\\\Application\\\\\\\\') or (EventData.Image = '\\\\\\\\WindowsApps\\\\\\\\MicrosoftEdge.exe') or ((EventData.Image = 'C:\\\\\\\\Program Files (x86)\\\\\\\\Microsoft\\\\\\\\Edge\\\\\\\\Application\\\\\\\\msedge.exe' or EventData.Image = 'C:\\\\\\\\Program Files\\\\\\\\Microsoft\\\\\\\\Edge\\\\\\\\Application\\\\\\\\msedge.exe')))) or ((EventData.Image = 'C:\\\\\\\\Program Files (x86)\\\\\\\\Microsoft\\\\\\\\EdgeCore\\\\\\\\' or EventData.Image = 'C:\\\\\\\\Program Files\\\\\\\\Microsoft\\\\\\\\EdgeCore\\\\\\\\') and (EventData.Image = '*\\\\\\\\msedge.exe' or EventData.Image = '*\\\\\\\\msedgewebview2.exe'))) or (EventData.Image = '*\\\\\\\\opera.exe')) or (EventData.Image = '*\\\\\\\\safari.exe')) or (EventData.Image = '*\\\\\\\\seamonkey.exe')) or (EventData.Image = '*\\\\\\\\vivaldi.exe')) or (EventData.Image = '*\\\\\\\\whale.exe'))\nselect *",
+  "rememberNotifications" : false,
+  "status" : "test",
+  "suppressDuplicateNotifications" : false,
+  "timeRange" : {
+    "name" : "All time",
+    "condition" : "BETWEEN"
+  },
+  "uuid" : "stroomworks_T1590_dns_query_win_susp_external_ip_lookup",
+  "version" : "c96e0000-dea0-4c3a-88cc-a107449521e1",
+  "type" : "AnalyticRule"
+}

@@ -1,0 +1,36 @@
+{
+  "type" : "View",
+  "uuid" : "01bff9b5-ebbd-40de-8dd1-a015bd04a410",
+  "name" : "RULE_VIEW",
+  "version" : "8a25919a-d3bc-49c5-90d2-bd05ee80bbc4",
+  "description" : "",
+  "dataSource" : {
+    "type" : "Index",
+    "uuid" : "1d2dad12-2d8f-4e2a-b9b9-050e2b8c24ed",
+    "name" : "XML_INDEX"
+  },
+  "filter" : {
+    "type" : "operator",
+    "children" : [ {
+      "type" : "term",
+      "field" : "Feed",
+      "condition" : "IS_DOC_REF",
+      "value" : "RULE_FEED",
+      "docRef" : {
+        "type" : "Feed",
+        "uuid" : "61f60ac1-b92b-4bb8-ac45-33bcf9f4ce61",
+        "name" : "RULE_FEED"
+      }
+    }, {
+      "type" : "term",
+      "field" : "Type",
+      "condition" : "EQUALS",
+      "value" : "Events"
+    } ]
+  },
+  "pipeline" : {
+    "type" : "Pipeline",
+    "uuid" : "978d5d04-1928-446c-8ef3-ac53dc4bc33a",
+    "name" : "XML_INDEX_EXTRACTION_PIPELINE"
+  }
+}

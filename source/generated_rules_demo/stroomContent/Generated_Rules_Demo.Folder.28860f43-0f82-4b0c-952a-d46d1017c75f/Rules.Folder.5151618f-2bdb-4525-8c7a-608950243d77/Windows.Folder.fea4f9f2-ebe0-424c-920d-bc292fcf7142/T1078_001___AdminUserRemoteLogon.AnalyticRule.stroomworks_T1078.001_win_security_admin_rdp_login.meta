@@ -1,0 +1,50 @@
+{
+  "analyticProcessType" : "STREAMING",
+  "description" : "Detect remote login by Administrator user (depending on internal pattern).\n\nLevel: low\n\nStatus: test\n\nFalse Positives:\n- Legitimate administrative activity.\n\nReferences:\n- https://car.mitre.org/wiki/CAR-2016-04-005\n\nTags:\n- attack.privilege-escalation\n- attack.persistence\n- attack.defense-evasion\n- attack.lateral-movement\n- attack.initial-access\n- attack.t1078.001\n- attack.t1078.002\n- attack.t1078.003\n- car.2016-04-005\n\nSource Sigma rule author(s):\n- juju4\n\nSource Sigma rule: win\\_security\\_admin\\_rdp\\_login.yml",
+  "duplicateNotificationConfig" : {
+    "chooseColumns" : false,
+    "columnNames" : [ ],
+    "rememberNotifications" : false,
+    "suppressDuplicateNotifications" : false
+  },
+  "errorFeed" : {
+    "type" : "Feed",
+    "uuid" : "8b95697a-1827-4e67-b982-940f3d47634c",
+    "name" : "RULE_ERRORS_FEED"
+  },
+  "includeRuleDocumentation" : false,
+  "languageVersion" : "STROOM_QL_VERSION_0_1",
+  "level" : "low",
+  "name" : "T1078.001 - AdminUserRemoteLogon",
+  "notifications" : [ {
+    "destination" : {
+      "type" : "stream",
+      "destinationFeed" : {
+        "type" : "Feed",
+        "uuid" : "f58bb9a9-1359-4077-9451-f977b2b862c3",
+        "name" : "RULE_OUTPUT_FEED"
+      },
+      "useSourceFeedIfPossible" : false
+    },
+    "destinationType" : "STREAM",
+    "enabled" : true,
+    "limitNotifications" : false,
+    "maxNotifications" : 1,
+    "resumeAfter" : {
+      "time" : 1,
+      "timeUnit" : "DAYS"
+    },
+    "uuid" : "9ed54c1d-6c2c-41e0-aae1-fe3a25c5f77c"
+  } ],
+  "query" : "from RULE_VIEW\nwhere (System.EventID in (\"4624\")) and (System.EventID = 4624 and EventData.LogonType = 10 and EventData.AuthenticationPackageName = 'Negotiate' and EventData.TargetUserName = '*Admin*')\nselect *",
+  "rememberNotifications" : false,
+  "status" : "test",
+  "suppressDuplicateNotifications" : false,
+  "timeRange" : {
+    "name" : "All time",
+    "condition" : "BETWEEN"
+  },
+  "uuid" : "stroomworks_T1078.001_win_security_admin_rdp_login",
+  "version" : "c96e0000-dea0-4c3a-88cc-a107449521e1",
+  "type" : "AnalyticRule"
+}

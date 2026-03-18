@@ -1,0 +1,5 @@
+name=T1587.001 - ContiVolumeShadowListing
+path=/Generated Rules Demo/Data Generators/Windows/T1587.001 - ContiVolumeShadowListing
+type=DataGen
+uuid=stroomworks_datagen_T1587.001 - ContiVolumeShadowListing
+version=V2

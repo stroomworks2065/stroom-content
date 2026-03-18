@@ -1,0 +1,5 @@
+name=T1590 - SuspiciousDNSQueryForIPLookupServiceApis
+path=/Generated Rules Demo/Data Generators/Windows/T1590 - SuspiciousDNSQueryForIPLookupServiceApis
+type=DataGen
+uuid=stroomworks_datagen_T1590 - SuspiciousDNSQueryForIPLookupServiceApis
+version=V2

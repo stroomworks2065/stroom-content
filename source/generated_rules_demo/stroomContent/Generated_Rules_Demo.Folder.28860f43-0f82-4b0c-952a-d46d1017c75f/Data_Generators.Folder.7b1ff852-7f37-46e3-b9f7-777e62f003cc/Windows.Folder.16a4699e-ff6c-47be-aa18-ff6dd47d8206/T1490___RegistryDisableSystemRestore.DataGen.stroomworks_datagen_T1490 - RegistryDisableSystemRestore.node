@@ -1,0 +1,5 @@
+name=T1490 - RegistryDisableSystemRestore
+path=/Generated Rules Demo/Data Generators/Windows/T1490 - RegistryDisableSystemRestore
+type=DataGen
+uuid=stroomworks_datagen_T1490 - RegistryDisableSystemRestore
+version=V2

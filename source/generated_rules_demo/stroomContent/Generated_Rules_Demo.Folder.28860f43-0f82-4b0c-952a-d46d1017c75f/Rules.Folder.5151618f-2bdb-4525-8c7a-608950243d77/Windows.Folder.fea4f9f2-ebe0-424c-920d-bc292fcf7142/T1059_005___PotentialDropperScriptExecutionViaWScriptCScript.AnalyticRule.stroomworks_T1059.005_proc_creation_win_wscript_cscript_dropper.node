@@ -1,0 +1,5 @@
+name=T1059.005 - PotentialDropperScriptExecutionViaWScriptCScript
+path=/Generated Rules Demo/Rules/Windows/T1059.005 - PotentialDropperScriptExecutionViaWScriptCScript
+type=AnalyticRule
+uuid=stroomworks_T1059.005_proc_creation_win_wscript_cscript_dropper
+version=V2

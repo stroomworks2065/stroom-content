@@ -1,0 +1,5 @@
+name=T1070 - ClearingWindowsConsoleHistory
+path=/Generated Rules Demo/Rules/Windows/T1070 - ClearingWindowsConsoleHistory
+type=AnalyticRule
+uuid=stroomworks_T1070_posh_ps_clearing_windows_console_histor
+version=V2

@@ -1,0 +1,69 @@
+{
+  "elements" : {
+    "add" : [ {
+      "id" : "Source",
+      "type" : "Source"
+    }, {
+      "id" : "7C15D798-D42C-481F-89A4-F70E8BB59916",
+      "type" : "XMLParser",
+      "name" : "XML Parser"
+    }, {
+      "id" : "A2B5581D-61CE-4EAD-A8D6-B858C94EECCD",
+      "type" : "SplitFilter",
+      "name" : "Split Filter"
+    }, {
+      "id" : "87C18D66-8E81-47BE-8A89-7BB250FDEFC2",
+      "type" : "IdEnrichmentFilter",
+      "name" : "ID Enrichment Filter"
+    }, {
+      "id" : "28685F11-1958-4243-82AB-32FB68BD5E32",
+      "type" : "XSLTFilter",
+      "name" : "XSLT Filter"
+    }, {
+      "id" : "70C9D91C-7363-40BA-804F-F993045DE146",
+      "type" : "DynamicIndexingFilter",
+      "name" : "Dynamic Indexing Filter"
+    } ]
+  },
+  "properties" : {
+    "add" : [ {
+      "element" : "28685F11-1958-4243-82AB-32FB68BD5E32",
+      "name" : "xslt",
+      "value" : {
+        "entity" : {
+          "type" : "XSLT",
+          "uuid" : "a184711f-4d2a-495f-8763-e184e51d081c",
+          "name" : "ID_ENRICHMENT"
+        }
+      }
+    }, {
+      "element" : "70C9D91C-7363-40BA-804F-F993045DE146",
+      "name" : "index",
+      "value" : {
+        "entity" : {
+          "type" : "Index",
+          "uuid" : "759afbac-297c-43f7-ac90-9303fb995f50",
+          "name" : "INDEX"
+        }
+      }
+    } ]
+  },
+  "links" : {
+    "add" : [ {
+      "from" : "Source",
+      "to" : "7C15D798-D42C-481F-89A4-F70E8BB59916"
+    }, {
+      "from" : "7C15D798-D42C-481F-89A4-F70E8BB59916",
+      "to" : "A2B5581D-61CE-4EAD-A8D6-B858C94EECCD"
+    }, {
+      "from" : "A2B5581D-61CE-4EAD-A8D6-B858C94EECCD",
+      "to" : "87C18D66-8E81-47BE-8A89-7BB250FDEFC2"
+    }, {
+      "from" : "87C18D66-8E81-47BE-8A89-7BB250FDEFC2",
+      "to" : "28685F11-1958-4243-82AB-32FB68BD5E32"
+    }, {
+      "from" : "28685F11-1958-4243-82AB-32FB68BD5E32",
+      "to" : "70C9D91C-7363-40BA-804F-F993045DE146"
+    } ]
+  }
+}

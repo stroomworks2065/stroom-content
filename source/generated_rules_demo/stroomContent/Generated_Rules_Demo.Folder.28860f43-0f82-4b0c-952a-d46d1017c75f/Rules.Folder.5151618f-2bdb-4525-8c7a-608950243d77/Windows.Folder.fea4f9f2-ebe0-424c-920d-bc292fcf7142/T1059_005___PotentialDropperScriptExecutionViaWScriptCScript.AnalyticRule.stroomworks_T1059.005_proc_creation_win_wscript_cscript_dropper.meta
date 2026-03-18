@@ -1,0 +1,50 @@
+{
+  "analyticProcessType" : "STREAMING",
+  "description" : "Detects wscript/cscript executions of scripts located in user directories\n\nLevel: medium\n\nStatus: test\n\nFalse Positives:\n- Some installers might generate a similar behavior. An initial baseline is required\n\nReferences:\n- https://thedfirreport.com/2023/10/30/netsupport-intrusion-results-in-domain-compromise/\n- https://redcanary.com/blog/gootloader/\n\nTags:\n- attack.execution\n- attack.t1059.005\n- attack.t1059.007\n\nSource Sigma rule author(s):\n- Margaritis Dimitrios (idea)\n- Florian Roth (Nextron Systems)\n- oscd.community\n- Nasreddine Bencherchali (Nextron Systems)\n\nSource Sigma rule: proc\\_creation\\_win\\_wscript\\_cscript\\_dropper.yml",
+  "duplicateNotificationConfig" : {
+    "chooseColumns" : false,
+    "columnNames" : [ ],
+    "rememberNotifications" : false,
+    "suppressDuplicateNotifications" : false
+  },
+  "errorFeed" : {
+    "type" : "Feed",
+    "uuid" : "8b95697a-1827-4e67-b982-940f3d47634c",
+    "name" : "RULE_ERRORS_FEED"
+  },
+  "includeRuleDocumentation" : false,
+  "languageVersion" : "STROOM_QL_VERSION_0_1",
+  "level" : "medium",
+  "name" : "T1059.005 - PotentialDropperScriptExecutionViaWScriptCScript",
+  "notifications" : [ {
+    "destination" : {
+      "type" : "stream",
+      "destinationFeed" : {
+        "type" : "Feed",
+        "uuid" : "f58bb9a9-1359-4077-9451-f977b2b862c3",
+        "name" : "RULE_OUTPUT_FEED"
+      },
+      "useSourceFeedIfPossible" : false
+    },
+    "destinationType" : "STREAM",
+    "enabled" : true,
+    "limitNotifications" : false,
+    "maxNotifications" : 1,
+    "resumeAfter" : {
+      "time" : 1,
+      "timeUnit" : "DAYS"
+    },
+    "uuid" : "9ed54c1d-6c2c-41e0-aae1-fe3a25c5f77c"
+  } ],
+  "query" : "from RULE_VIEW\nwhere (((EventData.Image = '*\\\\\\\\wscript.exe' or EventData.Image = '*\\\\\\\\cscript.exe')) or ((EventData.CommandLine = '*:\\\\\\\\Temp\\\\\\\\*' or EventData.CommandLine = '*:\\\\\\\\Tmp\\\\\\\\*' or EventData.CommandLine = '*:\\\\\\\\Users\\\\\\\\Public\\\\\\\\*' or EventData.CommandLine = '*:\\\\\\\\Windows\\\\\\\\Temp\\\\\\\\*' or EventData.CommandLine = '*\\\\\\\\AppData\\\\\\\\Local\\\\\\\\Temp\\\\\\\\*'))) or ((EventData.CommandLine = '*.js*' or EventData.CommandLine = '*.jse*' or EventData.CommandLine = '*.vba*' or EventData.CommandLine = '*.vbe*' or EventData.CommandLine = '*.vbs*' or EventData.CommandLine = '*.wsf*'))\nselect *",
+  "rememberNotifications" : false,
+  "status" : "test",
+  "suppressDuplicateNotifications" : false,
+  "timeRange" : {
+    "name" : "All time",
+    "condition" : "BETWEEN"
+  },
+  "uuid" : "stroomworks_T1059.005_proc_creation_win_wscript_cscript_dropper",
+  "version" : "c96e0000-dea0-4c3a-88cc-a107449521e1",
+  "type" : "AnalyticRule"
+}

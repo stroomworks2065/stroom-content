@@ -1,0 +1,5 @@
+name=T1074.001 - ZipAFolderWithPowershellForStagingInTempPowershell
+path=/Generated Rules Demo/Data Generators/Windows/T1074.001 - ZipAFolderWithPowershellForStagingInTempPowershell
+type=DataGen
+uuid=stroomworks_datagen_T1074.001 - ZipAFolderWithPowershellForStagingInTempPowershell
+version=V2
