@@ -287,16 +287,26 @@ contentPacks:
     # gitCommit: 5d650d01bd2839e5f89e9f897d2f0e7a733690f2
     gitNeedsAuth: false
 
-  - id: stroom-generated-rules
+  - id: stroom-generated-rules-demo
     uiName: Generated Rules
     iconUrl: https://raw.githubusercontent.com/gchq/stroom-content/refs/heads/master/images/StroomLogs.svg
     licenseName: Apache 2.0
     licenseUrl: https://raw.githubusercontent.com/gchq/stroom-content/refs/heads/master/LICENCE.txt
     stroomPath: /
     details: |
-      # Generated Rules
+      # Stroom Generated Rules Demo
 
-      This content pack contains ...
+      This content pack contains a set of generated analytic rules designed 
+      to detect potential malicious activity within Windows Event Logs.
+      
+      To support testing and demonstration, the pack also includes 30 data generators,
+      one for each rule. These generators can be scheduled to periodically send sample
+      logs into a feed, allowing you to validate rule behaviour and observe
+      detections in action.
+      
+      This pack is intended for demonstration purposes and currently includes a subset
+      of the full ruleset (30 rules). Development of the remaining ruleset is ongoing.
+
     gitRepoName: Internal Logs
     gitUrl: https://github.com/gchq/stroom-content.git
     gitBranch: gh-5366_analytic_rule_generation
