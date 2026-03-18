@@ -310,7 +310,7 @@ contentPacks:
     gitRepoName: Generated Rules Demo
     gitUrl: https://github.com/stroomworks2065/stroom-content.git
     gitBranch: gh-5366_analytic_rule_generation
-    gitPath: source/stroom-logs/stroomContent/Generated_Rules_Demo.Folder.28860f43-0f82-4b0c-952a-d46d1017c75f/
+    gitPath: source/generated_rules_demo/stroomContent/Generated_Rules_Demo.Folder.28860f43-0f82-4b0c-952a-d46d1017c75f/
     # gitCommit: 0c6da31bc3d1d2d87be3d681c859b9a015be4afb
 
 
