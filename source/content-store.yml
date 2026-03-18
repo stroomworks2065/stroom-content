@@ -307,10 +307,10 @@ contentPacks:
       This pack is intended for demonstration purposes and currently includes a subset
       of the full ruleset (30 rules). Development of the remaining ruleset is ongoing.
 
-    gitRepoName: Internal Logs
-    gitUrl: https://github.com/gchq/stroom-content.git
+    gitRepoName: Generated Rules Demo
+    gitUrl: https://github.com/stroomworks2065/stroom-content.git
     gitBranch: gh-5366_analytic_rule_generation
-    gitPath: source/stroom-logs/stroomContent/Internal_Logs.Folder.daf4a11e-2abd-4004-9f3c-92d368fbff14/
+    gitPath: source/stroom-logs/stroomContent/Generated_Rules_Demo.Folder.28860f43-0f82-4b0c-952a-d46d1017c75f/
     # gitCommit: 0c6da31bc3d1d2d87be3d681c859b9a015be4afb
 
 
