@@ -289,7 +289,7 @@ contentPacks:
 
   - id: stroom-generated-rules-demo
     uiName: Stroom Generated Rules Demo
-    iconUrl: https://raw.githubusercontent.com/gchq/stroom-content/refs/heads/master/images/StroomLogs.svg
+    iconUrl: https://raw.githubusercontent.com/gchq/stroom-content/refs/heads/master/images/AnalyticRule.svg
     licenseName: Apache 2.0
     licenseUrl: https://raw.githubusercontent.com/gchq/stroom-content/refs/heads/master/LICENCE.txt
     stroomPath: /
