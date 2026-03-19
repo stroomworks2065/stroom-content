@@ -288,7 +288,7 @@ contentPacks:
     gitNeedsAuth: false
 
   - id: stroom-generated-rules-demo
-    uiName: Generated Rules
+    uiName: Stroom Generated Rules Demo
     iconUrl: https://raw.githubusercontent.com/gchq/stroom-content/refs/heads/master/images/StroomLogs.svg
     licenseName: Apache 2.0
     licenseUrl: https://raw.githubusercontent.com/gchq/stroom-content/refs/heads/master/LICENCE.txt
