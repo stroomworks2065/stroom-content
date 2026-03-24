@@ -1,0 +1,4 @@
+name=T1074.001 - ZipAFolderWithPowerShellForStagingInTempPowerShell
+path=Rules/Windows
+type=AnalyticRule
+uuid=stroomworks_T1074.001_posh_pc_susp_zip_compress

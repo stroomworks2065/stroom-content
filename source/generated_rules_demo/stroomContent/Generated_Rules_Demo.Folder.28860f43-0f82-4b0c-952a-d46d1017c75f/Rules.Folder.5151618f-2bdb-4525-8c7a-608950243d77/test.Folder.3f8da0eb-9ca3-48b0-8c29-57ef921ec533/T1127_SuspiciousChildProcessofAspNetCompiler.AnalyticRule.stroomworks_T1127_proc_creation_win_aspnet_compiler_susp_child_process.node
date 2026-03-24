@@ -1,0 +1,4 @@
+name=T1127 - SuspiciousChildProcessofAspNetCompiler
+path=Rules/Windows
+type=AnalyticRule
+uuid=stroomworks_T1127_proc_creation_win_aspnet_compiler_susp_child_process
