@@ -1,5 +1,0 @@
-name=T1555 - DPAPIBackupKeysAndCertificateExportActivityIOC
-path=/Generated Rules Demo/Rules/Windows/T1555 - DPAPIBackupKeysAndCertificateExportActivityIOC
-type=AnalyticRule
-uuid=stroomworks_T1555_file_event_win_susp_dpapi_backup_and_cert_export_ioc
-version=V2

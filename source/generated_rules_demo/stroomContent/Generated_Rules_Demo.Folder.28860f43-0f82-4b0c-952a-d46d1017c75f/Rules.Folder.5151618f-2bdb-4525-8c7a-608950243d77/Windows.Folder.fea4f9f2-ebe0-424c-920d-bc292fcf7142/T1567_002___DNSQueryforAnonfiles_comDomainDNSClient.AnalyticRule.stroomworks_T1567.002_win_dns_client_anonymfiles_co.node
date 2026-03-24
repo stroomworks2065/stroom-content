@@ -1,5 +1,0 @@
-name=T1567.002 - DNSQueryforAnonfiles.comDomainDNSClient
-path=/Generated Rules Demo/Rules/Windows/T1567.002 - DNSQueryforAnonfiles.comDomainDNSClient
-type=AnalyticRule
-uuid=stroomworks_T1567.002_win_dns_client_anonymfiles_co
-version=V2

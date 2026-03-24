@@ -1,5 +1,0 @@
-name=T1567.002 - DNSQueryForAnonfiles.ComDomainDNSClient
-path=/Generated Rules Demo/Data Generators/Windows/T1567.002 - DNSQueryForAnonfiles.ComDomainDNSClient
-type=DataGen
-uuid=stroomworks_datagen_T1567.002 - DNSQueryForAnonfiles.ComDomainDNSClient
-version=V2

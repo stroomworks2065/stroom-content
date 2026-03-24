@@ -1,5 +1,0 @@
-name=T1078.001 - AdminUserRemoteLogon
-path=/Generated Rules Demo/Data Generators/Windows/T1078.001 - AdminUserRemoteLogon
-type=DataGen
-uuid=stroomworks_datagen_T1078.001 - AdminUserRemoteLogon
-version=V2

@@ -1,5 +1,0 @@
-name=T1548 - AbusedDebugPrivilegebyArbitraryParentProcesses
-path=/Generated Rules Demo/Rules/Windows/T1548 - AbusedDebugPrivilegebyArbitraryParentProcesses
-type=AnalyticRule
-uuid=stroomworks_T1548_proc_creation_win_susp_abusing_debug_privilege
-version=V2

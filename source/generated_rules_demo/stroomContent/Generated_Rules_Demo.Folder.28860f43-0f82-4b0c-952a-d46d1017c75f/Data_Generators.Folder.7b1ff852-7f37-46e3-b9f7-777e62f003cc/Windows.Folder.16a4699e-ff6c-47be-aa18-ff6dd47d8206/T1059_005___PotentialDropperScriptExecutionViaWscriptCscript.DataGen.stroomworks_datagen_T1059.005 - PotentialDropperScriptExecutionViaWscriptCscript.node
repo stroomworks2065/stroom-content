@@ -1,5 +1,0 @@
-name=T1059.005 - PotentialDropperScriptExecutionViaWscriptCscript
-path=/Generated Rules Demo/Data Generators/Windows/T1059.005 - PotentialDropperScriptExecutionViaWscriptCscript
-type=DataGen
-uuid=stroomworks_datagen_T1059.005 - PotentialDropperScriptExecutionViaWscriptCscript
-version=V2

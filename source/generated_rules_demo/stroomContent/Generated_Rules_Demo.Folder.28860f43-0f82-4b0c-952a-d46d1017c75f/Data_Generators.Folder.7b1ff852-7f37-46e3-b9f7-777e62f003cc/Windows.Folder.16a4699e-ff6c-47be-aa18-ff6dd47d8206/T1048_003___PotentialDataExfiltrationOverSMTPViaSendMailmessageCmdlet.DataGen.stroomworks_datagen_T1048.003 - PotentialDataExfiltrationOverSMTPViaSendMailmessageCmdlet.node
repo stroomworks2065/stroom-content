@@ -1,5 +1,0 @@
-name=T1048.003 - PotentialDataExfiltrationOverSMTPViaSendMailmessageCmdlet
-path=/Generated Rules Demo/Data Generators/Windows/T1048.003 - PotentialDataExfiltrationOverSMTPViaSendMailmessageCmdlet
-type=DataGen
-uuid=stroomworks_datagen_T1048.003 - PotentialDataExfiltrationOverSMTPViaSendMailmessageCmdlet
-version=V2

@@ -1,5 +1,0 @@
-name=T1542.003 - PotentialRansomwareOrUnauthorizedMBRTamperingViaBcdedit.Exe
-path=/Generated Rules Demo/Data Generators/Windows/T1542.003 - PotentialRansomwareOrUnauthorizedMBRTamperingViaBcdedit.Exe
-type=DataGen
-uuid=stroomworks_datagen_T1542.003 - PotentialRansomwareOrUnauthorizedMBRTamperingViaBcdedit.Exe
-version=V2

@@ -1,5 +1,0 @@
-name=T1071.004 - NetworkConnectionInitiatedViaFinger.Exe
-path=/Generated Rules Demo/Data Generators/Windows/T1071.004 - NetworkConnectionInitiatedViaFinger.Exe
-type=DataGen
-uuid=stroomworks_datagen_T1071.004 - NetworkConnectionInitiatedViaFinger.Exe
-version=V2

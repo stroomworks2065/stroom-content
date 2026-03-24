@@ -1,5 +1,0 @@
-name=T1071.004 - NetworkConnectionInitiatedviaFinger.EXE
-path=/Generated Rules Demo/Rules/Windows/T1071.004 - NetworkConnectionInitiatedviaFinger.EXE
-type=AnalyticRule
-uuid=stroomworks_T1071.004_net_connection_win_finger
-version=V2

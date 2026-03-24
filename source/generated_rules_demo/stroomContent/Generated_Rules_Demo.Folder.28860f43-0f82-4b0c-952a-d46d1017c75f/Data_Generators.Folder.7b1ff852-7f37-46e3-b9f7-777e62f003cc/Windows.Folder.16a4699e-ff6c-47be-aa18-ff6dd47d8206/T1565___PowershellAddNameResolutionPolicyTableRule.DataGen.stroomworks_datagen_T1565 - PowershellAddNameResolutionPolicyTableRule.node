@@ -1,5 +1,0 @@
-name=T1565 - PowershellAddNameResolutionPolicyTableRule
-path=/Generated Rules Demo/Data Generators/Windows/T1565 - PowershellAddNameResolutionPolicyTableRule
-type=DataGen
-uuid=stroomworks_datagen_T1565 - PowershellAddNameResolutionPolicyTableRule
-version=V2

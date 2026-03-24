@@ -1,5 +1,0 @@
-name=T1090.002 - NetworkCommunicationInitiatedToPortmap.IoDomain
-path=/Generated Rules Demo/Data Generators/Windows/T1090.002 - NetworkCommunicationInitiatedToPortmap.IoDomain
-type=DataGen
-uuid=stroomworks_datagen_T1090.002 - NetworkCommunicationInitiatedToPortmap.IoDomain
-version=V2

@@ -1,5 +1,0 @@
-name=T1558.003 - HackToolKrbRelayExecution
-path=/Generated Rules Demo/Rules/Windows/T1558.003 - HackToolKrbRelayExecution
-type=AnalyticRule
-uuid=stroomworks_T1558.003_proc_creation_win_hktl_krbrela
-version=V2

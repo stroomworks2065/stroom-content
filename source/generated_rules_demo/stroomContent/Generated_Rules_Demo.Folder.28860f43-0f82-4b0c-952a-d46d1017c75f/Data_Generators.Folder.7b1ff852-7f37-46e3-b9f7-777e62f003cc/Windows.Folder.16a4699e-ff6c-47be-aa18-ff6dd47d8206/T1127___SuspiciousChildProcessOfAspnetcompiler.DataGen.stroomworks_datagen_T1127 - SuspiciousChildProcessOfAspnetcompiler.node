@@ -1,5 +1,0 @@
-name=T1127 - SuspiciousChildProcessOfAspnetcompiler
-path=/Generated Rules Demo/Data Generators/Windows/T1127 - SuspiciousChildProcessOfAspnetcompiler
-type=DataGen
-uuid=stroomworks_datagen_T1127 - SuspiciousChildProcessOfAspnetcompiler
-version=V2
