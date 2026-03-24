@@ -1,0 +1,4 @@
+name=T1572 - CloudflaredTunnelConnectionsCleanup
+path=Rules/Windows
+type=AnalyticRule
+uuid=stroomworks_T1572_proc_creation_win_cloudflared_tunnel_cleanup

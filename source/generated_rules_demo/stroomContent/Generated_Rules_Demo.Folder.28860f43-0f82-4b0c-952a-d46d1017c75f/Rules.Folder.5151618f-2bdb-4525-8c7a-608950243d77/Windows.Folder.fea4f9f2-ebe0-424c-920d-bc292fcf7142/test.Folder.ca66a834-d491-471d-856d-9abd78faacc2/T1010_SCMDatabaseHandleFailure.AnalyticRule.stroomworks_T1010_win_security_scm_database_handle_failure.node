@@ -1,0 +1,4 @@
+name=T1010 - SCMDatabaseHandleFailure
+path=Rules/Windows
+type=AnalyticRule
+uuid=stroomworks_T1010_win_security_scm_database_handle_failure
