@@ -1,0 +1,5 @@
+name=T1567.002_DNSQueryforAnonfilescomDomainDNSClient.DataGen.stroomworks_T1567.002_win_dns_client_anonymfiles_com
+path=/Data Generators/Windows
+type=DataGen
+uuid=stroomworks_T1567.002_win_dns_client_anonymfiles_com
+stroomworks_T1567.002_win_dns_client_anonymfiles_com_v1
