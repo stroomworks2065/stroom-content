@@ -1,0 +1,4 @@
+name=T1220 - Msxsl.EXEExecution
+path=Rules/Windows
+type=AnalyticRule
+uuid=stroomworks_T1220_proc_creation_win_msxsl_execution
