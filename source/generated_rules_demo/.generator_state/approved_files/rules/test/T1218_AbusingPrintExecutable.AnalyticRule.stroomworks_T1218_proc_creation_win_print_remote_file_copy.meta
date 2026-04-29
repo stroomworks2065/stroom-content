@@ -14,7 +14,7 @@
   "includeRuleDocumentation": false,
   "languageVersion": "STROOM_QL_VERSION_0_1",
   "name": "T1218 - AbusingPrintExecutable",
-  "description": "Attackers can use print.exe for remote file copy\n\nLevel: medium\n\nStatus: test\n\nFalse Positives:\n- Unknown\n\nReferences:\n- https://lolbas-project.github.io/lolbas/Binaries/Print/\n- https://twitter.com/Oddvarmoe/status/985518877076541440\n\nTags:\n- attack.defense-evasion\n- attack.t1218\n\nSource Sigma rule author(s):\n- Furkan CALISKAN\n- @caliskanfurkan\\_\n- @oscd\\_initiative\n\nSource Sigma rule: proc\\_creation\\_win\\_print\\_remote\\_file\\_copy.yml",
+  "description": "Attackers can use print.exe for remote file copy\n\nLevel: medium\n\nStatus: test\n\nFalse Positives:\n- Unknown\n\nReferences:\n- https://lolbas-project.github.io/lolbas/Binaries/Print/\n- https://twitter.com/Oddvarmoe/status/985518877076541440\n\nTags:\n- attack.stealth\n- attack.t1218\n\nSource Sigma rule author(s):\n- Furkan CALISKAN\n- @caliskanfurkan\\_\n- @oscd\\_initiative\n\nSource Sigma rule: proc\\_creation\\_win\\_print\\_remote\\_file\\_copy.yml",
   "notifications": [
     {
       "destination": {

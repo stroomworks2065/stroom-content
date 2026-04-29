@@ -14,7 +14,7 @@
   "includeRuleDocumentation": false,
   "languageVersion": "STROOM_QL_VERSION_0_1",
   "name": "T1078.001 - AdminUserRemoteLogon",
-  "description": "Detect remote login by Administrator user (depending on internal pattern).\n\nLevel: low\n\nStatus: test\n\nFalse Positives:\n- Legitimate administrative activity.\n\nReferences:\n- https://car.mitre.org/wiki/CAR-2016-04-005\n\nTags:\n- attack.privilege-escalation\n- attack.persistence\n- attack.defense-evasion\n- attack.lateral-movement\n- attack.initial-access\n- attack.t1078.001\n- attack.t1078.002\n- attack.t1078.003\n- car.2016-04-005\n\nSource Sigma rule author(s):\n- juju4\n\nSource Sigma rule: win\\_security\\_admin\\_rdp\\_login.yml",
+  "description": "Detect remote login by Administrator user (depending on internal pattern).\n\nLevel: low\n\nStatus: test\n\nFalse Positives:\n- Legitimate administrative activity.\n\nReferences:\n- https://car.mitre.org/wiki/CAR-2016-04-005\n\nTags:\n- attack.privilege-escalation\n- attack.persistence\n- attack.lateral-movement\n- attack.initial-access\n- attack.stealth\n- attack.t1078.001\n- attack.t1078.002\n- attack.t1078.003\n- car.2016-04-005\n\nSource Sigma rule author(s):\n- juju4\n\nSource Sigma rule: win\\_security\\_admin\\_rdp\\_login.yml",
   "notifications": [
     {
       "destination": {

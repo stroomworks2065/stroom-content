@@ -14,7 +14,7 @@
   "includeRuleDocumentation": false,
   "languageVersion": "STROOM_QL_VERSION_0_1",
   "name": "T1548 - AbusedDebugPrivilegebyArbitraryParentProcesses",
-  "description": "Detection of unusual child processes by different system processes\n\nLevel: high\n\nStatus: test\n\nFalse Positives:\n- Unknown\n\nReferences:\n- https://image.slidesharecdn.com/kheirkhabarovoffzonefinal-181117201458/95/hunting-for-privilege-escalation-in-windows-environment-74-638.jpg\n\nTags:\n- attack.defense-evasion\n- attack.privilege-escalation\n- attack.t1548\n\nSource Sigma rule author(s):\n- Semanur Guneysu @semanurtg\n- oscd.community\n\nSource Sigma rule: proc\\_creation\\_win\\_susp\\_abusing\\_debug\\_privilege.yml",
+  "description": "Detection of unusual child processes by different system processes\n\nLevel: high\n\nStatus: test\n\nFalse Positives:\n- Unknown\n\nReferences:\n- https://image.slidesharecdn.com/kheirkhabarovoffzonefinal-181117201458/95/hunting-for-privilege-escalation-in-windows-environment-74-638.jpg\n\nTags:\n- attack.privilege-escalation\n- attack.t1548\n\nSource Sigma rule author(s):\n- Semanur Guneysu @semanurtg\n- oscd.community\n\nSource Sigma rule: proc\\_creation\\_win\\_susp\\_abusing\\_debug\\_privilege.yml",
   "notifications": [
     {
       "destination": {

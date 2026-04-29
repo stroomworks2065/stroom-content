@@ -14,7 +14,7 @@
   "includeRuleDocumentation": false,
   "languageVersion": "STROOM_QL_VERSION_0_1",
   "name": "T1070 - ClearingWindowsConsoleHistory",
-  "description": "Identifies when a user attempts to clear console history. An adversary may clear the command history of a compromised account to conceal the actions undertaken during an intrusion.\n\nLevel: high\n\nStatus: test\n\nFalse Positives:\n- Unknown\n\nReferences:\n- https://stefanos.cloud/blog/kb/how-to-clear-the-powershell-command-history/\n- https://www.shellhacks.com/clear-history-powershell/\n- https://community.sophos.com/sophos-labs/b/blog/posts/powershell-command-history-forensics\n\nTags:\n- attack.defense-evasion\n- attack.t1070\n- attack.t1070.003\n\nSource Sigma rule author(s):\n- Austin Songer @austinsonger\n\nSource Sigma rule: posh\\_ps\\_clearing\\_windows\\_console\\_history.yml",
+  "description": "Identifies when a user attempts to clear console history. An adversary may clear the command history of a compromised account to conceal the actions undertaken during an intrusion.\n\nLevel: high\n\nStatus: test\n\nFalse Positives:\n- Unknown\n\nReferences:\n- https://stefanos.cloud/blog/kb/how-to-clear-the-powershell-command-history/\n- https://www.shellhacks.com/clear-history-powershell/\n- https://community.sophos.com/sophos-labs/b/blog/posts/powershell-command-history-forensics\n\nTags:\n- attack.stealth\n- attack.t1070\n- attack.t1070.003\n\nSource Sigma rule author(s):\n- Austin Songer @austinsonger\n\nSource Sigma rule: posh\\_ps\\_clearing\\_windows\\_console\\_history.yml",
   "notifications": [
     {
       "destination": {
