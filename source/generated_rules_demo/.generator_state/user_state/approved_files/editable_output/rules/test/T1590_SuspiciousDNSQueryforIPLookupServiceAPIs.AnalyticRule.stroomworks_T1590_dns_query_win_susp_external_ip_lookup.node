@@ -1,0 +1,4 @@
+name=T1590 - SuspiciousDNSQueryforIPLookupServiceAPIs
+path=Rules/Windows
+type=AnalyticRule
+uuid=stroomworks_T1590_dns_query_win_susp_external_ip_lookup

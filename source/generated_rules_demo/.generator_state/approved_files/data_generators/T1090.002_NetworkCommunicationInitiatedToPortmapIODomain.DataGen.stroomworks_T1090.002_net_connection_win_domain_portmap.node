@@ -1,0 +1,5 @@
+name=T1090.002_NetworkCommunicationInitiatedToPortmapIODomain.DataGen.stroomworks_T1090.002_net_connection_win_domain_portmap
+path=/Data Generators/Windows
+type=DataGen
+uuid=stroomworks_T1090.002_net_connection_win_domain_portmap
+stroomworks_T1090.002_net_connection_win_domain_portmap_v1
