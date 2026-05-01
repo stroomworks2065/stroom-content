@@ -3,3 +3,4 @@ path=/Data Generators/Windows
 type=DataGen
 uuid=stroomworks_T1218_proc_creation_win_print_remote_file_copy
 stroomworks_T1218_proc_creation_win_print_remote_file_copy_v1
+version=V2

@@ -3,3 +3,4 @@ path=/Data Generators/Windows
 type=DataGen
 uuid=stroomworks_T1490_registry_set_disable_system_restore
 stroomworks_T1490_registry_set_disable_system_restore_v1
+version=V2

@@ -3,3 +3,4 @@ path=/Data Generators/Windows
 type=DataGen
 uuid=stroomworks_T1010_win_security_scm_database_handle_failure
 stroomworks_T1010_win_security_scm_database_handle_failure_v1
+version=V2

@@ -3,3 +3,4 @@ path=/Data Generators/Windows
 type=DataGen
 uuid=stroomworks_T1048.003_posh_ps_send_mailmessage
 stroomworks_T1048.003_posh_ps_send_mailmessage_v1
+version=V2

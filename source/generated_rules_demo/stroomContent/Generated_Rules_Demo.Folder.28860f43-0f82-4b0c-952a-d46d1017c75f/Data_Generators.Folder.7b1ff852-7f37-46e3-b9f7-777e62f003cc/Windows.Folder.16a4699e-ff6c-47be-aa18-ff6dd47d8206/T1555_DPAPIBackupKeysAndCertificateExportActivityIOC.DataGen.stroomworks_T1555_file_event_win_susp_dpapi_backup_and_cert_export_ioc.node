@@ -3,3 +3,4 @@ path=/Data Generators/Windows
 type=DataGen
 uuid=stroomworks_T1555_file_event_win_susp_dpapi_backup_and_cert_export_ioc
 stroomworks_T1555_file_event_win_susp_dpapi_backup_and_cert_export_ioc_v1
+version=V2

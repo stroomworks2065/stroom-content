@@ -3,3 +3,4 @@ path=/Data Generators/Windows
 type=DataGen
 uuid=stroomworks_T1056.001_posh_ps_susp_keylogger_activity
 stroomworks_T1056.001_posh_ps_susp_keylogger_activity_v1
+version=V2
