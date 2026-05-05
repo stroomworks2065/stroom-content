@@ -1,0 +1,6 @@
+name=T1490 - RegistryDisableSystemRestore
+path=Rules/Windows
+type=AnalyticRule
+uuid=stroomworks_T1490_registry_set_disable_system_restore
+
+stroomworks_T1490_registry_set_disable_system_restore_v1
