@@ -1,6 +1,0 @@
-name=T1048.003 - PotentialDataExfiltrationOverSMTPViaSendMailMessageCmdlet
-path=Rules/Windows/test
-type=AnalyticRule
-uuid=stroomworks_T1048.003_posh_ps_send_mailmessage
-
-stroomworks_T1048.003_posh_ps_send_mailmessage_v1

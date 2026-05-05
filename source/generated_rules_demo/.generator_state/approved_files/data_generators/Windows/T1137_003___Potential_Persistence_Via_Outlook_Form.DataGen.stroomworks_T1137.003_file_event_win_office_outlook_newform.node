@@ -1,0 +1,6 @@
+name=T1137.003 - Potential Persistence Via Outlook Form
+path=Data_Generators/Windows
+type=DataGen
+uuid=stroomworks_T1137.003_file_event_win_office_outlook_newform
+
+stroomworks_T1137.003_file_event_win_office_outlook_newform_v1
