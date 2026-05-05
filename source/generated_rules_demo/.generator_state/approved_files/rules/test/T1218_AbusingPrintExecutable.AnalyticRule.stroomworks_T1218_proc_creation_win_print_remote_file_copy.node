@@ -1,5 +1,0 @@
-name=T1218 - AbusingPrintExecutable
-path=Rules/Windows
-type=AnalyticRule
-uuid=stroomworks_T1218_proc_creation_win_print_remote_file_copy
-version=V2
