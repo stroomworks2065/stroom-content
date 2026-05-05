@@ -1,6 +1,0 @@
-name=T1565 - PowershellAddNameResolutionPolicyTableRule
-path=Rules/Windows
-type=AnalyticRule
-uuid=stroomworks_T1565_posh_ps_add_dnsclient_rule
-
-stroomworks_T1565_posh_ps_add_dnsclient_rule_v1
