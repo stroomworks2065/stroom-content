@@ -3,3 +3,4 @@ path=/Data Generators/Windows
 type=DataGen
 uuid=stroomworks_T1572_proc_creation_win_cloudflared_tunnel_cleanup
 stroomworks_T1572_proc_creation_win_cloudflared_tunnel_cleanup_v1
+version=V2

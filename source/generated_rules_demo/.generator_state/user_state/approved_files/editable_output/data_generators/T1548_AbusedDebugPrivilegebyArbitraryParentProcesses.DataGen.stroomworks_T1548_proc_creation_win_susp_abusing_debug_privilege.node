@@ -3,3 +3,4 @@ path=/Data Generators/Windows
 type=DataGen
 uuid=stroomworks_T1548_proc_creation_win_susp_abusing_debug_privilege
 stroomworks_T1548_proc_creation_win_susp_abusing_debug_privilege_v1
+version=V2

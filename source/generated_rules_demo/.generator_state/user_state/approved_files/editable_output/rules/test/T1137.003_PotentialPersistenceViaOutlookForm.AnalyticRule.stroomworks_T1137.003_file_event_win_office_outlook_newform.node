@@ -2,3 +2,4 @@ name=T1137.003 - PotentialPersistenceViaOutlookForm
 path=Rules/Windows
 type=AnalyticRule
 uuid=stroomworks_T1137.003_file_event_win_office_outlook_newform
+version=V2

@@ -3,3 +3,4 @@ path=/Data Generators/Windows
 type=DataGen
 uuid=stroomworks_T1567.002_win_dns_client_anonymfiles_com
 stroomworks_T1567.002_win_dns_client_anonymfiles_com_v1
+version=V2
