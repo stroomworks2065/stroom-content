@@ -1,6 +1,0 @@
-name=T1059.005_PotentialDropperScriptExecutionViaWScriptCScript.DataGen.stroomworks_T1059.005_proc_creation_win_wscript_cscript_dropper
-path=/Data Generators/Windows
-type=DataGen
-uuid=stroomworks_T1059.005_proc_creation_win_wscript_cscript_dropper
-stroomworks_T1059.005_proc_creation_win_wscript_cscript_dropper_v1
-version=V2

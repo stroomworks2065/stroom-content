@@ -1,6 +1,0 @@
-name=T1590_SuspiciousDNSQueryforIPLookupServiceAPIs.DataGen.stroomworks_T1590_dns_query_win_susp_external_ip_lookup
-path=/Data Generators/Windows
-type=DataGen
-uuid=stroomworks_T1590_dns_query_win_susp_external_ip_lookup
-stroomworks_T1590_dns_query_win_susp_external_ip_lookup_v1
-version=V2
