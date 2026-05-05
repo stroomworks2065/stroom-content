@@ -1,5 +1,5 @@
 name=T1574.011 - AbuseofServicePermissionstoHideServicesViaSetService
-path=Rules/Windows
+path=Rules/Windows/test
 type=AnalyticRule
 uuid=stroomworks_T1574.011_proc_creation_win_powershell_hide_services_via_set_service
 

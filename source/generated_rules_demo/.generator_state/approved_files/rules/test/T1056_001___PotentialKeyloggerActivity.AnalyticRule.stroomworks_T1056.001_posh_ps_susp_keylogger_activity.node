@@ -1,5 +1,5 @@
 name=T1056.001 - PotentialKeyloggerActivity
-path=Rules/Windows
+path=Rules/Windows/test
 type=AnalyticRule
 uuid=stroomworks_T1056.001_posh_ps_susp_keylogger_activity
 

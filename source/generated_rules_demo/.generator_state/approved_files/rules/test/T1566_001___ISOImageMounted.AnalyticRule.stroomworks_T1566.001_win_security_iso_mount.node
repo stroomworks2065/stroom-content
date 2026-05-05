@@ -1,5 +1,5 @@
 name=T1566.001 - ISOImageMounted
-path=Rules/Windows
+path=Rules/Windows/test
 type=AnalyticRule
 uuid=stroomworks_T1566.001_win_security_iso_mount
 
