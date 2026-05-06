@@ -1,0 +1,32 @@
+{
+  "elements" : {
+    "add" : [ {
+      "id" : "Source",
+      "type" : "Source"
+    }, {
+      "id" : "515882D9-8581-442F-943E-33192E173823",
+      "type" : "XMLParser",
+      "name" : "XML Parser"
+    }, {
+      "id" : "65BC8CC5-147E-4EB3-9B29-C729879564C1",
+      "type" : "IdEnrichmentFilter",
+      "name" : "ID Enrichment Filter"
+    }, {
+      "id" : "DCECEEFC-97C2-4968-9E5B-682AD042E8C1",
+      "type" : "DynamicSearchResultOutputFilter",
+      "name" : "Dynamic Search Result Output Filter"
+    } ]
+  },
+  "links" : {
+    "add" : [ {
+      "from" : "Source",
+      "to" : "515882D9-8581-442F-943E-33192E173823"
+    }, {
+      "from" : "515882D9-8581-442F-943E-33192E173823",
+      "to" : "65BC8CC5-147E-4EB3-9B29-C729879564C1"
+    }, {
+      "from" : "65BC8CC5-147E-4EB3-9B29-C729879564C1",
+      "to" : "DCECEEFC-97C2-4968-9E5B-682AD042E8C1"
+    } ]
+  }
+}

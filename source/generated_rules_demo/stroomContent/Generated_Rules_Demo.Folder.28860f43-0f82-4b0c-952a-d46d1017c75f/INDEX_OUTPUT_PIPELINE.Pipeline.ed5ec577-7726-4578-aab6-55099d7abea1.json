@@ -1,0 +1,82 @@
+{
+  "elements" : {
+    "add" : [ {
+      "id" : "Source",
+      "type" : "Source"
+    }, {
+      "id" : "27D575D0-8A49-40C7-9F48-3C4E979F2C12",
+      "type" : "XMLFragmentParser",
+      "name" : "XML Fragment Parser"
+    }, {
+      "id" : "8DDE91DC-0271-4BCD-A9DD-3BC17B76D4B3",
+      "type" : "SplitFilter",
+      "name" : "Split Filter"
+    }, {
+      "id" : "149223C6-0DE7-448C-975A-885CCFC27D89",
+      "type" : "XSLTFilter",
+      "name" : "XSLT Filter"
+    }, {
+      "id" : "86351141-9268-4A69-9F7C-320DC5A5D8F3",
+      "type" : "SchemaFilter",
+      "name" : "Schema Filter"
+    }, {
+      "id" : "B8F50684-FE67-4231-A7F5-8616814A06E2",
+      "type" : "XMLWriter",
+      "name" : "XML Writer"
+    }, {
+      "id" : "92F94561-BE72-44BA-A0EB-78BEFA65616E",
+      "type" : "StreamAppender",
+      "name" : "Stream Appender"
+    } ]
+  },
+  "properties" : {
+    "add" : [ {
+      "element" : "27D575D0-8A49-40C7-9F48-3C4E979F2C12",
+      "name" : "textConverter",
+      "value" : {
+        "entity" : {
+          "type" : "TextConverter",
+          "uuid" : "81d9fa31-b3c5-490c-8a20-04c63e105bba",
+          "name" : "XML_FRAGMENT_EVENTS"
+        }
+      }
+    }, {
+      "element" : "149223C6-0DE7-448C-975A-885CCFC27D89",
+      "name" : "xslt",
+      "value" : {
+        "entity" : {
+          "type" : "XSLT",
+          "uuid" : "b77d4209-9d4f-421d-b031-4b60562060d0",
+          "name" : "XML_INDEX_TRANSITION"
+        }
+      }
+    }, {
+      "element" : "92F94561-BE72-44BA-A0EB-78BEFA65616E",
+      "name" : "streamType",
+      "value" : {
+        "string" : "Events"
+      }
+    } ]
+  },
+  "links" : {
+    "add" : [ {
+      "from" : "Source",
+      "to" : "27D575D0-8A49-40C7-9F48-3C4E979F2C12"
+    }, {
+      "from" : "27D575D0-8A49-40C7-9F48-3C4E979F2C12",
+      "to" : "8DDE91DC-0271-4BCD-A9DD-3BC17B76D4B3"
+    }, {
+      "from" : "8DDE91DC-0271-4BCD-A9DD-3BC17B76D4B3",
+      "to" : "149223C6-0DE7-448C-975A-885CCFC27D89"
+    }, {
+      "from" : "149223C6-0DE7-448C-975A-885CCFC27D89",
+      "to" : "86351141-9268-4A69-9F7C-320DC5A5D8F3"
+    }, {
+      "from" : "86351141-9268-4A69-9F7C-320DC5A5D8F3",
+      "to" : "B8F50684-FE67-4231-A7F5-8616814A06E2"
+    }, {
+      "from" : "B8F50684-FE67-4231-A7F5-8616814A06E2",
+      "to" : "92F94561-BE72-44BA-A0EB-78BEFA65616E"
+    } ]
+  }
+}
