@@ -1,6 +1,0 @@
-name=T1564.006 - Suspicious Hyper-V Cmdlets
-path=Data_Generators/Windows
-type=DataGen
-uuid=stroomworks_T1564_006_posh_ps_susp_hyper_v_condlet_dg
-
-stroomworks_T1564_006_posh_ps_susp_hyper_v_condlet_dg_v1

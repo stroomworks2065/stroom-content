@@ -1,6 +1,0 @@
-name=T1047 - ServiceStartupTypeChangeViaWmic.EXE
-path=Rules/Windows/experimental
-type=AnalyticRule
-uuid=stroomworks_T1047_proc_creation_win_wmic_service_startup_change
-
-stroomworks_T1047_proc_creation_win_wmic_service_startup_change_v1

@@ -1,6 +1,0 @@
-name=T1204.004 - SuspiciousExplorerProcesswithWhitespacePaddingClickFixFileFix
-path=Rules/Windows/experimental
-type=AnalyticRule
-uuid=stroomworks_T1204_004_proc_creation_win_susp_clickfix_filefix_whitespace_padding
-
-stroomworks_T1204_004_proc_creation_win_susp_clickfix_filefix_whitespace_padding_v1

@@ -1,0 +1,52 @@
+{
+  "analyticProcessType": "STREAMING",
+  "duplicateNotificationConfig": {
+    "chooseColumns": false,
+    "columnNames": [],
+    "rememberNotifications": false,
+    "suppressDuplicateNotifications": false
+  },
+  "errorFeed": {
+    "type": "Feed",
+    "uuid": "8b95697a-1827-4e67-b982-940f3d47634c",
+    "name": "RULE_ERRORS_FEED"
+  },
+  "includeRuleDocumentation": false,
+  "languageVersion": "STROOM_QL_VERSION_0_1",
+  "name": "T1003.001 - SuspiciousLSASSAccessViaMalSecLogon",
+  "description": "Detects suspicious access to LSASS handle via a call trace to \"seclogon.dll\" with a suspicious access right.\n\nLevel: high\n\nStatus: test\n\nFalse Positives:\n- Unknown\n\nReferences:\n- https://twitter.com/SBousseaden/status/1541920424635912196\n- https://github.com/elastic/detection-rules/blob/2bc1795f3d7bcc3946452eb4f07ae799a756d94e/rules/windows/credential\\_access\\_lsass\\_handle\\_via\\_malseclogon.toml\n- https://splintercod3.blogspot.com/p/the-hidden-side-of-seclogon-part-3.html\n\nTags:\n- attack.credential-access\n- attack.t1003.001\n\nSource Sigma rule author(s):\n- Samir Bousseaden (original elastic rule)\n- Nasreddine Bencherchali (Nextron Systems)\n\nSource Sigma rule: proc\\_access\\_win\\_lsass\\_seclogon\\_access.yml",
+  "notifications": [
+    {
+      "destination": {
+        "type": "stream",
+        "destinationFeed": {
+          "type": "Feed",
+          "uuid": "f58bb9a9-1359-4077-9451-f977b2b862c3",
+          "name": "RULE_OUTPUT_FEED"
+        },
+        "useSourceFeedIfPossible": false
+      },
+      "destinationType": "STREAM",
+      "enabled": true,
+      "limitNotifications": false,
+      "maxNotifications": 1,
+      "resumeAfter": {
+        "time": 1,
+        "timeUnit": "DAYS"
+      },
+      "uuid": "9ed54c1d-6c2c-41e0-aae1-fe3a25c5f77c"
+    }
+  ],
+  "query": "from RULE_VIEW\nwhere (EventData.TargetImage = '*\\\\\\\\lsass.exe*' and EventData.SourceImage = '*\\\\\\\\svchost.exe*' and EventData.GrantedAccess = '0x14c0' and EventData.CallTrace = '*seclogon.dll*')\nselect *",
+  "rememberNotifications": false,
+  "suppressDuplicateNotifications": false,
+  "timeRange": {
+    "name": "All time",
+    "condition": "BETWEEN"
+  },
+  "uuid": "stroomworks_T1003_001_proc_access_win_lsass_seclogon_access",
+  "version": "stroomworks_T1003_001_proc_access_win_lsass_seclogon_access_v1",
+  "type": "AnalyticRule",
+  "level": "high",
+  "status": "test"
+}

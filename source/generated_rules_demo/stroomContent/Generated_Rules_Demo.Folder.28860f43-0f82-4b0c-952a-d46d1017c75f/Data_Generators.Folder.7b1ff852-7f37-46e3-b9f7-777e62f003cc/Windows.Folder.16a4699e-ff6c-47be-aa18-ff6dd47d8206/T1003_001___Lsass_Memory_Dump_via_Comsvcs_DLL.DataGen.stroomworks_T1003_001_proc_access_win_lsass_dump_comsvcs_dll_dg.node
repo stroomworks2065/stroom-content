@@ -1,0 +1,6 @@
+name=T1003.001 - Lsass Memory Dump via Comsvcs DLL
+path=Data_Generators/Windows
+type=DataGen
+uuid=stroomworks_T1003_001_proc_access_win_lsass_dump_comsvcs_dll_dg
+
+stroomworks_T1003_001_proc_access_win_lsass_dump_comsvcs_dll_dg_v1

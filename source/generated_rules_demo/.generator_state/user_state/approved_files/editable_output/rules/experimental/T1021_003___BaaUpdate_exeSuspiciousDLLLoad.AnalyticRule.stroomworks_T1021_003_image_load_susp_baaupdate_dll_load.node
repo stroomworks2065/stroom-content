@@ -1,6 +1,0 @@
-name=T1021.003 - BaaUpdate.exeSuspiciousDLLLoad
-path=Rules/Windows/experimental
-type=AnalyticRule
-uuid=stroomworks_T1021_003_image_load_susp_baaupdate_dll_load
-
-stroomworks_T1021_003_image_load_susp_baaupdate_dll_load_v1

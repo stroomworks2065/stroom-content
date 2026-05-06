@@ -1,6 +1,0 @@
-name=T1496 - Network Communication With Crypto Mining Pool
-path=Data_Generators/Windows
-type=DataGen
-uuid=stroomworks_T1496_net_connection_win_domain_crypto_mining_pools_dg
-
-stroomworks_T1496_net_connection_win_domain_crypto_mining_pools_dg_v1

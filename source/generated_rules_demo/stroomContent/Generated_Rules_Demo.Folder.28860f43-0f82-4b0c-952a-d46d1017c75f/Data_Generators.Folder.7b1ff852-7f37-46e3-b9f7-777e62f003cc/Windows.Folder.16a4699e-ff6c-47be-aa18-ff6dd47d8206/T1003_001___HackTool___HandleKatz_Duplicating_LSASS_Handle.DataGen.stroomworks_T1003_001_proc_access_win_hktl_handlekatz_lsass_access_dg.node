@@ -1,0 +1,6 @@
+name=T1003.001 - HackTool - HandleKatz Duplicating LSASS Handle
+path=Data_Generators/Windows
+type=DataGen
+uuid=stroomworks_T1003_001_proc_access_win_hktl_handlekatz_lsass_access_dg
+
+stroomworks_T1003_001_proc_access_win_hktl_handlekatz_lsass_access_dg_v1

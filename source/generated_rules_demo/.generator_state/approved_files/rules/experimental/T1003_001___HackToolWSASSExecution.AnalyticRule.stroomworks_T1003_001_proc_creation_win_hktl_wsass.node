@@ -1,6 +1,0 @@
-name=T1003.001 - HackToolWSASSExecution
-path=Rules/Windows/experimental
-type=AnalyticRule
-uuid=stroomworks_T1003_001_proc_creation_win_hktl_wsass
-
-stroomworks_T1003_001_proc_creation_win_hktl_wsass_v1

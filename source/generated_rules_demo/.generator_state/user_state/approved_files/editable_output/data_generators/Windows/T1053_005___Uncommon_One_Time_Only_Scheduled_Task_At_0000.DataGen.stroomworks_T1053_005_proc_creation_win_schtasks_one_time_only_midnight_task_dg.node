@@ -1,6 +1,0 @@
-name=T1053.005 - Uncommon One Time Only Scheduled Task At 0000
-path=Data_Generators/Windows
-type=DataGen
-uuid=stroomworks_T1053_005_proc_creation_win_schtasks_one_time_only_midnight_task_dg
-
-stroomworks_T1053_005_proc_creation_win_schtasks_one_time_only_midnight_task_dg_v1

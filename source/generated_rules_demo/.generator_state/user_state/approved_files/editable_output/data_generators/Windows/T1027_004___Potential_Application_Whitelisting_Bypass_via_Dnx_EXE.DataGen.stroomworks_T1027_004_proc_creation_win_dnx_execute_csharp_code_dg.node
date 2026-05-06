@@ -1,6 +1,0 @@
-name=T1027.004 - Potential Application Whitelisting Bypass via Dnx.EXE
-path=Data_Generators/Windows
-type=DataGen
-uuid=stroomworks_T1027_004_proc_creation_win_dnx_execute_csharp_code_dg
-
-stroomworks_T1027_004_proc_creation_win_dnx_execute_csharp_code_dg_v1

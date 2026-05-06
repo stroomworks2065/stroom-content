@@ -1,6 +1,0 @@
-name=T1685 - AMSIDisabledviaRegistryModification
-path=Rules/Windows/experimental
-type=AnalyticRule
-uuid=stroomworks_T1685_registry_set_amsi_disable
-
-stroomworks_T1685_registry_set_amsi_disable_v1

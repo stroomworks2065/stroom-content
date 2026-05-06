@@ -1,0 +1,6 @@
+name=T1003.001 - HackTool - Dumpert Process Dumper Default File
+path=Data_Generators/Windows
+type=DataGen
+uuid=stroomworks_T1003_001_file_event_win_hktl_dumpert_dg
+
+stroomworks_T1003_001_file_event_win_hktl_dumpert_dg_v1

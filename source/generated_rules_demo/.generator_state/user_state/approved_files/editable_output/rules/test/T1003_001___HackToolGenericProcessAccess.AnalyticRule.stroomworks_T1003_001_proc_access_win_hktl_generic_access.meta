@@ -1,0 +1,52 @@
+{
+  "analyticProcessType": "STREAMING",
+  "duplicateNotificationConfig": {
+    "chooseColumns": false,
+    "columnNames": [],
+    "rememberNotifications": false,
+    "suppressDuplicateNotifications": false
+  },
+  "errorFeed": {
+    "type": "Feed",
+    "uuid": "8b95697a-1827-4e67-b982-940f3d47634c",
+    "name": "RULE_ERRORS_FEED"
+  },
+  "includeRuleDocumentation": false,
+  "languageVersion": "STROOM_QL_VERSION_0_1",
+  "name": "T1003.001 - HackToolGenericProcessAccess",
+  "description": "Detects process access requests from hacktool processes based on their default image name\n\nLevel: high\n\nStatus: test\n\nFalse Positives:\n- Unlikely\n\nReferences:\n- https://jsecurity101.medium.com/bypassing-access-mask-auditing-strategies-480fb641c158\n- https://www.splunk.com/en\\_us/blog/security/you-bet-your-lsass-hunting-lsass-access.html\n\nTags:\n- attack.credential-access\n- attack.t1003.001\n- attack.s0002\n\nSource Sigma rule author(s):\n- Nasreddine Bencherchali (Nextron Systems)\n- Swachchhanda Shrawan Poudel\n\nSource Sigma rule: proc\\_access\\_win\\_hktl\\_generic\\_access.yml",
+  "notifications": [
+    {
+      "destination": {
+        "type": "stream",
+        "destinationFeed": {
+          "type": "Feed",
+          "uuid": "f58bb9a9-1359-4077-9451-f977b2b862c3",
+          "name": "RULE_OUTPUT_FEED"
+        },
+        "useSourceFeedIfPossible": false
+      },
+      "destinationType": "STREAM",
+      "enabled": true,
+      "limitNotifications": false,
+      "maxNotifications": 1,
+      "resumeAfter": {
+        "time": 1,
+        "timeUnit": "DAYS"
+      },
+      "uuid": "9ed54c1d-6c2c-41e0-aae1-fe3a25c5f77c"
+    }
+  ],
+  "query": "from RULE_VIEW\nwhere (((EventData.SourceImage = '*\\\\\\\\Akagi.exe*' or EventData.SourceImage = '*\\\\\\\\Akagi64.exe*' or EventData.SourceImage = '*\\\\\\\\atexec_windows.exe*' or EventData.SourceImage = '*\\\\\\\\Certify.exe*' or EventData.SourceImage = '*\\\\\\\\Certipy.exe*' or EventData.SourceImage = '*\\\\\\\\CoercedPotato.exe*' or EventData.SourceImage = '*\\\\\\\\crackmapexec.exe*' or EventData.SourceImage = '*\\\\\\\\CreateMiniDump.exe*' or EventData.SourceImage = '*\\\\\\\\dcomexec_windows.exe*' or EventData.SourceImage = '*\\\\\\\\dpapi_windows.exe*' or EventData.SourceImage = '*\\\\\\\\findDelegation_windows.exe*' or EventData.SourceImage = '*\\\\\\\\GetADUsers_windows.exe*' or EventData.SourceImage = '*\\\\\\\\GetNPUsers_windows.exe*' or EventData.SourceImage = '*\\\\\\\\getPac_windows.exe*' or EventData.SourceImage = '*\\\\\\\\getST_windows.exe*' or EventData.SourceImage = '*\\\\\\\\getTGT_windows.exe*' or EventData.SourceImage = '*\\\\\\\\GetUserSPNs_windows.exe*' or EventData.SourceImage = '*\\\\\\\\gmer.exe*' or EventData.SourceImage = '*\\\\\\\\hashcat.exe*' or EventData.SourceImage = '*\\\\\\\\htran.exe*' or EventData.SourceImage = '*\\\\\\\\ifmap_windows.exe*' or EventData.SourceImage = '*\\\\\\\\impersonate.exe*' or EventData.SourceImage = '*\\\\\\\\Inveigh.exe*' or EventData.SourceImage = '*\\\\\\\\LocalPotato.exe*' or EventData.SourceImage = '*\\\\\\\\mimikatz_windows.exe*' or EventData.SourceImage = '*\\\\\\\\mimikatz.exe*' or EventData.SourceImage = '*\\\\\\\\netview_windows.exe*' or EventData.SourceImage = '*\\\\\\\\nmapAnswerMachine_windows.exe*' or EventData.SourceImage = '*\\\\\\\\opdump_windows.exe*' or EventData.SourceImage = '*\\\\\\\\PasswordDump.exe*' or EventData.SourceImage = '*\\\\\\\\Potato.exe*' or EventData.SourceImage = '*\\\\\\\\PowerTool.exe*' or EventData.SourceImage = '*\\\\\\\\PowerTool64.exe*' or EventData.SourceImage = '*\\\\\\\\psexec_windows.exe*' or EventData.SourceImage = '*\\\\\\\\PurpleSharp.exe*' or EventData.SourceImage = '*\\\\\\\\pypykatz.exe*' or EventData.SourceImage = '*\\\\\\\\QuarksPwDump.exe*' or EventData.SourceImage = '*\\\\\\\\rdp_check_windows.exe*' or EventData.SourceImage = '*\\\\\\\\Rubeus.exe*' or EventData.SourceImage = '*\\\\\\\\SafetyKatz.exe*' or EventData.SourceImage = '*\\\\\\\\sambaPipe_windows.exe*' or EventData.SourceImage = '*\\\\\\\\SelectMyParent.exe*' or EventData.SourceImage = '*\\\\\\\\SharpChisel.exe*' or EventData.SourceImage = '*\\\\\\\\SharPersist.exe*' or EventData.SourceImage = '*\\\\\\\\SharpEvtMute.exe*' or EventData.SourceImage = '*\\\\\\\\SharpImpersonation.exe*' or EventData.SourceImage = '*\\\\\\\\SharpLDAPmonitor.exe*' or EventData.SourceImage = '*\\\\\\\\SharpLdapWhoami.exe*' or EventData.SourceImage = '*\\\\\\\\SharpUp.exe*' or EventData.SourceImage = '*\\\\\\\\SharpView.exe*' or EventData.SourceImage = '*\\\\\\\\smbclient_windows.exe*' or EventData.SourceImage = '*\\\\\\\\smbserver_windows.exe*' or EventData.SourceImage = '*\\\\\\\\sniff_windows.exe*' or EventData.SourceImage = '*\\\\\\\\sniffer_windows.exe*' or EventData.SourceImage = '*\\\\\\\\split_windows.exe*' or EventData.SourceImage = '*\\\\\\\\SpoolSample.exe*' or EventData.SourceImage = '*\\\\\\\\Stracciatella.exe*' or EventData.SourceImage = '*\\\\\\\\SysmonEOP.exe*' or EventData.SourceImage = '*\\\\\\\\temp\\\\\\\\rot.exe*' or EventData.SourceImage = '*\\\\\\\\ticketer_windows.exe*' or EventData.SourceImage = '*\\\\\\\\TruffleSnout.exe*' or EventData.SourceImage = '*\\\\\\\\winPEASany_ofs.exe*' or EventData.SourceImage = '*\\\\\\\\winPEASany.exe*' or EventData.SourceImage = '*\\\\\\\\winPEASx64_ofs.exe*' or EventData.SourceImage = '*\\\\\\\\winPEASx64.exe*' or EventData.SourceImage = '*\\\\\\\\winPEASx86_ofs.exe*' or EventData.SourceImage = '*\\\\\\\\winPEASx86.exe*' or EventData.SourceImage = '*\\\\\\\\xordump.exe*')) or ((EventData.SourceImage = '*\\\\\\\\goldenPac*' or EventData.SourceImage = '*\\\\\\\\just_dce_*' or EventData.SourceImage = '*\\\\\\\\karmaSMB*' or EventData.SourceImage = '*\\\\\\\\kintercept*' or EventData.SourceImage = '*\\\\\\\\LocalPotato*' or EventData.SourceImage = '*\\\\\\\\ntlmrelayx*' or EventData.SourceImage = '*\\\\\\\\rpcdump*' or EventData.SourceImage = '*\\\\\\\\samrdump*' or EventData.SourceImage = '*\\\\\\\\secretsdump*' or EventData.SourceImage = '*\\\\\\\\smbexec*' or EventData.SourceImage = '*\\\\\\\\smbrelayx*' or EventData.SourceImage = '*\\\\\\\\wmiexec*' or EventData.SourceImage = '*\\\\\\\\wmipersist*' or EventData.SourceImage = '*HotPotato*' or EventData.SourceImage = '*Juicy Potato*' or EventData.SourceImage = '*JuicyPotato*' or EventData.SourceImage = '*PetitPotam*' or EventData.SourceImage = '*RottenPotato*')))\nselect *",
+  "rememberNotifications": false,
+  "suppressDuplicateNotifications": false,
+  "timeRange": {
+    "name": "All time",
+    "condition": "BETWEEN"
+  },
+  "uuid": "stroomworks_T1003_001_proc_access_win_hktl_generic_access",
+  "version": "stroomworks_T1003_001_proc_access_win_hktl_generic_access_v1",
+  "type": "AnalyticRule",
+  "level": "high",
+  "status": "test"
+}

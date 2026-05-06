@@ -1,0 +1,6 @@
+name=T1003.001 - PowerShell Get-Process LSASS in ScriptBlock
+path=Data_Generators/Windows
+type=DataGen
+uuid=stroomworks_T1003_001_posh_ps_susp_getprocess_lsass_dg
+
+stroomworks_T1003_001_posh_ps_susp_getprocess_lsass_dg_v1

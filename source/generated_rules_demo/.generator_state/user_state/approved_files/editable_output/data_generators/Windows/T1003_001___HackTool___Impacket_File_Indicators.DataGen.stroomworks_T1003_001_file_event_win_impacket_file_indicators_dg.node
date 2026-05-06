@@ -1,0 +1,6 @@
+name=T1003.001 - HackTool - Impacket File Indicators
+path=Data_Generators/Windows
+type=DataGen
+uuid=stroomworks_T1003_001_file_event_win_impacket_file_indicators_dg
+
+stroomworks_T1003_001_file_event_win_impacket_file_indicators_dg_v1

@@ -1,6 +1,0 @@
-name=T1547.001 - WinRARCreatingFilesinStartupLocations
-path=Rules/Windows/experimental
-type=AnalyticRule
-uuid=stroomworks_T1547_001_file_event_win_winrar_file_creation_in_startup_folder
-
-stroomworks_T1547_001_file_event_win_winrar_file_creation_in_startup_folder_v1

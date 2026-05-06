@@ -1,0 +1,6 @@
+name=T1003.001 - HackToolImpacketFileIndicators
+path=Rules/Windows/experimental
+type=AnalyticRule
+uuid=stroomworks_T1003_001_file_event_win_impacket_file_indicators
+
+stroomworks_T1003_001_file_event_win_impacket_file_indicators_v1

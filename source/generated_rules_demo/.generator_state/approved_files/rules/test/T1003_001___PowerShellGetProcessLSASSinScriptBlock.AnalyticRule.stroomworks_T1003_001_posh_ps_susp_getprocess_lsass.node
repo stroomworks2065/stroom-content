@@ -1,0 +1,6 @@
+name=T1003.001 - PowerShellGetProcessLSASSinScriptBlock
+path=Rules/Windows/test
+type=AnalyticRule
+uuid=stroomworks_T1003_001_posh_ps_susp_getprocess_lsass
+
+stroomworks_T1003_001_posh_ps_susp_getprocess_lsass_v1

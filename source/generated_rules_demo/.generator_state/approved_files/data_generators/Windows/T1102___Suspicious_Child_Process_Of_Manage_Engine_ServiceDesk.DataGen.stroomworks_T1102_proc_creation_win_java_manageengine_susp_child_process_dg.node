@@ -1,6 +1,0 @@
-name=T1102 - Suspicious Child Process Of Manage Engine ServiceDesk
-path=Data_Generators/Windows
-type=DataGen
-uuid=stroomworks_T1102_proc_creation_win_java_manageengine_susp_child_process_dg
-
-stroomworks_T1102_proc_creation_win_java_manageengine_susp_child_process_dg_v1

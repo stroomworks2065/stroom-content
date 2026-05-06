@@ -1,6 +1,0 @@
-name=T1003.003 - NTDS.DIT Creation By Uncommon Parent Process
-path=Data_Generators/Windows
-type=DataGen
-uuid=stroomworks_T1003_003_file_event_win_ntds_dit_uncommon_parent_process_dg
-
-stroomworks_T1003_003_file_event_win_ntds_dit_uncommon_parent_process_dg_v1

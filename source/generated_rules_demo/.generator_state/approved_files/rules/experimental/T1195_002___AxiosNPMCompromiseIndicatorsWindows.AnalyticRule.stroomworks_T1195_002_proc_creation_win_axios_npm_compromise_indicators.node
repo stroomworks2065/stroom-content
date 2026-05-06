@@ -1,6 +1,0 @@
-name=T1195.002 - AxiosNPMCompromiseIndicatorsWindows
-path=Rules/Windows/experimental
-type=AnalyticRule
-uuid=stroomworks_T1195_002_proc_creation_win_axios_npm_compromise_indicators
-
-stroomworks_T1195_002_proc_creation_win_axios_npm_compromise_indicators_v1

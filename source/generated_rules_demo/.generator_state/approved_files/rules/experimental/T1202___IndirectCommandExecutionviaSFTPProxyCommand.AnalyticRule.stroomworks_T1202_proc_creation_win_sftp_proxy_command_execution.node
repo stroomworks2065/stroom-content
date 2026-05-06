@@ -1,6 +1,0 @@
-name=T1202 - IndirectCommandExecutionviaSFTPProxyCommand
-path=Rules/Windows/experimental
-type=AnalyticRule
-uuid=stroomworks_T1202_proc_creation_win_sftp_proxy_command_execution
-
-stroomworks_T1202_proc_creation_win_sftp_proxy_command_execution_v1

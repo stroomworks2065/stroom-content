@@ -1,0 +1,6 @@
+name=T1001.003 - SuspiciousLDAPAttributesUsed
+path=Rules/Windows/test
+type=AnalyticRule
+uuid=stroomworks_T1001_003_win_security_susp_ldap_dataexchange
+
+stroomworks_T1001_003_win_security_susp_ldap_dataexchange_v1

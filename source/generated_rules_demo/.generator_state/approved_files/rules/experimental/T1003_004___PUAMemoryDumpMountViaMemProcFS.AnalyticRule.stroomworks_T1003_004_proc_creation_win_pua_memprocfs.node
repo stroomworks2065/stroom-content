@@ -1,6 +1,0 @@
-name=T1003.004 - PUAMemoryDumpMountViaMemProcFS
-path=Rules/Windows/experimental
-type=AnalyticRule
-uuid=stroomworks_T1003_004_proc_creation_win_pua_memprocfs
-
-stroomworks_T1003_004_proc_creation_win_pua_memprocfs_v1

@@ -1,0 +1,6 @@
+name=T1003.001 - SuspiciousRenamedComsvcsDLLLoadedByRundll32
+path=Rules/Windows/test
+type=AnalyticRule
+uuid=stroomworks_T1003_001_image_load_dll_comsvcs_load_renamed_version_by_rundll32
+
+stroomworks_T1003_001_image_load_dll_comsvcs_load_renamed_version_by_rundll32_v1

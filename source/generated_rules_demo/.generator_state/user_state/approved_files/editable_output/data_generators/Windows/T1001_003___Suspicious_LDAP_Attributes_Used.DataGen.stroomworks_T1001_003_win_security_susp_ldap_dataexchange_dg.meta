@@ -1,0 +1,13 @@
+{
+  "description": "",
+  "feed": {
+    "type": "Feed",
+    "uuid": "61f60ac1-b92b-4bb8-ac45-33bcf9f4ce61",
+    "name": "RULE_FEED"
+  },
+  "name": "T1001.003 - Suspicious LDAP-Attributes Used",
+  "template": "<Event xmlns=\"http://schemas.microsoft.com/win/2004/08/events/event\">\n  <System>\n    <EventID>5136</EventID>\n  </System>\n  <EventData>\n    <Data Name=\"EventID\">5136</Data>\n    <Data Name=\"AttributeValue\">C:\\stroomworks_test\\test_file.log</Data>\n    <Data Name=\"AttributeLDAPDisplayName\">primaryInternationalISDNNumber</Data>\n  </EventData>\n</Event>\n",
+  "uuid": "stroomworks_T1001_003_win_security_susp_ldap_dataexchange_dg",
+  "version": "stroomworks_T1001_003_win_security_susp_ldap_dataexchange_dg_v1",
+  "type": "DataGen"
+}

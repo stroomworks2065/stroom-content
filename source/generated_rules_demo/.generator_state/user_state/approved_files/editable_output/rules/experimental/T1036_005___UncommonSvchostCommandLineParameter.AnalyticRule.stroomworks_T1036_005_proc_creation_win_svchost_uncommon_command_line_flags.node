@@ -1,6 +1,0 @@
-name=T1036.005 - UncommonSvchostCommandLineParameter
-path=Rules/Windows/experimental
-type=AnalyticRule
-uuid=stroomworks_T1036_005_proc_creation_win_svchost_uncommon_command_line_flags
-
-stroomworks_T1036_005_proc_creation_win_svchost_uncommon_command_line_flags_v1

@@ -1,0 +1,52 @@
+{
+  "analyticProcessType": "STREAMING",
+  "duplicateNotificationConfig": {
+    "chooseColumns": false,
+    "columnNames": [],
+    "rememberNotifications": false,
+    "suppressDuplicateNotifications": false
+  },
+  "errorFeed": {
+    "type": "Feed",
+    "uuid": "8b95697a-1827-4e67-b982-940f3d47634c",
+    "name": "RULE_ERRORS_FEED"
+  },
+  "includeRuleDocumentation": false,
+  "languageVersion": "STROOM_QL_VERSION_0_1",
+  "name": "T1003.001 - LSASSProcessMemoryDumpCreationViaTaskmgr.EXE",
+  "description": "Detects the creation of an \"lsass.dmp\" file by the taskmgr process. This indicates a manual dumping of the LSASS.exe process memory using Windows Task Manager.\n\nLevel: high\n\nStatus: test\n\nFalse Positives:\n- Rare case of troubleshooting by an administrator or support that has to be investigated regardless\n\nReferences:\n- https://github.com/redcanaryco/atomic-red-team/blob/987e3ca988ae3cff4b9f6e388c139c05bf44bbb8/atomics/T1003.001/T1003.001.md#L1\n\nTags:\n- attack.credential-access\n- attack.t1003.001\n\nSource Sigma rule author(s):\n- Swachchhanda Shrawan Poudel\n\nSource Sigma rule: file\\_event\\_win\\_taskmgr\\_lsass\\_dump.yml",
+  "notifications": [
+    {
+      "destination": {
+        "type": "stream",
+        "destinationFeed": {
+          "type": "Feed",
+          "uuid": "f58bb9a9-1359-4077-9451-f977b2b862c3",
+          "name": "RULE_OUTPUT_FEED"
+        },
+        "useSourceFeedIfPossible": false
+      },
+      "destinationType": "STREAM",
+      "enabled": true,
+      "limitNotifications": false,
+      "maxNotifications": 1,
+      "resumeAfter": {
+        "time": 1,
+        "timeUnit": "DAYS"
+      },
+      "uuid": "9ed54c1d-6c2c-41e0-aae1-fe3a25c5f77c"
+    }
+  ],
+  "query": "from RULE_VIEW\nwhere ((EventData.Image = ':\\\\\\\\Windows\\\\\\\\system32\\\\\\\\taskmgr.exe' or EventData.Image = ':\\\\\\\\Windows\\\\\\\\SysWOW64\\\\\\\\taskmgr.exe') and (EventData.TargetFilename = '*\\\\\\\\AppData\\\\\\\\Local\\\\\\\\Temp\\\\\\\\*' or EventData.TargetFilename = '*\\\\\\\\lsass*' or EventData.TargetFilename = '*.DMP*'))\nselect *",
+  "rememberNotifications": false,
+  "suppressDuplicateNotifications": false,
+  "timeRange": {
+    "name": "All time",
+    "condition": "BETWEEN"
+  },
+  "uuid": "stroomworks_T1003_001_file_event_win_taskmgr_lsass_dump",
+  "version": "stroomworks_T1003_001_file_event_win_taskmgr_lsass_dump_v1",
+  "type": "AnalyticRule",
+  "level": "high",
+  "status": "test"
+}

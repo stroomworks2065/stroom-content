@@ -1,0 +1,6 @@
+name=T1003.001 - RemoteLSASSProcessAccessThroughWindowsRemoteManagement
+path=Rules/Windows/stable
+type=AnalyticRule
+uuid=stroomworks_T1003_001_proc_access_win_lsass_remote_access_trough_winrm
+
+stroomworks_T1003_001_proc_access_win_lsass_remote_access_trough_winrm_v1

@@ -1,6 +1,0 @@
-name=T1685 - SuspiciousLoadingofDbgcoreDbghelpDLLsfromUncommonLocation
-path=Rules/Windows/experimental
-type=AnalyticRule
-uuid=stroomworks_T1685_image_load_win_susp_dbgcore_dbghelp_load
-
-stroomworks_T1685_image_load_win_susp_dbgcore_dbghelp_load_v1

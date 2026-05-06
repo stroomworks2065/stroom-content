@@ -1,6 +1,0 @@
-name=T1127 - Node Process Executions
-path=Data_Generators/Windows
-type=DataGen
-uuid=stroomworks_T1127_proc_creation_win_node_adobe_creative_cloud_abuse_dg
-
-stroomworks_T1127_proc_creation_win_node_adobe_creative_cloud_abuse_dg_v1
