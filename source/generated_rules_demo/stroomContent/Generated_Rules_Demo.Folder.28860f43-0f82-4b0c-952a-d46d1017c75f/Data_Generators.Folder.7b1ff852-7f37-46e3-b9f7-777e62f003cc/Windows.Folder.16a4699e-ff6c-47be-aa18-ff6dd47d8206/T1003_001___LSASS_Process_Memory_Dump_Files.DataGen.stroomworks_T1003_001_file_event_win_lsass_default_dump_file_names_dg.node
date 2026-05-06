@@ -1,6 +1,0 @@
-name=T1003.001 - LSASS Process Memory Dump Files
-path=Data_Generators/Windows
-type=DataGen
-uuid=stroomworks_T1003_001_file_event_win_lsass_default_dump_file_names_dg
-
-stroomworks_T1003_001_file_event_win_lsass_default_dump_file_names_dg_v1

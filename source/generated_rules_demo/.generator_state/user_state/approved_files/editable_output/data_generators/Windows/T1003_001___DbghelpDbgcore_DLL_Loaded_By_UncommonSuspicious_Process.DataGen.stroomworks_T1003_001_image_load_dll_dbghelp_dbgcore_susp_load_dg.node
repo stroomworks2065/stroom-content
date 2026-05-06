@@ -1,6 +1,0 @@
-name=T1003.001 - DbghelpDbgcore DLL Loaded By UncommonSuspicious Process
-path=Data_Generators/Windows
-type=DataGen
-uuid=stroomworks_T1003_001_image_load_dll_dbghelp_dbgcore_susp_load_dg
-
-stroomworks_T1003_001_image_load_dll_dbghelp_dbgcore_susp_load_dg_v1

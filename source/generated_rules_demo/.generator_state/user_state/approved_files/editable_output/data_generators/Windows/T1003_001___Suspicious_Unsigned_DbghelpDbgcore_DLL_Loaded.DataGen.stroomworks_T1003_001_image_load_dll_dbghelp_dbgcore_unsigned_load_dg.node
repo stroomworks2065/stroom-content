@@ -1,6 +1,0 @@
-name=T1003.001 - Suspicious Unsigned DbghelpDbgcore DLL Loaded
-path=Data_Generators/Windows
-type=DataGen
-uuid=stroomworks_T1003_001_image_load_dll_dbghelp_dbgcore_unsigned_load_dg
-
-stroomworks_T1003_001_image_load_dll_dbghelp_dbgcore_unsigned_load_dg_v1
