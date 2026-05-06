@@ -1,6 +1,0 @@
-name=T1003.001 - UnsignedImageLoadedIntoLSASSProcess
-path=Rules/Windows/test
-type=AnalyticRule
-uuid=stroomworks_T1003_001_image_load_lsass_unsigned_image_load
-
-stroomworks_T1003_001_image_load_lsass_unsigned_image_load_v1
