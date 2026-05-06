@@ -1,0 +1,6 @@
+name=T1685 - DevconExecutionDisablingVMwareVMCIDevice
+path=Rules/Windows/experimental
+type=AnalyticRule
+uuid=stroomworks_T1685_proc_creation_win_devcon_disable_vmci_driver
+
+stroomworks_T1685_proc_creation_win_devcon_disable_vmci_driver_v1

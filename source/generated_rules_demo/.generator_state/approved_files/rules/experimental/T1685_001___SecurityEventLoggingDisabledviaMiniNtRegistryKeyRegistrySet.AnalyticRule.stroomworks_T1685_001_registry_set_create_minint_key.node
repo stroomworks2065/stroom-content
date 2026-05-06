@@ -1,0 +1,6 @@
+name=T1685.001 - SecurityEventLoggingDisabledviaMiniNtRegistryKeyRegistrySet
+path=Rules/Windows/experimental
+type=AnalyticRule
+uuid=stroomworks_T1685_001_registry_set_create_minint_key
+
+stroomworks_T1685_001_registry_set_create_minint_key_v1

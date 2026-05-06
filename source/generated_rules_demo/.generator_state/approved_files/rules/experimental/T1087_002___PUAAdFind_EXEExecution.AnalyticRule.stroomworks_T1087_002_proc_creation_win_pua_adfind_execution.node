@@ -1,0 +1,6 @@
+name=T1087.002 - PUAAdFind.EXEExecution
+path=Rules/Windows/experimental
+type=AnalyticRule
+uuid=stroomworks_T1087_002_proc_creation_win_pua_adfind_execution
+
+stroomworks_T1087_002_proc_creation_win_pua_adfind_execution_v1

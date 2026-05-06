@@ -1,0 +1,6 @@
+name=T1078.002 - msDSManagedAccountPrecededByLinkAttributeModified
+path=Rules/Windows/experimental
+type=AnalyticRule
+uuid=stroomworks_T1078_002_win_security_modification_of_msds_dmsa_link_attribute
+
+stroomworks_T1078_002_win_security_modification_of_msds_dmsa_link_attribute_v1

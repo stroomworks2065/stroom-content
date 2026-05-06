@@ -1,0 +1,6 @@
+name=T1685 - WDACPolicyFileCreationInCodeIntegrityFolder
+path=Rules/Windows/experimental
+type=AnalyticRule
+uuid=stroomworks_T1685_file_event_win_wdac_policy_creation_in_codeintegrity_folder
+
+stroomworks_T1685_file_event_win_wdac_policy_creation_in_codeintegrity_folder_v1

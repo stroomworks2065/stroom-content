@@ -1,0 +1,6 @@
+name=T1550.002 - Pass the Hash Activity 2
+path=Data_Generators/Windows
+type=DataGen
+uuid=stroomworks_T1550_002_win_security_pass_the_hash_2_dg
+
+stroomworks_T1550_002_win_security_pass_the_hash_2_dg_v1

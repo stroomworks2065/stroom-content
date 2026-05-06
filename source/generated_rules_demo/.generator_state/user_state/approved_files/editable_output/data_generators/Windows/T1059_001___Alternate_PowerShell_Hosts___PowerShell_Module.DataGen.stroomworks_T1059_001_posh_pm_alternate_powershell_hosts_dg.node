@@ -1,0 +1,6 @@
+name=T1059.001 - Alternate PowerShell Hosts - PowerShell Module
+path=Data_Generators/Windows
+type=DataGen
+uuid=stroomworks_T1059_001_posh_pm_alternate_powershell_hosts_dg
+
+stroomworks_T1059_001_posh_pm_alternate_powershell_hosts_dg_v1

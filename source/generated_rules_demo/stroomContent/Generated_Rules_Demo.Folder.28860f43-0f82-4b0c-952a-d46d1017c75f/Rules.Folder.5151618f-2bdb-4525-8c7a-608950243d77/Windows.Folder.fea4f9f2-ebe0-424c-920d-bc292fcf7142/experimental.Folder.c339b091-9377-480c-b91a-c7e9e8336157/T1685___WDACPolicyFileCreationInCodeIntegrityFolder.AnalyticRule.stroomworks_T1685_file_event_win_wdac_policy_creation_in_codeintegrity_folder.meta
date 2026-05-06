@@ -1,0 +1,52 @@
+{
+  "analyticProcessType": "STREAMING",
+  "duplicateNotificationConfig": {
+    "chooseColumns": false,
+    "columnNames": [],
+    "rememberNotifications": false,
+    "suppressDuplicateNotifications": false
+  },
+  "errorFeed": {
+    "type": "Feed",
+    "uuid": "8b95697a-1827-4e67-b982-940f3d47634c",
+    "name": "RULE_ERRORS_FEED"
+  },
+  "includeRuleDocumentation": false,
+  "languageVersion": "STROOM_QL_VERSION_0_1",
+  "name": "T1685 - WDACPolicyFileCreationInCodeIntegrityFolder",
+  "description": "Attackers can craft a custom Windows Defender Application Control (WDAC) policy that blocks Endpoint Detection and Response (EDR) components while allowing their own malicious code. The policy is placed in the privileged Windows Code Integrity folder (C:\\Windows\\System32\\CodeIntegrity\\). Upon reboot, the policy prevents EDR drivers from loading, effectively bypassing security measures and may further enable undetected lateral movement within an Active Directory environment.\n\n\nLevel: medium\n\nStatus: experimental\n\nFalse Positives:\n- May occur legitimately as part of admin activity, but rarely with interactive elevation.\n\nReferences:\n- https://beierle.win/2024-12-20-Weaponizing-WDAC-Killing-the-Dreams-of-EDR/\n- https://www.virustotal.com/gui/file/d2a4f52a9923336f119a52e531bbb1e66f18322fd8efa9af1a64b94f4d36dc97\n\nTags:\n- attack.defense-impairment\n- attack.t1685\n- detection.threat-hunting\n\nSource Sigma rule author(s):\n- Andreas Braathen (mnemonic.io)\n\nSource Sigma rule: file\\_event\\_win\\_wdac\\_policy\\_creation\\_in\\_codeintegrity\\_folder.yml",
+  "notifications": [
+    {
+      "destination": {
+        "type": "stream",
+        "destinationFeed": {
+          "type": "Feed",
+          "uuid": "f58bb9a9-1359-4077-9451-f977b2b862c3",
+          "name": "RULE_OUTPUT_FEED"
+        },
+        "useSourceFeedIfPossible": false
+      },
+      "destinationType": "STREAM",
+      "enabled": true,
+      "limitNotifications": false,
+      "maxNotifications": 1,
+      "resumeAfter": {
+        "time": 1,
+        "timeUnit": "DAYS"
+      },
+      "uuid": "9ed54c1d-6c2c-41e0-aae1-fe3a25c5f77c"
+    }
+  ],
+  "query": "from RULE_VIEW\nwhere (EventData.TargetFilename = '*:\\\\\\\\Windows\\\\\\\\System32\\\\\\\\CodeIntegrity\\\\\\\\*' and (EventData.TargetFilename = '*.cip*' or EventData.TargetFilename = '*.p7b*') and EventData.IntegrityLevel = 'High')\nselect *",
+  "rememberNotifications": false,
+  "suppressDuplicateNotifications": false,
+  "timeRange": {
+    "name": "All time",
+    "condition": "BETWEEN"
+  },
+  "uuid": "stroomworks_T1685_file_event_win_wdac_policy_creation_in_codeintegrity_folder",
+  "version": "stroomworks_T1685_file_event_win_wdac_policy_creation_in_codeintegrity_folder_v1",
+  "type": "AnalyticRule",
+  "level": "medium",
+  "status": "experimental"
+}

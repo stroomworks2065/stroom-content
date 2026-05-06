@@ -1,0 +1,6 @@
+name=T1490 - File Recovery From Backup Via Wbadmin.EXE
+path=Data_Generators/Windows
+type=DataGen
+uuid=stroomworks_T1490_proc_creation_win_wbadmin_restore_file_dg
+
+stroomworks_T1490_proc_creation_win_wbadmin_restore_file_dg_v1

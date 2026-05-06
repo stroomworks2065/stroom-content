@@ -1,0 +1,6 @@
+name=T1543.003 - Sysinternals PsSuspend Execution
+path=Data_Generators/Windows
+type=DataGen
+uuid=stroomworks_T1543_003_proc_creation_win_sysinternals_pssuspend_execution_dg
+
+stroomworks_T1543_003_proc_creation_win_sysinternals_pssuspend_execution_dg_v1

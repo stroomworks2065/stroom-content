@@ -1,0 +1,6 @@
+name=T1546.001 - Suspicious Shell Open Command Registry Modification
+path=Data_Generators/Windows
+type=DataGen
+uuid=stroomworks_T1546_001_registry_set_susp_shell_open_keys_modification_patterns_dg
+
+stroomworks_T1546_001_registry_set_susp_shell_open_keys_modification_patterns_dg_v1

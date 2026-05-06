@@ -1,0 +1,52 @@
+{
+  "analyticProcessType": "STREAMING",
+  "duplicateNotificationConfig": {
+    "chooseColumns": false,
+    "columnNames": [],
+    "rememberNotifications": false,
+    "suppressDuplicateNotifications": false
+  },
+  "errorFeed": {
+    "type": "Feed",
+    "uuid": "8b95697a-1827-4e67-b982-940f3d47634c",
+    "name": "RULE_ERRORS_FEED"
+  },
+  "includeRuleDocumentation": false,
+  "languageVersion": "STROOM_QL_VERSION_0_1",
+  "name": "T1547.001 - WinRARCreatingFilesinStartupLocations",
+  "description": "Detects WinRAR creating files in Windows startup locations, which may indicate an attempt to establish persistence by adding malicious files to the Startup folder.\nThis kind of behaviour has been associated with exploitation of WinRAR path traversal vulnerability CVE-2025-6218 or CVE-2025-8088.\n\n\nLevel: high\n\nStatus: experimental\n\nFalse Positives:\n- Unknown\n\nReferences:\n- https://github.com/mulwareX/CVE-2025-6218-POC\n- https://x.com/0x534c/status/1944694507787710685\n- https://www.welivesecurity.com/en/eset-research/update-winrar-tools-now-romcom-and-others-exploiting-zero-day-vulnerability/\n\nTags:\n- attack.privilege-escalation\n- attack.persistence\n- attack.t1547.001\n\nSource Sigma rule author(s):\n- Swachchhanda Shrawan Poudel (Nextron Systems)\n\nSource Sigma rule: file\\_event\\_win\\_winrar\\_file\\_creation\\_in\\_startup\\_folder.yml",
+  "notifications": [
+    {
+      "destination": {
+        "type": "stream",
+        "destinationFeed": {
+          "type": "Feed",
+          "uuid": "f58bb9a9-1359-4077-9451-f977b2b862c3",
+          "name": "RULE_OUTPUT_FEED"
+        },
+        "useSourceFeedIfPossible": false
+      },
+      "destinationType": "STREAM",
+      "enabled": true,
+      "limitNotifications": false,
+      "maxNotifications": 1,
+      "resumeAfter": {
+        "time": 1,
+        "timeUnit": "DAYS"
+      },
+      "uuid": "9ed54c1d-6c2c-41e0-aae1-fe3a25c5f77c"
+    }
+  ],
+  "query": "from RULE_VIEW\nwhere ((EventData.Image = '*\\\\\\\\WinRAR.exe' or EventData.Image = '*\\\\\\\\Rar.exe') and EventData.TargetFilename = '*\\\\\\\\Start Menu\\\\\\\\Programs\\\\\\\\Startup\\\\\\\\*')\nselect *",
+  "rememberNotifications": false,
+  "suppressDuplicateNotifications": false,
+  "timeRange": {
+    "name": "All time",
+    "condition": "BETWEEN"
+  },
+  "uuid": "stroomworks_T1547_001_file_event_win_winrar_file_creation_in_startup_folder",
+  "version": "stroomworks_T1547_001_file_event_win_winrar_file_creation_in_startup_folder_v1",
+  "type": "AnalyticRule",
+  "level": "high",
+  "status": "experimental"
+}

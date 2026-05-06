@@ -1,0 +1,6 @@
+name=T1219.002 - DNS Query To AzureWebsites.NET By Non-Browser Process
+path=Data_Generators/Windows
+type=DataGen
+uuid=stroomworks_T1219_002_dns_query_win_domain_azurewebsites_dg
+
+stroomworks_T1219_002_dns_query_win_domain_azurewebsites_dg_v1

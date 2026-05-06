@@ -1,0 +1,13 @@
+{
+  "description": "",
+  "feed": {
+    "type": "Feed",
+    "uuid": "61f60ac1-b92b-4bb8-ac45-33bcf9f4ce61",
+    "name": "RULE_FEED"
+  },
+  "name": "T1496 - Network Communication With Crypto Mining Pool",
+  "template": "<Event xmlns=\"http://schemas.microsoft.com/win/2004/08/events/event\">\n  <System>\n    <EventID>1</EventID>\n  </System>\n  <EventData>\n    <Data Name=\"DestinationHostname\">alimabi.cn</Data>\n  </EventData>\n</Event>\n",
+  "uuid": "stroomworks_T1496_net_connection_win_domain_crypto_mining_pools_dg",
+  "version": "stroomworks_T1496_net_connection_win_domain_crypto_mining_pools_dg_v1",
+  "type": "DataGen"
+}

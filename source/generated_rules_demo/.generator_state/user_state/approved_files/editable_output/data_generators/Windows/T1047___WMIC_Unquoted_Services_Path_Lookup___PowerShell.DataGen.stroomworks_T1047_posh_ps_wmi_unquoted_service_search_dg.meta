@@ -1,0 +1,13 @@
+{
+  "description": "",
+  "feed": {
+    "type": "Feed",
+    "uuid": "61f60ac1-b92b-4bb8-ac45-33bcf9f4ce61",
+    "name": "RULE_FEED"
+  },
+  "name": "T1047 - WMIC Unquoted Services Path Lookup - PowerShell",
+  "template": "<Event xmlns=\"http://schemas.microsoft.com/win/2004/08/events/event\">\n  <System>\n    <EventID>1</EventID>\n  </System>\n  <EventData>\n    <Data Name=\"ScriptBlockText\">C:\\Users\\User\\AppData\\Get-WmiObject \\gwmi \\ Win32_Service \\Name\\DisplayName\\PathName\\StartMode</Data>\n  </EventData>\n</Event>\n",
+  "uuid": "stroomworks_T1047_posh_ps_wmi_unquoted_service_search_dg",
+  "version": "stroomworks_T1047_posh_ps_wmi_unquoted_service_search_dg_v1",
+  "type": "DataGen"
+}

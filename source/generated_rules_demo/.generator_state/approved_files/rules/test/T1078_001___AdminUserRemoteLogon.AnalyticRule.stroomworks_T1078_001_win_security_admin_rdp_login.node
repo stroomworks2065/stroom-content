@@ -1,6 +1,0 @@
-name=T1078.001 - AdminUserRemoteLogon
-path=Rules/Windows/test
-type=AnalyticRule
-uuid=stroomworks_T1078_001_win_security_admin_rdp_login
-
-stroomworks_T1078_001_win_security_admin_rdp_login_v1

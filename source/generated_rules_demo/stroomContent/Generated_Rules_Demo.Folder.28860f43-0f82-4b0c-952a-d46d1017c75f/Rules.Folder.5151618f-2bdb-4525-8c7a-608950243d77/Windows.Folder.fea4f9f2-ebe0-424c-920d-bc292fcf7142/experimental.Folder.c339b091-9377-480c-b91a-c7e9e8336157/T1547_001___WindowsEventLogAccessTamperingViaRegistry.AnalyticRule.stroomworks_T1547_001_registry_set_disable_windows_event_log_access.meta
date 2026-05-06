@@ -1,0 +1,52 @@
+{
+  "analyticProcessType": "STREAMING",
+  "duplicateNotificationConfig": {
+    "chooseColumns": false,
+    "columnNames": [],
+    "rememberNotifications": false,
+    "suppressDuplicateNotifications": false
+  },
+  "errorFeed": {
+    "type": "Feed",
+    "uuid": "8b95697a-1827-4e67-b982-940f3d47634c",
+    "name": "RULE_ERRORS_FEED"
+  },
+  "includeRuleDocumentation": false,
+  "languageVersion": "STROOM_QL_VERSION_0_1",
+  "name": "T1547.001 - WindowsEventLogAccessTamperingViaRegistry",
+  "description": "Detects changes to the Windows EventLog channel permission values. It focuses on changes to the Security Descriptor Definition Language (SDDL) string, as modifications to these values can restrict access to specific users or groups, potentially aiding in defense evasion by controlling who can view or modify a event log channel. Upon execution, the user shouldn't be able to access the event log channel via the event viewer or via utilities such as \"Get-EventLog\" or \"wevtutil\".\n\n\nLevel: high\n\nStatus: experimental\n\nFalse Positives:\n- Administrative activity, still unlikely\n\nReferences:\n- https://www.atomicredteam.io/atomic-red-team/atomics/T1562.002#atomic-test-8---modify-event-log-channel-access-permissions-via-registry---powershell\n- https://www.youtube.com/watch?v=uSYvHUVU8xY\n- https://learn.microsoft.com/en-us/windows/win32/secauthz/security-descriptor-definition-language\n\nTags:\n- attack.privilege-escalation\n- attack.persistence\n- attack.defense-impairment\n- attack.t1547.001\n- attack.t1112\n\nSource Sigma rule author(s):\n- X\\_\\_Junior\n\nSource Sigma rule: registry\\_set\\_disable\\_windows\\_event\\_log\\_access.yml",
+  "notifications": [
+    {
+      "destination": {
+        "type": "stream",
+        "destinationFeed": {
+          "type": "Feed",
+          "uuid": "f58bb9a9-1359-4077-9451-f977b2b862c3",
+          "name": "RULE_OUTPUT_FEED"
+        },
+        "useSourceFeedIfPossible": false
+      },
+      "destinationType": "STREAM",
+      "enabled": true,
+      "limitNotifications": false,
+      "maxNotifications": 1,
+      "resumeAfter": {
+        "time": 1,
+        "timeUnit": "DAYS"
+      },
+      "uuid": "9ed54c1d-6c2c-41e0-aae1-fe3a25c5f77c"
+    }
+  ],
+  "query": "from RULE_VIEW\nwhere (((EventData.TargetObject = '*\\\\\\\\SYSTEM\\\\\\\\CurrentControlSet\\\\\\\\Services\\\\\\\\EventLog\\\\\\\\*' and EventData.TargetObject = '*\\\\\\\\CustomSD*') or ((EventData.TargetObject = '*\\\\\\\\Policies\\\\\\\\Microsoft\\\\\\\\Windows\\\\\\\\EventLog\\\\\\\\*' or EventData.TargetObject = '*\\\\\\\\Microsoft\\\\\\\\Windows\\\\\\\\CurrentVersion\\\\\\\\WINEVT\\\\\\\\Channels*') and EventData.TargetObject = '*\\\\\\\\ChannelAccess*')) and ((EventData.Details = '*D:(D;*') or ((EventData.Details = '*D:(*' or EventData.Details = '*)(D;*')))) and not ((EventData.Image = 'C:\\\\\\\\Windows\\\\\\\\servicing\\\\\\\\TrustedInstaller.exe') or (EventData.Image = 'C:\\\\\\\\Windows\\\\\\\\WinSxS\\\\\\\\' and EventData.Image = '*\\\\\\\\TiWorker.exe')) and not ((EventData.Image = '*') or (EventData.Image = ''))\nselect *",
+  "rememberNotifications": false,
+  "suppressDuplicateNotifications": false,
+  "timeRange": {
+    "name": "All time",
+    "condition": "BETWEEN"
+  },
+  "uuid": "stroomworks_T1547_001_registry_set_disable_windows_event_log_access",
+  "version": "stroomworks_T1547_001_registry_set_disable_windows_event_log_access_v1",
+  "type": "AnalyticRule",
+  "level": "high",
+  "status": "experimental"
+}

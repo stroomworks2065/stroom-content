@@ -1,0 +1,6 @@
+name=T1036.003 - RemoteAccessToolRenamedMeshAgentExecutionWindows
+path=Rules/Windows/experimental
+type=AnalyticRule
+uuid=stroomworks_T1036_003_proc_creation_win_remote_access_tools_renamed_meshagent_execution
+
+stroomworks_T1036_003_proc_creation_win_remote_access_tools_renamed_meshagent_execution_v1

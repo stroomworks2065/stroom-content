@@ -1,0 +1,52 @@
+{
+  "analyticProcessType": "STREAMING",
+  "duplicateNotificationConfig": {
+    "chooseColumns": false,
+    "columnNames": [],
+    "rememberNotifications": false,
+    "suppressDuplicateNotifications": false
+  },
+  "errorFeed": {
+    "type": "Feed",
+    "uuid": "8b95697a-1827-4e67-b982-940f3d47634c",
+    "name": "RULE_ERRORS_FEED"
+  },
+  "includeRuleDocumentation": false,
+  "languageVersion": "STROOM_QL_VERSION_0_1",
+  "name": "T1059.003 - SuspiciousUsageofForLoopwithRecursiveDirectorySearchinCMD",
+  "description": "Detects suspicious usage of the cmd.exe 'for /f' loop combined with the 'tokens=' parameter and a recursive directory listing.\nThis pattern may indicate an attempt to discover and execute system binaries dynamically, for example powershell, a technique sometimes used by attackers to evade detection.\nThis behavior has been observed in various malicious lnk files.\n\n\nLevel: medium\n\nStatus: experimental\n\nFalse Positives:\n- Unknown\n\nReferences:\n- https://www.virustotal.com/gui/file/29837d0d3202758063185828c8f8d9e0b7b42b365c8941cc926d2d7c7bae2fb3\n\nTags:\n- attack.execution\n- attack.stealth\n- attack.t1059.003\n- attack.t1027.010\n\nSource Sigma rule author(s):\n- Joseliyo Sanchez\n- @Joseliyo\\_Jstnk\n\nSource Sigma rule: proc\\_creation\\_win\\_susp\\_cmd\\_for\\_loop\\_execution\\_with\\_recursive\\_directory\\_search.yml",
+  "notifications": [
+    {
+      "destination": {
+        "type": "stream",
+        "destinationFeed": {
+          "type": "Feed",
+          "uuid": "f58bb9a9-1359-4077-9451-f977b2b862c3",
+          "name": "RULE_OUTPUT_FEED"
+        },
+        "useSourceFeedIfPossible": false
+      },
+      "destinationType": "STREAM",
+      "enabled": true,
+      "limitNotifications": false,
+      "maxNotifications": 1,
+      "resumeAfter": {
+        "time": 1,
+        "timeUnit": "DAYS"
+      },
+      "uuid": "9ed54c1d-6c2c-41e0-aae1-fe3a25c5f77c"
+    }
+  ],
+  "query": "from RULE_VIEW\nwhere ((EventData.CommandLine = '*for /f*' or EventData.CommandLine = '*tokens=*' or EventData.CommandLine = '*in (*' or EventData.CommandLine = '*dir*')) or ((EventData.ParentCommandLine = '*for /f*' or EventData.ParentCommandLine = '*tokens=*' or EventData.ParentCommandLine = '*in (*' or EventData.ParentCommandLine = '*dir*'))\nselect *",
+  "rememberNotifications": false,
+  "suppressDuplicateNotifications": false,
+  "timeRange": {
+    "name": "All time",
+    "condition": "BETWEEN"
+  },
+  "uuid": "stroomworks_T1059_003_proc_creation_win_susp_cmd_for_loop_execution_with_recursive_directory_search",
+  "version": "stroomworks_T1059_003_proc_creation_win_susp_cmd_for_loop_execution_with_recursive_directory_search_v1",
+  "type": "AnalyticRule",
+  "level": "medium",
+  "status": "experimental"
+}

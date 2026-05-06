@@ -1,0 +1,6 @@
+name=T1021.006 - PotentialLateralMovementviaWindowsRemoteShell
+path=Rules/Windows/experimental
+type=AnalyticRule
+uuid=stroomworks_T1021_006_proc_creation_win_winrshost_command_execution
+
+stroomworks_T1021_006_proc_creation_win_winrshost_command_execution_v1

@@ -1,0 +1,6 @@
+name=T1548.002 - TrustedPathBypassviaWindowsDirectorySpoofing
+path=Rules/Windows/experimental
+type=AnalyticRule
+uuid=stroomworks_T1548_002_image_load_win_trusted_path_bypass
+
+stroomworks_T1548_002_image_load_win_trusted_path_bypass_v1

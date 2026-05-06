@@ -1,6 +1,0 @@
-name=T1542.003 - PotentialRansomwareorUnauthorizedMBRTamperingViaBcdedit.EXE
-path=Rules/Windows/test
-type=AnalyticRule
-uuid=stroomworks_T1542_003_proc_creation_win_bcdedit_susp_execution
-
-stroomworks_T1542_003_proc_creation_win_bcdedit_susp_execution_v1

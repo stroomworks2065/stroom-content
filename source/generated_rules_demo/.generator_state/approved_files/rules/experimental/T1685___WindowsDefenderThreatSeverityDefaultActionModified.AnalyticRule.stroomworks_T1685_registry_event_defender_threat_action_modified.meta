@@ -1,0 +1,52 @@
+{
+  "analyticProcessType": "STREAMING",
+  "duplicateNotificationConfig": {
+    "chooseColumns": false,
+    "columnNames": [],
+    "rememberNotifications": false,
+    "suppressDuplicateNotifications": false
+  },
+  "errorFeed": {
+    "type": "Feed",
+    "uuid": "8b95697a-1827-4e67-b982-940f3d47634c",
+    "name": "RULE_ERRORS_FEED"
+  },
+  "includeRuleDocumentation": false,
+  "languageVersion": "STROOM_QL_VERSION_0_1",
+  "name": "T1685 - WindowsDefenderThreatSeverityDefaultActionModified",
+  "description": "Detects modifications or creations of Windows Defender's default threat action settings based on severity to 'allow' or take 'no action'.\nThis is a highly suspicious configuration change that effectively disables Defender's ability to automatically mitigate threats of a certain severity level,\nallowing malicious software to run unimpeded. An attacker might use this technique to bypass defenses before executing payloads.\n\n\nLevel: high\n\nStatus: experimental\n\nFalse Positives:\n- Legitimate administration via scripts or tools (e.g., SCCM, Intune, GPO enforcement). Correlate with administrative activity.\n- Software installations that legitimately modify Defender settings (less common for these specific keys).\n\nReferences:\n- https://learn.microsoft.com/en-us/powershell/module/defender/set-mppreference\n- https://learn.microsoft.com/en-us/windows-hardware/customize/desktop/unattend/security-malware-windows-defender-threatseveritydefaultaction\n- https://research.splunk.com/endpoint/7215831c-8252-4ae3-8d43-db588e82f952\n- https://gist.github.com/Dump-GUY/8daef859f382b895ac6fd0cf094555d2\n- https://thedfirreport.com/2021/10/18/icedid-to-xinglocker-ransomware-in-24-hours/\n\nTags:\n- attack.defense-impairment\n- attack.t1685\n\nSource Sigma rule author(s):\n- Matt Anderson (Huntress)\n\nSource Sigma rule: registry\\_event\\_defender\\_threat\\_action\\_modified.yml",
+  "notifications": [
+    {
+      "destination": {
+        "type": "stream",
+        "destinationFeed": {
+          "type": "Feed",
+          "uuid": "f58bb9a9-1359-4077-9451-f977b2b862c3",
+          "name": "RULE_OUTPUT_FEED"
+        },
+        "useSourceFeedIfPossible": false
+      },
+      "destinationType": "STREAM",
+      "enabled": true,
+      "limitNotifications": false,
+      "maxNotifications": 1,
+      "resumeAfter": {
+        "time": 1,
+        "timeUnit": "DAYS"
+      },
+      "uuid": "9ed54c1d-6c2c-41e0-aae1-fe3a25c5f77c"
+    }
+  ],
+  "query": "from RULE_VIEW\nwhere (EventData.TargetObject = '*\\\\\\\\Microsoft\\\\\\\\Windows Defender\\\\\\\\Threats\\\\\\\\ThreatSeverityDefaultAction\\\\\\\\*' and (EventData.TargetObject = '*\\\\\\\\1*' or EventData.TargetObject = '*\\\\\\\\2*' or EventData.TargetObject = '*\\\\\\\\4*' or EventData.TargetObject = '*\\\\\\\\5*') and (EventData.Details = '*DWORD (0x00000006)*' or EventData.Details = '*DWORD (0x00000009)*'))\nselect *",
+  "rememberNotifications": false,
+  "suppressDuplicateNotifications": false,
+  "timeRange": {
+    "name": "All time",
+    "condition": "BETWEEN"
+  },
+  "uuid": "stroomworks_T1685_registry_event_defender_threat_action_modified",
+  "version": "stroomworks_T1685_registry_event_defender_threat_action_modified_v1",
+  "type": "AnalyticRule",
+  "level": "high",
+  "status": "experimental"
+}

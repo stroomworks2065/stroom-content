@@ -1,0 +1,52 @@
+{
+  "analyticProcessType": "STREAMING",
+  "duplicateNotificationConfig": {
+    "chooseColumns": false,
+    "columnNames": [],
+    "rememberNotifications": false,
+    "suppressDuplicateNotifications": false
+  },
+  "errorFeed": {
+    "type": "Feed",
+    "uuid": "8b95697a-1827-4e67-b982-940f3d47634c",
+    "name": "RULE_ERRORS_FEED"
+  },
+  "includeRuleDocumentation": false,
+  "languageVersion": "STROOM_QL_VERSION_0_1",
+  "name": "T1036.005 - UncommonSvchostCommandLineParameter",
+  "description": "Detects instances of svchost.exe running with an unusual or uncommon command line parameter by excluding known legitimate or common patterns.\nThis could point at a file masquerading as svchost, a process injection, or hollowing of a legitimate svchost instance.\n\n\nLevel: high\n\nStatus: experimental\n\nFalse Positives:\n- Unlikely\n\nReferences:\n- https://cardinalops.com/blog/the-art-of-anomaly-hunting-patterns-detection/\n- https://www.security.com/threat-intelligence/blackbyte-exbyte-ransomware\n- https://cloud.google.com/blog/topics/threat-intelligence/apt41-initiates-global-intrusion-campaign-using-multiple-exploits/\n- https://media.kasperskycontenthub.com/wp-content/uploads/sites/43/2018/03/08064518/Carbanak\\_APT\\_eng.pdf\n\nTags:\n- attack.privilege-escalation\n- attack.stealth\n- attack.t1036.005\n- attack.t1055\n- attack.t1055.012\n\nSource Sigma rule author(s):\n- Liran Ravich\n\nSource Sigma rule: proc\\_creation\\_win\\_svchost\\_uncommon\\_command\\_line\\_flags.yml",
+  "notifications": [
+    {
+      "destination": {
+        "type": "stream",
+        "destinationFeed": {
+          "type": "Feed",
+          "uuid": "f58bb9a9-1359-4077-9451-f977b2b862c3",
+          "name": "RULE_OUTPUT_FEED"
+        },
+        "useSourceFeedIfPossible": false
+      },
+      "destinationType": "STREAM",
+      "enabled": true,
+      "limitNotifications": false,
+      "maxNotifications": 1,
+      "resumeAfter": {
+        "time": 1,
+        "timeUnit": "DAYS"
+      },
+      "uuid": "9ed54c1d-6c2c-41e0-aae1-fe3a25c5f77c"
+    }
+  ],
+  "query": "from RULE_VIEW\nwhere ((EventData.Image = '*\\\\\\\\svchost.exe') and not (((EventData.CommandLine = '*-k\\\\\\\\s\\\\\\\\w{1,64}(?:\\\\\\\\s?(?:-p|-s))?*') or (EventData.CommandLine = '')) or (EventData.CommandLine = ''))) and not ((EventData.ParentImage = '*\\\\\\\\MsMpEng.exe' and EventData.CommandLine = '*svchost.exe*') or (EventData.ParentImage = '*\\\\\\\\MRT.exe' and EventData.CommandLine = '*svchost.exe*'))\nselect *",
+  "rememberNotifications": false,
+  "suppressDuplicateNotifications": false,
+  "timeRange": {
+    "name": "All time",
+    "condition": "BETWEEN"
+  },
+  "uuid": "stroomworks_T1036_005_proc_creation_win_svchost_uncommon_command_line_flags",
+  "version": "stroomworks_T1036_005_proc_creation_win_svchost_uncommon_command_line_flags_v1",
+  "type": "AnalyticRule",
+  "level": "high",
+  "status": "experimental"
+}

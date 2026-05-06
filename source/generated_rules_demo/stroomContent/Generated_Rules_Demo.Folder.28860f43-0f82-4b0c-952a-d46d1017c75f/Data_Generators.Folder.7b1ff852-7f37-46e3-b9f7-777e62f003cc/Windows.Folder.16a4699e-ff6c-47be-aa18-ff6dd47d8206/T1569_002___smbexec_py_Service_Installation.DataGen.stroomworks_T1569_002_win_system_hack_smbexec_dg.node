@@ -1,0 +1,6 @@
+name=T1569.002 - smbexec.py Service Installation
+path=Data_Generators/Windows
+type=DataGen
+uuid=stroomworks_T1569_002_win_system_hack_smbexec_dg
+
+stroomworks_T1569_002_win_system_hack_smbexec_dg_v1

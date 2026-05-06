@@ -1,0 +1,6 @@
+name=T1059.001 - ObfuscatedPowerShellMSIInstallviaWindowsInstallerCOM
+path=Rules/Windows/experimental
+type=AnalyticRule
+uuid=stroomworks_T1059_001_proc_creation_win_powershell_comobject_msi
+
+stroomworks_T1059_001_proc_creation_win_powershell_comobject_msi_v1

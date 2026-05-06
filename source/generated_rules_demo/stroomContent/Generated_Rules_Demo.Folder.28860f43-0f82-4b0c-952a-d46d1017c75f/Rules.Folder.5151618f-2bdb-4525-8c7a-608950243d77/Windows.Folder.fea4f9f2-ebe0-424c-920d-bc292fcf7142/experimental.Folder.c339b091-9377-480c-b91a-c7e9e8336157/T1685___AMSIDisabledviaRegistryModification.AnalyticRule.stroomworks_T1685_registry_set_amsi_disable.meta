@@ -1,0 +1,52 @@
+{
+  "analyticProcessType": "STREAMING",
+  "duplicateNotificationConfig": {
+    "chooseColumns": false,
+    "columnNames": [],
+    "rememberNotifications": false,
+    "suppressDuplicateNotifications": false
+  },
+  "errorFeed": {
+    "type": "Feed",
+    "uuid": "8b95697a-1827-4e67-b982-940f3d47634c",
+    "name": "RULE_ERRORS_FEED"
+  },
+  "includeRuleDocumentation": false,
+  "languageVersion": "STROOM_QL_VERSION_0_1",
+  "name": "T1685 - AMSIDisabledviaRegistryModification",
+  "description": "Detects attempts to disable AMSI (Anti-Malware Scan Interface) by modifying the AmsiEnable registry value.\nAnti-Malware Scan Interface (AMSI) is a security feature in Windows that allows applications and services to integrate with anti-malware products for enhanced protection against malicious content.\nAdversaries may attempt to disable AMSI to evade detection by security software, allowing them to execute malicious scripts or code without being scanned.\n\n\nLevel: high\n\nStatus: experimental\n\nFalse Positives:\n- Unlikely\n\nReferences:\n- https://mostafayahiax.medium.com/hunting-for-amsi-bypassing-methods-9886dda0bf9d\n- https://docs.microsoft.com/en-us/windows/win32/amsi/antimalware-scan-interface-portal\n- https://www.mdsec.co.uk/2019/02/macros-and-more-with-sharpshooter-v2-0/\n\nTags:\n- attack.defense-impairment\n- attack.t1685\n\nSource Sigma rule author(s):\n- Swachchhanda Shrawan Poudel (Nextron Systems)\n\nSource Sigma rule: registry\\_set\\_amsi\\_disable.yml",
+  "notifications": [
+    {
+      "destination": {
+        "type": "stream",
+        "destinationFeed": {
+          "type": "Feed",
+          "uuid": "f58bb9a9-1359-4077-9451-f977b2b862c3",
+          "name": "RULE_OUTPUT_FEED"
+        },
+        "useSourceFeedIfPossible": false
+      },
+      "destinationType": "STREAM",
+      "enabled": true,
+      "limitNotifications": false,
+      "maxNotifications": 1,
+      "resumeAfter": {
+        "time": 1,
+        "timeUnit": "DAYS"
+      },
+      "uuid": "9ed54c1d-6c2c-41e0-aae1-fe3a25c5f77c"
+    }
+  ],
+  "query": "from RULE_VIEW\nwhere (EventData.TargetObject = '*\\\\\\\\Software\\\\\\\\Microsoft\\\\\\\\Windows Script\\\\\\\\Settings\\\\\\\\AmsiEnable*' and EventData.Details = '*DWORD (0x00000000)*')\nselect *",
+  "rememberNotifications": false,
+  "suppressDuplicateNotifications": false,
+  "timeRange": {
+    "name": "All time",
+    "condition": "BETWEEN"
+  },
+  "uuid": "stroomworks_T1685_registry_set_amsi_disable",
+  "version": "stroomworks_T1685_registry_set_amsi_disable_v1",
+  "type": "AnalyticRule",
+  "level": "high",
+  "status": "experimental"
+}

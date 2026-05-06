@@ -1,0 +1,6 @@
+name=T1134.002 - Potential MeterpreterCobaltStrike Activity
+path=Data_Generators/Windows
+type=DataGen
+uuid=stroomworks_T1134_002_proc_creation_win_hktl_meterpreter_getsystem_dg
+
+stroomworks_T1134_002_proc_creation_win_hktl_meterpreter_getsystem_dg_v1

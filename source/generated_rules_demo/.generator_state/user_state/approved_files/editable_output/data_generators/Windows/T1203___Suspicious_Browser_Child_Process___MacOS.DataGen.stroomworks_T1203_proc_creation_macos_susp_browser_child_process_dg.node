@@ -1,0 +1,6 @@
+name=T1203 - Suspicious Browser Child Process - MacOS
+path=Data_Generators/Windows
+type=DataGen
+uuid=stroomworks_T1203_proc_creation_macos_susp_browser_child_process_dg
+
+stroomworks_T1203_proc_creation_macos_susp_browser_child_process_dg_v1

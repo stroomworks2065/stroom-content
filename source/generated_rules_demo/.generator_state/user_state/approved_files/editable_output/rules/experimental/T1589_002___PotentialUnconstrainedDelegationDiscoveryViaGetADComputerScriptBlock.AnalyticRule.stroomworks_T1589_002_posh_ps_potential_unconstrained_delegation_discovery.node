@@ -1,0 +1,6 @@
+name=T1589.002 - PotentialUnconstrainedDelegationDiscoveryViaGetADComputerScriptBlock
+path=Rules/Windows/experimental
+type=AnalyticRule
+uuid=stroomworks_T1589_002_posh_ps_potential_unconstrained_delegation_discovery
+
+stroomworks_T1589_002_posh_ps_potential_unconstrained_delegation_discovery_v1

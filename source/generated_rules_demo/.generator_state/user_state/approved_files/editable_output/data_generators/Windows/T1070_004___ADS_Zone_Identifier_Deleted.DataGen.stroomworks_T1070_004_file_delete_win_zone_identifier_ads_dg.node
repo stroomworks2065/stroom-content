@@ -1,0 +1,6 @@
+name=T1070.004 - ADS Zone.Identifier Deleted
+path=Data_Generators/Windows
+type=DataGen
+uuid=stroomworks_T1070_004_file_delete_win_zone_identifier_ads_dg
+
+stroomworks_T1070_004_file_delete_win_zone_identifier_ads_dg_v1

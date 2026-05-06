@@ -1,0 +1,52 @@
+{
+  "analyticProcessType": "STREAMING",
+  "duplicateNotificationConfig": {
+    "chooseColumns": false,
+    "columnNames": [],
+    "rememberNotifications": false,
+    "suppressDuplicateNotifications": false
+  },
+  "errorFeed": {
+    "type": "Feed",
+    "uuid": "8b95697a-1827-4e67-b982-940f3d47634c",
+    "name": "RULE_ERRORS_FEED"
+  },
+  "includeRuleDocumentation": false,
+  "languageVersion": "STROOM_QL_VERSION_0_1",
+  "name": "T1202 - IndirectCommandExecutionviaSFTPProxyCommand",
+  "description": "Detects the use of SFTP.exe to execute commands indirectly via ProxyCommand parameter.\nThreat actors were seen leveraging this legitimate Windows binary to bypass security controls and execute arbitrary commands while evading detection.\n\n\nLevel: medium\n\nStatus: experimental\n\nFalse Positives:\n- Legitimate use of SFTP with proxy commands for administration or networking tasks\n\nReferences:\n- https://lolbas-project.github.io/lolbas/Binaries/Sftp/\n- https://news.sophos.com/en-us/2025/05/09/lumma-stealer-coming-and-going/\n\nTags:\n- attack.stealth\n- attack.t1202\n\nSource Sigma rule author(s):\n- Swachchhanda Shrawan Poudel (Nextron Systems)\n\nSource Sigma rule: proc\\_creation\\_win\\_sftp\\_proxy\\_command\\_execution.yml",
+  "notifications": [
+    {
+      "destination": {
+        "type": "stream",
+        "destinationFeed": {
+          "type": "Feed",
+          "uuid": "f58bb9a9-1359-4077-9451-f977b2b862c3",
+          "name": "RULE_OUTPUT_FEED"
+        },
+        "useSourceFeedIfPossible": false
+      },
+      "destinationType": "STREAM",
+      "enabled": true,
+      "limitNotifications": false,
+      "maxNotifications": 1,
+      "resumeAfter": {
+        "time": 1,
+        "timeUnit": "DAYS"
+      },
+      "uuid": "9ed54c1d-6c2c-41e0-aae1-fe3a25c5f77c"
+    }
+  ],
+  "query": "from RULE_VIEW\nwhere (EventData.Image = '*\\\\\\\\sftp.exe' and EventData.CommandLine = '*ProxyCommand=*')\nselect *",
+  "rememberNotifications": false,
+  "suppressDuplicateNotifications": false,
+  "timeRange": {
+    "name": "All time",
+    "condition": "BETWEEN"
+  },
+  "uuid": "stroomworks_T1202_proc_creation_win_sftp_proxy_command_execution",
+  "version": "stroomworks_T1202_proc_creation_win_sftp_proxy_command_execution_v1",
+  "type": "AnalyticRule",
+  "level": "medium",
+  "status": "experimental"
+}

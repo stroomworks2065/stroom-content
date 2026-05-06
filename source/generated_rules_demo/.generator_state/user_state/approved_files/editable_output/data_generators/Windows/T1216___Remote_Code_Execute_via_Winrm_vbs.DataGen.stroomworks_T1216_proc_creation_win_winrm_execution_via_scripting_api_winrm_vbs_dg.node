@@ -1,0 +1,6 @@
+name=T1216 - Remote Code Execute via Winrm.vbs
+path=Data_Generators/Windows
+type=DataGen
+uuid=stroomworks_T1216_proc_creation_win_winrm_execution_via_scripting_api_winrm_vbs_dg
+
+stroomworks_T1216_proc_creation_win_winrm_execution_via_scripting_api_winrm_vbs_dg_v1

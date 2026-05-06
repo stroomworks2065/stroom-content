@@ -1,0 +1,6 @@
+name=T1548.002 - UAC Bypass Using ChangePK and SLUI
+path=Data_Generators/Windows
+type=DataGen
+uuid=stroomworks_T1548_002_proc_creation_win_uac_bypass_changepk_slui_dg
+
+stroomworks_T1548_002_proc_creation_win_uac_bypass_changepk_slui_dg_v1

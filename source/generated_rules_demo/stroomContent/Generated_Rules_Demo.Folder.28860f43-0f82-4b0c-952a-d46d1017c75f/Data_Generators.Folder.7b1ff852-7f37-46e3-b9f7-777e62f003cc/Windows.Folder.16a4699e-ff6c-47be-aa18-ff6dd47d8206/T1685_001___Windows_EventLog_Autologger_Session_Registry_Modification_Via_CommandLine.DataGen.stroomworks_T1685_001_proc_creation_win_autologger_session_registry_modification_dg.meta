@@ -1,0 +1,13 @@
+{
+  "description": "",
+  "feed": {
+    "type": "Feed",
+    "uuid": "61f60ac1-b92b-4bb8-ac45-33bcf9f4ce61",
+    "name": "RULE_FEED"
+  },
+  "name": "T1685.001 - Windows EventLog Autologger Session Registry Modification Via CommandLine",
+  "template": "<Event xmlns=\"http://schemas.microsoft.com/win/2004/08/events/event\">\n  <System>\n    <EventID>1</EventID>\n  </System>\n  <EventData>\n    <Data Name=\"Image\">\\reg.exe</Data>\n  </EventData>\n</Event>\n",
+  "uuid": "stroomworks_T1685_001_proc_creation_win_autologger_session_registry_modification_dg",
+  "version": "stroomworks_T1685_001_proc_creation_win_autologger_session_registry_modification_dg_v1",
+  "type": "DataGen"
+}
