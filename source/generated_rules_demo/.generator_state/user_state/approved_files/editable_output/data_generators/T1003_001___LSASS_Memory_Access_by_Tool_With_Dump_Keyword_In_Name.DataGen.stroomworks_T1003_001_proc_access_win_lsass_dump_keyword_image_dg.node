@@ -1,6 +1,0 @@
-name=T1003.001 - LSASS Memory Access by Tool With Dump Keyword In Name
-path=Data_Generators/Windows
-type=DataGen
-uuid=stroomworks_T1003_001_proc_access_win_lsass_dump_keyword_image_dg
-
-stroomworks_T1003_001_proc_access_win_lsass_dump_keyword_image_dg_v1

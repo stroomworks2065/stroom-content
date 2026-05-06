@@ -1,6 +1,0 @@
-name=T1003.001 - HackToolGenericProcessAccess
-path=Rules/Windows/test
-type=AnalyticRule
-uuid=stroomworks_T1003_001_proc_access_win_hktl_generic_access
-
-stroomworks_T1003_001_proc_access_win_hktl_generic_access_v1

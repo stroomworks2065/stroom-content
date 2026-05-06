@@ -1,6 +1,0 @@
-name=T1003.001 - WerFault LSASS Process Memory Dump
-path=Data_Generators/Windows
-type=DataGen
-uuid=stroomworks_T1003_001_file_event_win_lsass_werfault_dump_dg
-
-stroomworks_T1003_001_file_event_win_lsass_werfault_dump_dg_v1

@@ -1,6 +1,0 @@
-name=T1003.001 - LSASSProcessMemoryDumpCreationViaTaskmgr.EXE
-path=Rules/Windows/test
-type=AnalyticRule
-uuid=stroomworks_T1003_001_file_event_win_taskmgr_lsass_dump
-
-stroomworks_T1003_001_file_event_win_taskmgr_lsass_dump_v1

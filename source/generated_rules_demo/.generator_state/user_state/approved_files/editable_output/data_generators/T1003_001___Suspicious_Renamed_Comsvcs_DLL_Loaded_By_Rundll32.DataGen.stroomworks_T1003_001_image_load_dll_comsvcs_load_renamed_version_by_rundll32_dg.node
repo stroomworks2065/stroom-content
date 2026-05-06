@@ -1,6 +1,0 @@
-name=T1003.001 - Suspicious Renamed Comsvcs DLL Loaded By Rundll32
-path=Data_Generators/Windows
-type=DataGen
-uuid=stroomworks_T1003_001_image_load_dll_comsvcs_load_renamed_version_by_rundll32_dg
-
-stroomworks_T1003_001_image_load_dll_comsvcs_load_renamed_version_by_rundll32_dg_v1

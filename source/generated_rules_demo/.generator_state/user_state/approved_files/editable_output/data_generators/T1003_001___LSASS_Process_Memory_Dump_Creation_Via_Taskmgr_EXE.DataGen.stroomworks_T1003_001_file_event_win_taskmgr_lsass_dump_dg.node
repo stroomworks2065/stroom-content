@@ -1,6 +1,0 @@
-name=T1003.001 - LSASS Process Memory Dump Creation Via Taskmgr.EXE
-path=Data_Generators/Windows
-type=DataGen
-uuid=stroomworks_T1003_001_file_event_win_taskmgr_lsass_dump_dg
-
-stroomworks_T1003_001_file_event_win_taskmgr_lsass_dump_dg_v1

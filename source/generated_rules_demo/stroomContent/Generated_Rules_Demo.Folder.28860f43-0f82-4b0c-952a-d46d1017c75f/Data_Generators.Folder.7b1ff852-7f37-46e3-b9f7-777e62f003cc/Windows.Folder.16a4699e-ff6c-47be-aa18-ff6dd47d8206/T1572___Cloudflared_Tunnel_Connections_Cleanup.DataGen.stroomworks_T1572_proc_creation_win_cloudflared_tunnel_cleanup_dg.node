@@ -1,0 +1,6 @@
+name=T1572 - Cloudflared Tunnel Connections Cleanup
+path=Data_Generators/Windows
+type=DataGen
+uuid=stroomworks_T1572_proc_creation_win_cloudflared_tunnel_cleanup_dg
+
+stroomworks_T1572_proc_creation_win_cloudflared_tunnel_cleanup_dg_v1

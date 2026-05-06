@@ -1,0 +1,6 @@
+name=T1137.003 - PotentialPersistenceViaOutlookForm
+path=Rules/Windows/test
+type=AnalyticRule
+uuid=stroomworks_T1137_003_file_event_win_office_outlook_newform
+
+stroomworks_T1137_003_file_event_win_office_outlook_newform_v1

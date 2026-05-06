@@ -1,0 +1,6 @@
+name=T1567.002 - DNSQueryforAnonfiles.comDomainDNSClient
+path=Rules/Windows/test
+type=AnalyticRule
+uuid=stroomworks_T1567_002_win_dns_client_anonymfiles_com
+
+stroomworks_T1567_002_win_dns_client_anonymfiles_com_v1
