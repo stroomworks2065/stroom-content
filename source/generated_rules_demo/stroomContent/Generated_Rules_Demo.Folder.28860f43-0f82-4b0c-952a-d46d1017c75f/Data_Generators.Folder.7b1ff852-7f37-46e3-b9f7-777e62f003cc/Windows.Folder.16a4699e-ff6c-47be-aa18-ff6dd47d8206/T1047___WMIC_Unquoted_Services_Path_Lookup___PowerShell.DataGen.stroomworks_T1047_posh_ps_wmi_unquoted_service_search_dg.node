@@ -1,6 +1,0 @@
-name=T1047 - WMIC Unquoted Services Path Lookup - PowerShell
-path=Data_Generators/Windows
-type=DataGen
-uuid=stroomworks_T1047_posh_ps_wmi_unquoted_service_search_dg
-
-stroomworks_T1047_posh_ps_wmi_unquoted_service_search_dg_v1

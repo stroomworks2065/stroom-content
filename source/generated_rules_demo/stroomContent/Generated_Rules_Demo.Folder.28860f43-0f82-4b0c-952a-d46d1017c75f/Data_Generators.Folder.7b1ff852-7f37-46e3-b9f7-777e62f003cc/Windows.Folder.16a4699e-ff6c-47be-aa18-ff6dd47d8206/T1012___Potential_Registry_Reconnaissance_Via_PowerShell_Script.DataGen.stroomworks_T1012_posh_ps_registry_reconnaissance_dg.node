@@ -1,6 +1,0 @@
-name=T1012 - Potential Registry Reconnaissance Via PowerShell Script
-path=Data_Generators/Windows
-type=DataGen
-uuid=stroomworks_T1012_posh_ps_registry_reconnaissance_dg
-
-stroomworks_T1012_posh_ps_registry_reconnaissance_dg_v1

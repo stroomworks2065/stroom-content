@@ -1,6 +1,0 @@
-name=T1018 - HackToolNetExecExecution
-path=Rules/Windows/experimental
-type=AnalyticRule
-uuid=stroomworks_T1018_proc_creation_win_hktl_netexec
-
-stroomworks_T1018_proc_creation_win_hktl_netexec_v1

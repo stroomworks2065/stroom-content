@@ -1,6 +1,0 @@
-name=T1027.010 - PythonOneLinerswithBase64Decoding
-path=Rules/Windows/experimental
-type=AnalyticRule
-uuid=stroomworks_T1027_010_proc_creation_win_python_base64_encoded_execution
-
-stroomworks_T1027_010_proc_creation_win_python_base64_encoded_execution_v1

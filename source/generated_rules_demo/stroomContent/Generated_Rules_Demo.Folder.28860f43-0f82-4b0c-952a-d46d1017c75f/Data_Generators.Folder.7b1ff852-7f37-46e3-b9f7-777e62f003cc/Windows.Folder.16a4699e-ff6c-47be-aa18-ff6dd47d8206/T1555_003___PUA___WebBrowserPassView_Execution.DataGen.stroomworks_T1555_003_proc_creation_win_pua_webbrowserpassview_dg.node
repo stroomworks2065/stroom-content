@@ -1,6 +1,0 @@
-name=T1555.003 - PUA - WebBrowserPassView Execution
-path=Data_Generators/Windows
-type=DataGen
-uuid=stroomworks_T1555_003_proc_creation_win_pua_webbrowserpassview_dg
-
-stroomworks_T1555_003_proc_creation_win_pua_webbrowserpassview_dg_v1

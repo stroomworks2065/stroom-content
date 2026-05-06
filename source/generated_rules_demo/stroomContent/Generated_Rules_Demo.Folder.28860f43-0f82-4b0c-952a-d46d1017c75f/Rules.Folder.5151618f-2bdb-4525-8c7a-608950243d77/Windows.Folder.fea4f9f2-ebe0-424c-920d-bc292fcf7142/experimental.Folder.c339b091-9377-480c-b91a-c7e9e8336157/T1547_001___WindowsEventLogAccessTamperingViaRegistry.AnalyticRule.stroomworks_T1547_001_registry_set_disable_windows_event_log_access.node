@@ -1,6 +1,0 @@
-name=T1547.001 - WindowsEventLogAccessTamperingViaRegistry
-path=Rules/Windows/experimental
-type=AnalyticRule
-uuid=stroomworks_T1547_001_registry_set_disable_windows_event_log_access
-
-stroomworks_T1547_001_registry_set_disable_windows_event_log_access_v1

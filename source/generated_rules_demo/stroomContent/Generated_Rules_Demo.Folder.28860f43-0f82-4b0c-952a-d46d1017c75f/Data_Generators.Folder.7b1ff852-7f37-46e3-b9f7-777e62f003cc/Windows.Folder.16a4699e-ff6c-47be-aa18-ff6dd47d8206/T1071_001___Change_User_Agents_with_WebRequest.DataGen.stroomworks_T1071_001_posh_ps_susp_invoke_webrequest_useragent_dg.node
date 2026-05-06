@@ -1,6 +1,0 @@
-name=T1071.001 - Change User Agents with WebRequest
-path=Data_Generators/Windows
-type=DataGen
-uuid=stroomworks_T1071_001_posh_ps_susp_invoke_webrequest_useragent_dg
-
-stroomworks_T1071_001_posh_ps_susp_invoke_webrequest_useragent_dg_v1

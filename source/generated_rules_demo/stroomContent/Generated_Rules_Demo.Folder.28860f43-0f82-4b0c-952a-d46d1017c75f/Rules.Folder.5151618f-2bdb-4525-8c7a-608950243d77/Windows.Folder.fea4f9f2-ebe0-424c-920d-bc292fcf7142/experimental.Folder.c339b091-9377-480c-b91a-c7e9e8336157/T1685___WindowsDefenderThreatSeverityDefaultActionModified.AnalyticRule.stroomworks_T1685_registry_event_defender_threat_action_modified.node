@@ -1,6 +1,0 @@
-name=T1685 - WindowsDefenderThreatSeverityDefaultActionModified
-path=Rules/Windows/experimental
-type=AnalyticRule
-uuid=stroomworks_T1685_registry_event_defender_threat_action_modified
-
-stroomworks_T1685_registry_event_defender_threat_action_modified_v1

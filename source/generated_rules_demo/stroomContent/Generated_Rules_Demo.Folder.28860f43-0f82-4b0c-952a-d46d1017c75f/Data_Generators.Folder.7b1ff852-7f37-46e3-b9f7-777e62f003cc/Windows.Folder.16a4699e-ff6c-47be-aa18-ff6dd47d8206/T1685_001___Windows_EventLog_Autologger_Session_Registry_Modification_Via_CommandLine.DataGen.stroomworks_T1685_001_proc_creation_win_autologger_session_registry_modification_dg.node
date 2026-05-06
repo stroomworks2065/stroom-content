@@ -1,6 +1,0 @@
-name=T1685.001 - Windows EventLog Autologger Session Registry Modification Via CommandLine
-path=Data_Generators/Windows
-type=DataGen
-uuid=stroomworks_T1685_001_proc_creation_win_autologger_session_registry_modification_dg
-
-stroomworks_T1685_001_proc_creation_win_autologger_session_registry_modification_dg_v1
