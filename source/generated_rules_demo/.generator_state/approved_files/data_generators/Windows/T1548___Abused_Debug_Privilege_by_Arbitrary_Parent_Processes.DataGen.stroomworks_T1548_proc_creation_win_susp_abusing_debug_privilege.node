@@ -1,6 +1,0 @@
-name=T1548 - Abused Debug Privilege by Arbitrary Parent Processes
-path=Data_Generators/Windows
-type=DataGen
-uuid=stroomworks_T1548_proc_creation_win_susp_abusing_debug_privilege
-
-stroomworks_T1548_proc_creation_win_susp_abusing_debug_privilege_v1

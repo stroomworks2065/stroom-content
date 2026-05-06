@@ -1,0 +1,6 @@
+name=T1218 - Abusing Print Executable
+path=Data_Generators/Windows
+type=DataGen
+uuid=stroomworks_T1218_proc_creation_win_print_remote_file_copy_dg
+
+stroomworks_T1218_proc_creation_win_print_remote_file_copy_dg_v1

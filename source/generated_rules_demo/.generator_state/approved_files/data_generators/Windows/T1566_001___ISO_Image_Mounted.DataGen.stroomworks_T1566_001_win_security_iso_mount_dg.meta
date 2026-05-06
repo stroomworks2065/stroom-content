@@ -1,0 +1,13 @@
+{
+  "description": "",
+  "feed": {
+    "type": "Feed",
+    "uuid": "61f60ac1-b92b-4bb8-ac45-33bcf9f4ce61",
+    "name": "RULE_FEED"
+  },
+  "name": "T1566.001 - ISO Image Mounted",
+  "template": "<Event xmlns=\"http://schemas.microsoft.com/win/2004/08/events/event\">\n  <System>\n    <EventID>4663</EventID>\n  </System>\n  <EventData>\n    <Data Name=\"EventID\">4663</Data>\n    <Data Name=\"ObjectServer\">Security</Data>\n    <Data Name=\"ObjectType\">File</Data>\n    <Data Name=\"ObjectName\">\\Device\\CdRom</Data>\n  </EventData>\n</Event>\n",
+  "uuid": "stroomworks_T1566_001_win_security_iso_mount_dg",
+  "version": "stroomworks_T1566_001_win_security_iso_mount_dg_v1",
+  "type": "DataGen"
+}

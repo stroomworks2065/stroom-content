@@ -1,0 +1,6 @@
+name=T1542.003 - Potential Ransomware or Unauthorized MBR Tampering Via Bcdedit.EXE
+path=Data_Generators/Windows
+type=DataGen
+uuid=stroomworks_T1542_003_proc_creation_win_bcdedit_susp_execution_dg
+
+stroomworks_T1542_003_proc_creation_win_bcdedit_susp_execution_dg_v1
