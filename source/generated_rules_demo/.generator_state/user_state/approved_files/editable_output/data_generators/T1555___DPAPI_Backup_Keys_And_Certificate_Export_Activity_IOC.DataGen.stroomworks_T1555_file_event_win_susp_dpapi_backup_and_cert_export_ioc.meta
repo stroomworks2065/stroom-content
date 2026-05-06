@@ -1,0 +1,13 @@
+{
+  "description": "",
+  "feed": {
+    "type": "Feed",
+    "uuid": "61f60ac1-b92b-4bb8-ac45-33bcf9f4ce61",
+    "name": "RULE_FEED"
+  },
+  "name": "T1555 - DPAPI Backup Keys And Certificate Export Activity IOC",
+  "template": "<Event xmlns=\"http://schemas.microsoft.com/win/2004/08/events/event\">\n  <System>\n    <EventID>1</EventID>\n  </System>\n  <EventData>\n    <Data Name=\"TargetFilename\">C:\\Users\\User\\AppData\\ntds_capi_\\ntds_legacy_\\ntds_unknown_\\stroomworks_test.cer</Data>\n  </EventData>\n</Event>\n",
+  "uuid": "stroomworks_T1555_file_event_win_susp_dpapi_backup_and_cert_export_ioc",
+  "version": "stroomworks_T1555_file_event_win_susp_dpapi_backup_and_cert_export_ioc_v1",
+  "type": "DataGen"
+}
