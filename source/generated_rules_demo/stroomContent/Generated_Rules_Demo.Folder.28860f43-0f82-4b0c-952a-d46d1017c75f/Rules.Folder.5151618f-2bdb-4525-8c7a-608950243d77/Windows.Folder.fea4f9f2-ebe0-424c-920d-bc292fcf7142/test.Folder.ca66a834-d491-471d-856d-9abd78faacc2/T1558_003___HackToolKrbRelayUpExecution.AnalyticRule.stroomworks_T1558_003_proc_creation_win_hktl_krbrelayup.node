@@ -1,6 +1,0 @@
-name=T1558.003 - HackToolKrbRelayUpExecution
-path=Rules/Windows/test
-type=AnalyticRule
-uuid=stroomworks_T1558_003_proc_creation_win_hktl_krbrelayup
-
-stroomworks_T1558_003_proc_creation_win_hktl_krbrelayup_v1

@@ -1,6 +1,0 @@
-name=T1010 - SCM Database Handle Failure
-path=Data_Generators/Windows
-type=DataGen
-uuid=stroomworks_T1010_win_security_scm_database_handle_failure_dg
-
-stroomworks_T1010_win_security_scm_database_handle_failure_dg_v1

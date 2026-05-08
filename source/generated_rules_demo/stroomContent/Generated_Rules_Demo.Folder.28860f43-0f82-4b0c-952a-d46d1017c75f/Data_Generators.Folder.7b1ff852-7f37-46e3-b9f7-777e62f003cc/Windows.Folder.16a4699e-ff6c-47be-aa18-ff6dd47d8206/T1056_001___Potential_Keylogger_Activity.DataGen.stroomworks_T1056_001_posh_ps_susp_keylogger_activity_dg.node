@@ -1,6 +1,0 @@
-name=T1056.001 - Potential Keylogger Activity
-path=Data_Generators/Windows
-type=DataGen
-uuid=stroomworks_T1056_001_posh_ps_susp_keylogger_activity_dg
-
-stroomworks_T1056_001_posh_ps_susp_keylogger_activity_dg_v1
