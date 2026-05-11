@@ -6,8 +6,8 @@
   "description" : "",
   "dataSource" : {
     "type" : "Index",
-    "uuid" : "1d2dad12-2d8f-4e2a-b9b9-050e2b8c24ed",
-    "name" : "XML_INDEX"
+    "uuid" : "759afbac-297c-43f7-ac90-9303fb995f50",
+    "name" : "INDEX"
   },
   "filter" : {
     "type" : "operator",
@@ -30,7 +30,7 @@
   },
   "pipeline" : {
     "type" : "Pipeline",
-    "uuid" : "978d5d04-1928-446c-8ef3-ac53dc4bc33a",
-    "name" : "XML_INDEX_EXTRACTION_PIPELINE"
+    "uuid" : "05d50cd4-f9dd-4972-aac9-32810a57e02c",
+    "name" : "INDEX_EXTRACTION_PIPELINE"
   }
 }
