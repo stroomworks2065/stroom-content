@@ -2,5 +2,4 @@ name=T1071.004 - NetworkConnectionInitiatedviaFinger.EXE
 path=Rules/Windows/experimental
 type=AnalyticRule
 uuid=stroomworks_T1071_004_net_connection_win_finger
-
-stroomworks_T1071_004_net_connection_win_finger_v1
+version=V2

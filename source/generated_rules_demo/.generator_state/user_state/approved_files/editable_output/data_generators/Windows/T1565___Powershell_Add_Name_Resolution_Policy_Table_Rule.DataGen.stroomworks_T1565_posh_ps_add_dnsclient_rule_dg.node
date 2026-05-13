@@ -2,5 +2,4 @@ name=T1565 - Powershell Add Name Resolution Policy Table Rule
 path=Data_Generators/Windows
 type=DataGen
 uuid=stroomworks_T1565_posh_ps_add_dnsclient_rule_dg
-
-stroomworks_T1565_posh_ps_add_dnsclient_rule_dg_v1
+version=V2

@@ -2,5 +2,4 @@ name=T1090.002 - NetworkCommunicationInitiatedToPortmap.IODomain
 path=Rules/Windows/test
 type=AnalyticRule
 uuid=stroomworks_T1090_002_net_connection_win_domain_portmap
-
-stroomworks_T1090_002_net_connection_win_domain_portmap_v1
+version=V2

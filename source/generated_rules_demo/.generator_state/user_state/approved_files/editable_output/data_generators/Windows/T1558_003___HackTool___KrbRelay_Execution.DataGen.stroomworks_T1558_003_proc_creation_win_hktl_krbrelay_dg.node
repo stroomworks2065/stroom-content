@@ -2,5 +2,4 @@ name=T1558.003 - HackTool - KrbRelay Execution
 path=Data_Generators/Windows
 type=DataGen
 uuid=stroomworks_T1558_003_proc_creation_win_hktl_krbrelay_dg
-
-stroomworks_T1558_003_proc_creation_win_hktl_krbrelay_dg_v1
+version=V2

@@ -2,5 +2,4 @@ name=T1074.001 - ZipAFolderWithPowerShellForStagingInTempPowerShell
 path=Rules/Windows/test
 type=AnalyticRule
 uuid=stroomworks_T1074_001_posh_pc_susp_zip_compress
-
-stroomworks_T1074_001_posh_pc_susp_zip_compress_v1
+version=V2

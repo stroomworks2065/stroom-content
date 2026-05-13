@@ -2,5 +2,4 @@ name=T1001.003 - ADSI-Cache File Creation By Uncommon Tool
 path=Data_Generators/Windows
 type=DataGen
 uuid=stroomworks_T1001_003_file_event_win_adsi_cache_creation_by_uncommon_tool_dg
-
-stroomworks_T1001_003_file_event_win_adsi_cache_creation_by_uncommon_tool_dg_v1
+version=V2
