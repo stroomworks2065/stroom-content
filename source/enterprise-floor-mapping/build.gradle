@@ -1,0 +1,7 @@
+//enterprise-floor-mapping
+
+dependencies {
+    compileSource project(path: ':core-xml-schemas', configuration: 'distConfig')
+    compileSource project(path: ':event-logging-xml-schemas', configuration: 'distConfig')
+}
+
