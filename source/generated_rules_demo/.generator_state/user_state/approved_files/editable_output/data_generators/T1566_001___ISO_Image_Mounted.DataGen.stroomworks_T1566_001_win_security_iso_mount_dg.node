@@ -1,0 +1,5 @@
+name=T1566.001 - ISO Image Mounted
+path=Data_Generators/Windows
+type=DataGen
+uuid=stroomworks_T1566_001_win_security_iso_mount_dg
+version=V2

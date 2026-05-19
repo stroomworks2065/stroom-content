@@ -1,0 +1,5 @@
+name=T1070 - Clearing Windows Console History
+path=Data_Generators/Windows
+type=DataGen
+uuid=stroomworks_T1070_posh_ps_clearing_windows_console_history_dg
+version=V2

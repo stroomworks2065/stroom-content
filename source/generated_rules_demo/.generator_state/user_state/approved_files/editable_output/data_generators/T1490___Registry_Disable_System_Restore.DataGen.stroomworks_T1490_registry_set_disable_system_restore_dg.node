@@ -1,0 +1,5 @@
+name=T1490 - Registry Disable System Restore
+path=Data_Generators/Windows
+type=DataGen
+uuid=stroomworks_T1490_registry_set_disable_system_restore_dg
+version=V2

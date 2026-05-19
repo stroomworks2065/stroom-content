@@ -1,0 +1,5 @@
+name=T1090.002 - Network Communication Initiated To Portmap.IO Domain
+path=Data_Generators/Windows
+type=DataGen
+uuid=stroomworks_T1090_002_net_connection_win_domain_portmap_dg
+version=V2

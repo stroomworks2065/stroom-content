@@ -1,0 +1,5 @@
+name=T1567.002 - DNS Query for Anonfiles.com Domain - DNS Client
+path=Data_Generators/Windows
+type=DataGen
+uuid=stroomworks_T1567_002_win_dns_client_anonymfiles_com_dg
+version=V2
