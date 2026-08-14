@@ -45,7 +45,7 @@
     "condition": "BETWEEN"
   },
   "uuid": "stroomworks_T1218_proc_creation_win_print_remote_file_copy",
-  "version": "stroomworks_T1218_proc_creation_win_print_remote_file_copy_v1",
+  "version": "964e45b0-ed52-55a9-bf2c-45883773e884",
   "type": "AnalyticRule",
   "level": "medium",
   "status": "test"

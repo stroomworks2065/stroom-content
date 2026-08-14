@@ -45,7 +45,7 @@
     "condition": "BETWEEN"
   },
   "uuid": "stroomworks_T1090_002_net_connection_win_domain_portmap",
-  "version": "stroomworks_T1090_002_net_connection_win_domain_portmap_v1",
+  "version": "60b8e8b6-be06-5799-a0ec-c238f3e807f6",
   "type": "AnalyticRule",
   "level": "medium",
   "status": "test"

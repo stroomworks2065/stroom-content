@@ -1,5 +1,0 @@
-name=T1074.001 - Zip A Folder With PowerShell For Staging In Temp - PowerShell
-path=Data_Generators/Windows
-type=DataGen
-uuid=stroomworks_T1074_001_posh_pc_susp_zip_compress_dg
-version=V2

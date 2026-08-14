@@ -45,7 +45,7 @@
     "condition": "BETWEEN"
   },
   "uuid": "stroomworks_T1574_011_proc_creation_win_powershell_hide_services_via_set_service",
-  "version": "stroomworks_T1574_011_proc_creation_win_powershell_hide_services_via_set_service_v1",
+  "version": "f3259aa3-b988-59d9-909f-82d290e9492e",
   "type": "AnalyticRule",
   "level": "high",
   "status": "test"

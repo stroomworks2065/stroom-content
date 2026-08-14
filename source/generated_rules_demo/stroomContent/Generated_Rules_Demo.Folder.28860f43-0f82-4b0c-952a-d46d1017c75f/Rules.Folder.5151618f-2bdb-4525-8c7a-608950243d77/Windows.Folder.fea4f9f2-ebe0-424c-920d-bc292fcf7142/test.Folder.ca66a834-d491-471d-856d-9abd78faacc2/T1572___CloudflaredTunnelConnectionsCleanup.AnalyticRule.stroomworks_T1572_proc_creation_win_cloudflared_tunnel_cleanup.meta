@@ -45,7 +45,7 @@
     "condition": "BETWEEN"
   },
   "uuid": "stroomworks_T1572_proc_creation_win_cloudflared_tunnel_cleanup",
-  "version": "stroomworks_T1572_proc_creation_win_cloudflared_tunnel_cleanup_v1",
+  "version": "4c30e0a3-b638-5bbd-aa7a-a952f33a2507",
   "type": "AnalyticRule",
   "level": "medium",
   "status": "test"

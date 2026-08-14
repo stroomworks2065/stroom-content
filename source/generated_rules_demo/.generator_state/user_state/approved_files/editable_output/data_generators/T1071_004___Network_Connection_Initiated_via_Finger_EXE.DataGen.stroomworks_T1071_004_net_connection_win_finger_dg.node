@@ -1,5 +1,0 @@
-name=T1071.004 - Network Connection Initiated via Finger.EXE
-path=Data_Generators/Windows
-type=DataGen
-uuid=stroomworks_T1071_004_net_connection_win_finger_dg
-version=V2

@@ -45,7 +45,7 @@
     "condition": "BETWEEN"
   },
   "uuid": "stroomworks_T1567_002_win_dns_client_anonymfiles_com",
-  "version": "stroomworks_T1567_002_win_dns_client_anonymfiles_com_v1",
+  "version": "578b3fdc-36b4-517a-b756-13d5c1d14bbd",
   "type": "AnalyticRule",
   "level": "high",
   "status": "test"

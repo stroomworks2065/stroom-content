@@ -45,7 +45,7 @@
     "condition": "BETWEEN"
   },
   "uuid": "stroomworks_T1048_003_posh_ps_send_mailmessage",
-  "version": "stroomworks_T1048_003_posh_ps_send_mailmessage_v1",
+  "version": "36788656-7bd3-5f80-8622-3302d53585d4",
   "type": "AnalyticRule",
   "level": "medium",
   "status": "test"

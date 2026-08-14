@@ -1,5 +1,0 @@
-name=T1048.003 - Potential Data Exfiltration Over SMTP Via Send-MailMessage Cmdlet
-path=Data_Generators/Windows
-type=DataGen
-uuid=stroomworks_T1048_003_posh_ps_send_mailmessage_dg
-version=V2

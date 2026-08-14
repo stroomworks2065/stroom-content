@@ -45,7 +45,7 @@
     "condition": "BETWEEN"
   },
   "uuid": "stroomworks_T1070_posh_ps_clearing_windows_console_history",
-  "version": "stroomworks_T1070_posh_ps_clearing_windows_console_history_v1",
+  "version": "3bc561aa-d762-5929-ac67-056d37339814",
   "type": "AnalyticRule",
   "level": "high",
   "status": "test"

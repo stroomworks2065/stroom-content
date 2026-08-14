@@ -45,7 +45,7 @@
     "condition": "BETWEEN"
   },
   "uuid": "stroomworks_T1010_win_security_scm_database_handle_failure",
-  "version": "stroomworks_T1010_win_security_scm_database_handle_failure_v1",
+  "version": "d62e0f56-5081-5649-9ea2-67fa71d382c0",
   "type": "AnalyticRule",
   "level": "medium",
   "status": "test"

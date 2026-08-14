@@ -45,7 +45,7 @@
     "condition": "BETWEEN"
   },
   "uuid": "stroomworks_T1074_001_posh_pc_susp_zip_compress",
-  "version": "stroomworks_T1074_001_posh_pc_susp_zip_compress_v1",
+  "version": "4fd45f76-bee0-5861-bc52-1f5d3299df60",
   "type": "AnalyticRule",
   "level": "medium",
   "status": "test"

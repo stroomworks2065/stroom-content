@@ -1,5 +1,0 @@
-name=T1555 - DPAPI Backup Keys And Certificate Export Activity IOC
-path=Data_Generators/Windows
-type=DataGen
-uuid=stroomworks_T1555_file_event_win_susp_dpapi_backup_and_cert_export_ioc_dg
-version=V2

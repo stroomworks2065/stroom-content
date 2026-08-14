@@ -1,5 +1,0 @@
-name=T1078.001 - Admin User Remote Logon
-path=Data_Generators/Windows
-type=DataGen
-uuid=stroomworks_T1078_001_win_security_admin_rdp_login_dg
-version=V2

@@ -45,7 +45,7 @@
     "condition": "BETWEEN"
   },
   "uuid": "stroomworks_T1548_proc_creation_win_susp_abusing_debug_privilege",
-  "version": "stroomworks_T1548_proc_creation_win_susp_abusing_debug_privilege_v1",
+  "version": "82e0f09b-0027-5238-aaa6-e3996c8420e3",
   "type": "AnalyticRule",
   "level": "high",
   "status": "test"

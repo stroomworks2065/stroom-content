@@ -45,7 +45,7 @@
     "condition": "BETWEEN"
   },
   "uuid": "stroomworks_T1590_dns_query_win_susp_external_ip_lookup",
-  "version": "stroomworks_T1590_dns_query_win_susp_external_ip_lookup_v1",
+  "version": "b68e44a1-7f41-526a-8748-40bcfa60c6ca",
   "type": "AnalyticRule",
   "level": "medium",
   "status": "test"

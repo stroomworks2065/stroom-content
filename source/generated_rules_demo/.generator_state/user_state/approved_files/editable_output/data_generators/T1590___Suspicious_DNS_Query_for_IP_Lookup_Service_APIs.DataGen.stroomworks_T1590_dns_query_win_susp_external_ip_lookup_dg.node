@@ -1,5 +1,0 @@
-name=T1590 - Suspicious DNS Query for IP Lookup Service APIs
-path=Data_Generators/Windows
-type=DataGen
-uuid=stroomworks_T1590_dns_query_win_susp_external_ip_lookup_dg
-version=V2

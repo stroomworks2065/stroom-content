@@ -45,7 +45,7 @@
     "condition": "BETWEEN"
   },
   "uuid": "stroomworks_T1490_registry_set_disable_system_restore",
-  "version": "stroomworks_T1490_registry_set_disable_system_restore_v1",
+  "version": "d770e9c4-5718-523a-b0c6-bc131bb8ef83",
   "type": "AnalyticRule",
   "level": "high",
   "status": "test"

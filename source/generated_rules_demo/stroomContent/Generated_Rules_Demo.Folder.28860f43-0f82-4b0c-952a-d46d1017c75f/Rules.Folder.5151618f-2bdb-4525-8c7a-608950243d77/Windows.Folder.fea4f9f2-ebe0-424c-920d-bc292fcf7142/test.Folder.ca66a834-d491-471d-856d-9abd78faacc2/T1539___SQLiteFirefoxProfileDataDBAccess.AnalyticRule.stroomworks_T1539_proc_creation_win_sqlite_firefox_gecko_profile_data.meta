@@ -45,7 +45,7 @@
     "condition": "BETWEEN"
   },
   "uuid": "stroomworks_T1539_proc_creation_win_sqlite_firefox_gecko_profile_data",
-  "version": "stroomworks_T1539_proc_creation_win_sqlite_firefox_gecko_profile_data_v1",
+  "version": "083c59e9-16c2-5874-be11-c7aefe979d11",
   "type": "AnalyticRule",
   "level": "high",
   "status": "test"

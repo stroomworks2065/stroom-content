@@ -45,7 +45,7 @@
     "condition": "BETWEEN"
   },
   "uuid": "stroomworks_T1542_003_proc_creation_win_bcdedit_susp_execution",
-  "version": "stroomworks_T1542_003_proc_creation_win_bcdedit_susp_execution_v1",
+  "version": "2f0d9f90-8c3a-527f-add7-254089a492cc",
   "type": "AnalyticRule",
   "level": "medium",
   "status": "test"
