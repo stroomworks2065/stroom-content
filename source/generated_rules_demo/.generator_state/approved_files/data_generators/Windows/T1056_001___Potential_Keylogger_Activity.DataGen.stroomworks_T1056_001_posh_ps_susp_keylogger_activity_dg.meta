@@ -8,6 +8,6 @@
   "name": "T1056.001 - Potential Keylogger Activity",
   "template": "<Event xmlns=\"http://schemas.microsoft.com/win/2004/08/events/event\">\n  <System>\n    <EventID>1</EventID>\n  </System>\n  <EventData>\n    <Data Name=\"ScriptBlockText\">C:\\[Windows.Input.Keyboard]::IsKeyDown([System.Windows.Input.Key]::\\test_file.log</Data>\n  </EventData>\n</Event>\n",
   "uuid": "stroomworks_T1056_001_posh_ps_susp_keylogger_activity_dg",
-  "version": "stroomworks_T1056_001_posh_ps_susp_keylogger_activity_dg_v1",
+  "version": "460c9d82-087a-5d7d-89ab-eb8b466cc601",
   "type": "DataGen"
 }

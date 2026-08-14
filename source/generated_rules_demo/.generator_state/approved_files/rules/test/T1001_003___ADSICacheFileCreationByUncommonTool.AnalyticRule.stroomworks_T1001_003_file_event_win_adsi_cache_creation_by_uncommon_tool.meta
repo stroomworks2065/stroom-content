@@ -45,7 +45,7 @@
     "condition": "BETWEEN"
   },
   "uuid": "stroomworks_T1001_003_file_event_win_adsi_cache_creation_by_uncommon_tool",
-  "version": "stroomworks_T1001_003_file_event_win_adsi_cache_creation_by_uncommon_tool_v1",
+  "version": "42de4a75-e3db-5a32-85a2-7f788a56101c",
   "type": "AnalyticRule",
   "level": "medium",
   "status": "test"

@@ -45,7 +45,7 @@
     "condition": "BETWEEN"
   },
   "uuid": "stroomworks_T1555_file_event_win_susp_dpapi_backup_and_cert_export_ioc",
-  "version": "stroomworks_T1555_file_event_win_susp_dpapi_backup_and_cert_export_ioc_v1",
+  "version": "75c74ef0-381c-59a9-b696-85e4f48b9cd4",
   "type": "AnalyticRule",
   "level": "high",
   "status": "test"

@@ -8,6 +8,6 @@
   "name": "T1565 - Powershell Add Name Resolution Policy Table Rule",
   "template": "<Event xmlns=\"http://schemas.microsoft.com/win/2004/08/events/event\">\n  <System>\n    <EventID>1</EventID>\n  </System>\n  <EventData>\n    <Data Name=\"ScriptBlockText\">C:\\Add-DnsClientNrptRule\\test_file.log</Data>\n  </EventData>\n</Event>\n",
   "uuid": "stroomworks_T1565_posh_ps_add_dnsclient_rule_dg",
-  "version": "stroomworks_T1565_posh_ps_add_dnsclient_rule_dg_v1",
+  "version": "1081fe92-bc1e-5724-a7fb-6b9b51fd3232",
   "type": "DataGen"
 }

@@ -45,7 +45,7 @@
     "condition": "BETWEEN"
   },
   "uuid": "stroomworks_T1137_003_file_event_win_office_outlook_newform",
-  "version": "stroomworks_T1137_003_file_event_win_office_outlook_newform_v1",
+  "version": "ddfc215e-2ade-57e4-8661-fcf1f3baf1c7",
   "type": "AnalyticRule",
   "level": "high",
   "status": "test"

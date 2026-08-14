@@ -8,6 +8,6 @@
   "name": "T1220 - Msxsl.EXE Execution",
   "template": "<Event xmlns=\"http://schemas.microsoft.com/win/2004/08/events/event\">\n  <System>\n    <EventID>1</EventID>\n  </System>\n  <EventData>\n    <Data Name=\"Image\">\\msxsl.exe</Data>\n  </EventData>\n</Event>\n",
   "uuid": "stroomworks_T1220_proc_creation_win_msxsl_execution_dg",
-  "version": "stroomworks_T1220_proc_creation_win_msxsl_execution_dg_v1",
+  "version": "9d8b4937-6fa0-516a-ae62-67b88df29118",
   "type": "DataGen"
 }

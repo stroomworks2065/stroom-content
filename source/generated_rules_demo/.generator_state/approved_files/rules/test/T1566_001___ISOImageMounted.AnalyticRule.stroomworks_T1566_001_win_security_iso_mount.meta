@@ -45,7 +45,7 @@
     "condition": "BETWEEN"
   },
   "uuid": "stroomworks_T1566_001_win_security_iso_mount",
-  "version": "stroomworks_T1566_001_win_security_iso_mount_v1",
+  "version": "793d2b7a-2bdc-53bb-ab3b-d35cfafeeef6",
   "type": "AnalyticRule",
   "level": "medium",
   "status": "test"

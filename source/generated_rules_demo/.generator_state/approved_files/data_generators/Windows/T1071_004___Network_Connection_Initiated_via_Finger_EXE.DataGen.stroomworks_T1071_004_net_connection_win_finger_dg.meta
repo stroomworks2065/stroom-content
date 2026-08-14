@@ -8,6 +8,6 @@
   "name": "T1071.004 - Network Connection Initiated via Finger.EXE",
   "template": "<Event xmlns=\"http://schemas.microsoft.com/win/2004/08/events/event\">\n  <System>\n    <EventID>1</EventID>\n  </System>\n  <EventData>\n    <Data Name=\"Initiated\">true</Data>\n    <Data Name=\"Image\">\\finger.exe</Data>\n  </EventData>\n</Event>\n",
   "uuid": "stroomworks_T1071_004_net_connection_win_finger_dg",
-  "version": "stroomworks_T1071_004_net_connection_win_finger_dg_v1",
+  "version": "034c8978-689b-5b0a-8c4c-550badff980a",
   "type": "DataGen"
 }

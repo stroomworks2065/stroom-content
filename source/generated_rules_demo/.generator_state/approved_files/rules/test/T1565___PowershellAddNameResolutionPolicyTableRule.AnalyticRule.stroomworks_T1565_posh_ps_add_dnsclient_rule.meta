@@ -45,7 +45,7 @@
     "condition": "BETWEEN"
   },
   "uuid": "stroomworks_T1565_posh_ps_add_dnsclient_rule",
-  "version": "stroomworks_T1565_posh_ps_add_dnsclient_rule_v1",
+  "version": "e1fee4b6-74ee-57a7-a6a0-9bcadcb76d9d",
   "type": "AnalyticRule",
   "level": "high",
   "status": "test"

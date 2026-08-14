@@ -45,7 +45,7 @@
     "condition": "BETWEEN"
   },
   "uuid": "stroomworks_T1127_proc_creation_win_aspnet_compiler_susp_child_process",
-  "version": "stroomworks_T1127_proc_creation_win_aspnet_compiler_susp_child_process_v1",
+  "version": "e6b4bd9c-2a7d-5159-a317-9379ddf96e94",
   "type": "AnalyticRule",
   "level": "high",
   "status": "test"

@@ -8,6 +8,6 @@
   "name": "T1567.002 - DNS Query for Anonfiles.com Domain - DNS Client",
   "template": "<Event xmlns=\"http://schemas.microsoft.com/win/2004/08/events/event\">\n  <System>\n    <EventID>3008</EventID>\n  </System>\n  <EventData>\n    <Data Name=\"EventID\">3008</Data>\n    <Data Name=\"QueryName\">C:\\.anonfiles.com\\test_file.log</Data>\n  </EventData>\n</Event>\n",
   "uuid": "stroomworks_T1567_002_win_dns_client_anonymfiles_com_dg",
-  "version": "stroomworks_T1567_002_win_dns_client_anonymfiles_com_dg_v1",
+  "version": "3f2ad8b5-ccce-5fbe-be30-0a0e97663bb8",
   "type": "DataGen"
 }

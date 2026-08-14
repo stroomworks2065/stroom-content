@@ -45,7 +45,7 @@
     "condition": "BETWEEN"
   },
   "uuid": "stroomworks_T1056_001_posh_ps_susp_keylogger_activity",
-  "version": "stroomworks_T1056_001_posh_ps_susp_keylogger_activity_v1",
+  "version": "22b7174b-4eb9-556a-867a-54d6a3fa448b",
   "type": "AnalyticRule",
   "level": "medium",
   "status": "test"

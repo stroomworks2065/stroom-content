@@ -45,7 +45,7 @@
     "condition": "BETWEEN"
   },
   "uuid": "stroomworks_T1558_003_proc_creation_win_hktl_krbrelayup",
-  "version": "stroomworks_T1558_003_proc_creation_win_hktl_krbrelayup_v1",
+  "version": "fc6a616c-8572-5c0a-9091-0105e77fc3d1",
   "type": "AnalyticRule",
   "level": "high",
   "status": "test"

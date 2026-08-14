@@ -8,6 +8,6 @@
   "name": "T1542.003 - Potential Ransomware or Unauthorized MBR Tampering Via Bcdedit.EXE",
   "template": "<Event xmlns=\"http://schemas.microsoft.com/win/2004/08/events/event\">\n  <System>\n    <EventID>1</EventID>\n  </System>\n  <EventData>\n    <Data Name=\"Image\">\\bcdedit.exe</Data>\n  </EventData>\n</Event>\n",
   "uuid": "stroomworks_T1542_003_proc_creation_win_bcdedit_susp_execution_dg",
-  "version": "stroomworks_T1542_003_proc_creation_win_bcdedit_susp_execution_dg_v1",
+  "version": "f485d651-6fdd-5a54-af41-4e5c058b7518",
   "type": "DataGen"
 }

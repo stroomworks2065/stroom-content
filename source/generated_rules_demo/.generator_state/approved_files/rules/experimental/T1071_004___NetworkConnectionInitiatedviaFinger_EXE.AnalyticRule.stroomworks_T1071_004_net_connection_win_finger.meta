@@ -45,7 +45,7 @@
     "condition": "BETWEEN"
   },
   "uuid": "stroomworks_T1071_004_net_connection_win_finger",
-  "version": "stroomworks_T1071_004_net_connection_win_finger_v1",
+  "version": "94f39519-4414-5fb2-a521-be593203d790",
   "type": "AnalyticRule",
   "level": "high",
   "status": "experimental"

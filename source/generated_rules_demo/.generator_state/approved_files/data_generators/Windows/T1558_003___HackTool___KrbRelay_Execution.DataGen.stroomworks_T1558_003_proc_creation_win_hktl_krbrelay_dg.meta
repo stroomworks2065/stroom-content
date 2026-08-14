@@ -8,6 +8,6 @@
   "name": "T1558.003 - HackTool - KrbRelay Execution",
   "template": "<Event xmlns=\"http://schemas.microsoft.com/win/2004/08/events/event\">\n  <System>\n    <EventID>1</EventID>\n  </System>\n  <EventData>\n    <Data Name=\"Image\">\\KrbRelay.exe</Data>\n  </EventData>\n</Event>\n",
   "uuid": "stroomworks_T1558_003_proc_creation_win_hktl_krbrelay_dg",
-  "version": "stroomworks_T1558_003_proc_creation_win_hktl_krbrelay_dg_v1",
+  "version": "7132573c-a878-5310-ac8c-ec54cd5be54c",
   "type": "DataGen"
 }

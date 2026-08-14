@@ -8,6 +8,6 @@
   "name": "T1572 - Cloudflared Tunnel Connections Cleanup",
   "template": "<Event xmlns=\"http://schemas.microsoft.com/win/2004/08/events/event\">\n  <System>\n    <EventID>1</EventID>\n  </System>\n  <EventData>\n    <Data Name=\"CommandLine\">C:\\Users\\User\\AppData\\ tunnel \\cleanup \\-config \\-connector-id </Data>\n  </EventData>\n</Event>\n",
   "uuid": "stroomworks_T1572_proc_creation_win_cloudflared_tunnel_cleanup_dg",
-  "version": "stroomworks_T1572_proc_creation_win_cloudflared_tunnel_cleanup_dg_v1",
+  "version": "d29a453c-db49-5a91-a581-c63baf0b80c5",
   "type": "DataGen"
 }

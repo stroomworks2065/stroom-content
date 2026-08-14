@@ -8,6 +8,6 @@
   "name": "T1074.001 - Zip A Folder With PowerShell For Staging In Temp - PowerShell",
   "template": "<Event xmlns=\"http://schemas.microsoft.com/win/2004/08/events/event\">\n  <System>\n    <EventID>1</EventID>\n  </System>\n  <EventData>\n    <Data Name=\"Data\">C:\\Compress-Archive -Pathstroomworks_test-DestinationPath $env:TEMP\\test_file.log</Data>\n  </EventData>\n</Event>\n",
   "uuid": "stroomworks_T1074_001_posh_pc_susp_zip_compress_dg",
-  "version": "stroomworks_T1074_001_posh_pc_susp_zip_compress_dg_v1",
+  "version": "d18f1363-6a81-572c-ac85-428ef466ad69",
   "type": "DataGen"
 }

@@ -45,7 +45,7 @@
     "condition": "BETWEEN"
   },
   "uuid": "stroomworks_T1078_001_win_security_admin_rdp_login",
-  "version": "stroomworks_T1078_001_win_security_admin_rdp_login_v1",
+  "version": "2ef572d8-ab72-527e-89a8-3f410d630239",
   "type": "AnalyticRule",
   "level": "low",
   "status": "test"

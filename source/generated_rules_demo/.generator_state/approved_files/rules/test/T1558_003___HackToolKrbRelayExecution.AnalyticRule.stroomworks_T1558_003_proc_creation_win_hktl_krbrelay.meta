@@ -45,7 +45,7 @@
     "condition": "BETWEEN"
   },
   "uuid": "stroomworks_T1558_003_proc_creation_win_hktl_krbrelay",
-  "version": "stroomworks_T1558_003_proc_creation_win_hktl_krbrelay_v1",
+  "version": "4a6b1f70-513d-5ca8-ba9a-6dc62fc13319",
   "type": "AnalyticRule",
   "level": "high",
   "status": "test"
